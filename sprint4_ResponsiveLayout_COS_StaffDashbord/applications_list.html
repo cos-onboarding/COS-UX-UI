@@ -18,26 +18,26 @@
 
 		<!-- 01 Navbar -->
 		<!-- <div class="fixed-top"> -->
-		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark">
+		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
 			<!-- Brand and collapse-icon -->
-			<div class="order-1 d-inline-flex col-3">
+			<div class="order-1 d-inline-flex py-2">
 				<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a class="navbar-brand" href="#Staff Dashboard">Brand</a>
+				<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
 			</div>
 			<!-- nav-Links -->
-			<div class="collapse navbar-collapse order-3 order-lg-2 col-12 col-lg-5 col-xl-6" id="collapsibleNavbar">
+			<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
 				<ul class="navbar-nav nav">
 					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Applications</a>
+						<a class="nav-link text-white" href="applications_list.html">Applications</a>
 					</li>
 					<!-- Dropdown -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
 						<ul class="dropdown-menu bg-success py-0">
 							<li class="nav-item">
-								<a class="dropdown-item text-white" href="#">Team</a>
+								<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
 							</li>
 							<li class="nav-item">
 								<a class="dropdown-item text-white" href="#">Report</a>
@@ -50,26 +50,28 @@
 					<li class="nav-item">
 						<a class="nav-link text-white" href="#">Admin</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">
+							Notification<span class="badge badge-info">4</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 			<!--  nav-right -->
-			<div class="text-white order-2 order-lg-3 h-100 col-9 col-xl-3 col-lg-4 p-0">
-				<div class="d-flex justify-content-end p-0 m-0">
-					<span class="border-left"></span>
-					<i class="fa fa-globe" aria-hidden="true"></i>
-					<select class="bg-success text-white border-0 ml-1 px-0" ng-model="selectedLanguage">
-						<option name="selectedLanguage" value="English">English</option>
-						<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
-						<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
-					</select>
-
-					<span class="border-left"></span>
-					<img src="img/remind.svg"/>						
-					<span class="badge badge-info rounded-circle">4</span>
-					<span class="border-left"></span>
-					<img class="img-circle" src="img/loginPic.svg"/>
-					<span ng-model="username">Chan, Tai Man</span>
-					<span class="mr-3"></span>
+			<div class="text-white order-2 order-lg-3">
+				<div class="d-inline-flex justify-content-end">
+					<div class="border-left p-3 col-auto">
+						<img src="img/globe.svg"/>
+						<select class="bg-success text-white border-0" ng-model="selectedLanguage">
+							<option name="selectedLanguage" value="English">English</option>
+							<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+							<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+						</select>
+					</div>
+					<div class="d-inlink-block border-left p-3 col-auto mr-3">
+						<img class="img-circle" src="img/loginPic.svg"/>
+						<span ng-model="username">Chrismrs Wong</span>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -77,244 +79,220 @@
 
 
         <main class="container-fluid py-3">
-        	<!-- 02 TabContent -->
-	        <div class="tab-content">
-
-
-				<!-- #Applications -->
-				<section id="Applications" class="tab-pane active">
-
-					<div class="row">
-						<!-- Filter -->
-						<div class="order-last order-xl-first order-lg-first col-12 col-lg-8 pr-lg-2 pr-xl-2 mb-3">
-							<div class="card bg-white h-100">
-								<div class="card-header bg-white text-success font-weight-bold">
-									Filter
-								</div>
-								<form class="card-body px-5">
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">Application Number:</label>
-										<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
-									</div>
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">Status:</label>
-										<select class="form-control col-9" ng-model="selectedStatus">
-											<option name="selectedStatus" value="English">All status</option>
-										</select>
-									</div>
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">Customer Name:</label>
-										<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
-									</div>
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">Customer ID:</label>
-										<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
-									</div>
-									
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">Business Centre:</label>
-										<select class="form-control col-9" ng-model="selectedCentre">
-											<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
-											<option name="selectedCentre" value="Centre">Centre</option>
-											<option name="selectedCentre" value="MongKok">Mong Kok</option>
-										</select>
-									</div>
-									<div class="form-group row">
-										<label class="form-control border-0 col-3 pl-0" for="">BBO Assigned:</label>
-										<select class="form-control col-9" ng-model="selectedCentre">
-											<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
-											<option name="selectedCentre" value="Centre">Centre</option>
-											<option name="selectedCentre" value="MongKok">Mong Kok</option>
-										</select>
-									</div>
-									<!-- <div class="form-check col-5 offset-3 pl-3">
-										<label class="form-check-label">
-											<input class="form-check-input" type="checkbox" value="">Show only action by me
-										</label>
-									</div> -->
-									<div class="row">
-										<button class="btn btn-success col-md-2 offset-md-10" type="submit" >Search</button>
-									</div>
-								</form>
-							</div>
+			<!-- 51000 Applications_list_page -->
+			<div class="row">
+				<!-- Filter -->
+				<div class="order-last order-xl-first order-lg-first col-12 col-lg-8 pr-lg-2 pr-xl-2 mb-3">
+					<div class="card bg-white h-100">
+						<div class="card-header bg-white text-success font-weight-bold">
+							Filter
 						</div>
-						<!-- Filter end -->
-						
-						<!-- summary -->
-						<div class="col-12 col-lg-4 pl-lg-2 pl-xl-2 mb-3">
-							<div class="card bg-white h-100">
-								<div class="card-header bg-white text-success font-weight-bold">
-									Summary
-								</div>
-								<div class="card-body px-5">
-									<!-- Summary-body -->
-								</div>
+						<form class="card-body px-5">
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">Application Number:</label>
+								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
 							</div>
-						</div>
-						<!-- summary end-->
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">Status:</label>
+								<select class="form-control col-9" ng-model="selectedStatus">
+									<option name="selectedStatus" value="English">All status</option>
+								</select>
+							</div>
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">Customer Name:</label>
+								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
+							</div>
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">Customer ID:</label>
+								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
+							</div>
+							
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">Business Centre:</label>
+								<select class="form-control col-9" ng-model="selectedCentre">
+									<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
+									<option name="selectedCentre" value="Centre">Centre</option>
+									<option name="selectedCentre" value="MongKok">Mong Kok</option>
+								</select>
+							</div>
+							<div class="form-group row">
+								<label class="control-label border-0 col-3 pl-0" for="">BBO Assigned:</label>
+								<select class="form-control col-9" ng-model="selectedCentre">
+									<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
+									<option name="selectedCentre" value="Centre">Centre</option>
+									<option name="selectedCentre" value="MongKok">Mong Kok</option>
+								</select>
+							</div>
+							<!-- <div class="form-check col-5 offset-3 pl-3">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" value="">Show only action by me
+								</label>
+							</div> -->
+							<div class="row">
+								<button class="btn btn-success col-md-2 offset-md-10" type="submit" >Search</button>
+							</div>
+						</form>
 					</div>
-					
-					<div class="row">
-						<div class="col h-100">
-							<!-- table -->
-							<div class="card bg-white">
-								<div class="card-header bg-white text-success font-weight-bold">
-									Table
-								</div>
-								<div class="card-body px-3 pt-3">
-									<!-- table-button -->
-									<div class="row pr-3 mb-3">
-										<button class="btn btn-success col-md-1 offset-md-10" type="submit"  data-toggle="modal" data-target="#myModal">Assign</button>
-										<button class="btn btn-success col-md-1" type="submit" >+Create</button>
-										<!-- modal start -->
-										<div class="modal fade" id="myModal">
-											<div class="modal-dialog modal-sm">
-												<div class="modal-content">
-													<!-- modal-header -->
-													<!-- <div class="modal-header">
-														<h4 class="modal-title">Assign the 4 cases to</h4>
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-													</div> -->
-													<!-- modal-body -->
-													<div class="modal-body">
-														<label for="">Assign the 4 cases to</label>
-														<select ng-model="selectedCentre">
-															<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres
-															<option name="selectedCentre" value="Centre">Centre
-															<option name="selectedCentre" value="MongKok">Mong Kok
-														</select>
-													</div>
-													<!-- modal-footer -->
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-														<button type="button" class="btn btn-default">Save</button>
-													</div>
-												</div>
+				</div>
+				<!-- Filter end -->
+				
+				<!-- summary -->
+				<div class="col-12 col-lg-4 pl-lg-2 pl-xl-2 mb-3">
+					<div class="card bg-white h-100">
+						<div class="card-header bg-white text-success font-weight-bold">
+							Summary
+						</div>
+						<div class="card-body px-5">
+							<!-- Summary-body -->
+						</div>
+					</div>
+				</div>
+				<!-- summary end-->
+			</div>
+			
+			<div class="row">
+				<div class="col h-100">
+					<!-- table -->
+					<div class="card bg-white">
+						<div class="card-header bg-white text-success font-weight-bold">
+							Table
+						</div>
+						<div class="card-body px-3 pt-3">
+							<!-- table-button -->
+							<div class="row pr-3 mb-3">
+								<button class="btn btn-success col-md-1 offset-md-10" type="submit"  data-toggle="modal" data-target="#myModal">Assign</button>
+								<button class="btn btn-success col-md-1" type="submit" >+Create</button>
+								<!-- modal start -->
+								<div class="modal fade" id="myModal">
+									<div class="modal-dialog modal-sm">
+										<div class="modal-content">
+											<!-- modal-header -->
+											<!-- <div class="modal-header">
+												<h4 class="modal-title">Assign the 4 cases to</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div> -->
+											<!-- modal-body -->
+											<div class="modal-body">
+												<label for="">Assign the 4 cases to</label>
+												<select ng-model="selectedCentre">
+													<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres
+													<option name="selectedCentre" value="Centre">Centre
+													<option name="selectedCentre" value="MongKok">Mong Kok
+												</select>
+											</div>
+											<!-- modal-footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+												<button type="button" class="btn btn-default">Save</button>
 											</div>
 										</div>
-										<!-- modal end -->
 									</div>
-									<!-- table-button end -->
-									
-									<!-- table-responsive -->
-									<table class="col-12 table table-striped table-hover table-responsive pl-0">
-										<thead>
-											<tr>
-											<th scope="col"></th>
-											<th scope="col">Application ID</th>
-											<th scope="col">Status</th>
-											<th scope="col">Customer Name</th>
-											<th scope="col">Assigned To</th>
-											<th scope="col">Date Created</th>
-											<th scope="col">BBO Assigned Date</th>
-											<th scope="col">aaa</th>
-											<th scope="col">Application ID</th>
-											<th scope="col">Status</th>
-											<th scope="col">Customer Name</th>
-											<th scope="col">Assigned To</th>
-											<th scope="col">Date Created</th>
-											<th scope="col">BBO Assigned Date</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row"><input type="checkbox" value=""></th>
-												<td>28881888</td>
-												<td>Pending CCC allocation</td>
-												<td>Chan Tai Man</td>
-												<td>Not assigned</td>
-												<td>12 Dec 2019</td>
-												<td>Not assigned</td>
-												<td>28881888</td>
-												<td>Pending CCC allocation</td>
-												<td>Chan Tai Man</td>
-												<td>Not assigned</td>
-												<td>12 Dec 2019</td>
-												<td>Not assigned1</td>
-												<td>Not assigned2</td>
-											</tr>
-											<tr>
-												<th scope="row"><input type="checkbox" value=""></th>
-												<td>28881888</td>
-												<td>Pending Customer</td>
-												<td>Chan Tai Man</td>
-												<td>Not assigned</td>
-												<td>12 Dec 2019</td>
-												<td>12 Mar 2020</td>
-												<td>28881888</td>
-												<td>Pending CCC allocation</td>
-												<td>Chan Tai Man</td>
-												<td>Not assigned</td>
-												<td>12 Dec 2019</td>
-												<td>Not assigned1</td>
-												<td>Not assigned2</td>	
-											</tr>
-											<tr>
-												<th scope="row"><input type="checkbox" value=""></th>
-												<td>28881888</td>
-												<td>Pending Customer</td>
-												<td>Chan Tai Man</td>
-												<td>Aaron</td>
-												<td>12 Dec 2019</td>
-												<td>12 Mar 2020</td>
-												<td>28881888</td>
-												<td>Pending CCC allocation</td>
-												<td>Chan Tai Man</td>
-												<td>Not assigned</td>
-												<td>12 Dec 2019</td>
-												<td>Not assigned1</td>
-												<td>Not assigned2</td>
-											</tr>
-										</tbody>
-									</table>
-									<!-- table-responsive end -->
-									
-									<!-- Pagination -->
-									<nav class="" aria-label="Page navigation example">
-										<label class="float-left" for="">Showing 1 to 10 of 57 entries</label>
-										<ul class="pagination float-right">
-											<li class="page-item">
-												<a class="page-link text-success" href="#" aria-label="Previous">
-													<span aria-hidden="true">&laquo;</span>
-													<span class="sr-only">Previous</span>
-												</a>
-											</li>
-											<li class="page-item"><a class="page-link text-success" href="#">1</a></li>
-											<li class="page-item"><a class="page-link text-success" href="#">2</a></li>
-											<li class="page-item"><a class="page-link text-success" href="#">3</a></li>
-											<li class="page-item">
-												<a class="page-link text-success" href="#" aria-label="Next">
-													<span aria-hidden="true">&raquo;</span>
-													<span class="sr-only">Next</span>
-												</a>
-											</li>
-										</ul>
-									</nav>
-									<!-- Pagination end -->
 								</div>
+								<!-- modal end -->
 							</div>
-							<!-- table end-->
+							<!-- table-button end -->
+							
+							<!-- table-responsive -->
+							<table class="col-12 table table-striped table-hover table-responsive pl-0">
+								<thead>
+									<tr>
+									<th scope="col"></th>
+									<th scope="col">Application ID</th>
+									<th scope="col">Status</th>
+									<th scope="col">Customer Name</th>
+									<th scope="col">Assigned To</th>
+									<th scope="col">Date Created</th>
+									<th scope="col">BBO Assigned Date</th>
+									<th scope="col">aaa</th>
+									<th scope="col">Application ID</th>
+									<th scope="col">Status</th>
+									<th scope="col">Customer Name</th>
+									<th scope="col">Assigned To</th>
+									<th scope="col">Date Created</th>
+									<th scope="col">BBO Assigned Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td>28881888</td>
+										<td>Pending CCC allocation</td>
+										<td>Chan Tai Man</td>
+										<td>Not assigned</td>
+										<td>12 Dec 2019</td>
+										<td>Not assigned</td>
+										<td>28881888</td>
+										<td>Pending CCC allocation</td>
+										<td>Chan Tai Man</td>
+										<td>Not assigned</td>
+										<td>12 Dec 2019</td>
+										<td>Not assigned1</td>
+										<td>Not assigned2</td>
+									</tr>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td>28881888</td>
+										<td>Pending Customer</td>
+										<td>Chan Tai Man</td>
+										<td>Not assigned</td>
+										<td>12 Dec 2019</td>
+										<td>12 Mar 2020</td>
+										<td>28881888</td>
+										<td>Pending CCC allocation</td>
+										<td>Chan Tai Man</td>
+										<td>Not assigned</td>
+										<td>12 Dec 2019</td>
+										<td>Not assigned1</td>
+										<td>Not assigned2</td>	
+									</tr>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td>28881888</td>
+										<td>Pending Customer</td>
+										<td>Chan Tai Man</td>
+										<td>Aaron</td>
+										<td>12 Dec 2019</td>
+										<td>12 Mar 2020</td>
+										<td>28881888</td>
+										<td>Pending CCC allocation</td>
+										<td>Chan Tai Man</td>
+										<td>Not assigned</td>
+										<td>12 Dec 2019</td>
+										<td>Not assigned1</td>
+										<td>Not assigned2</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- table-responsive end -->
+							
+							<!-- Pagination -->
+							<nav aria-label="Page navigation">
+								<label class="float-left" for="">Showing 1 to 10 of 57 entries</label>
+								<ul class="pagination float-right">
+									<li class="page-item">
+										<a class="page-link text-success" href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+											<span class="sr-only">Previous</span>
+										</a>
+									</li>
+									<li class="page-item"><a class="page-link text-success" href="#">1</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">2</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+									<li class="page-item">
+										<a class="page-link text-success" href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+											<span class="sr-only">Next</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<!-- Pagination end -->
 						</div>
-					</div>					
-				</section>
-				<!-- #Applications end-->
-
-
-				<section id="Admin" class="container-fluid tab-pane fade">
-					Admin page.
-				</section>
-				<section id="Team" class="container-fluid tab-pane fade"><br>
-					Manage-Team page.
-				</section>
-				<section id="Timeslot" class="container-fluid tab-pane fade"><br>
-					Manage-Timeslot page.
-				</section>
-				<section id="Report" class="container-fluid tab-pane fade"><br>
-					Manage-Report page.
-				</section>
-
-			</div>
-			<!-- TabContent end-->
+					</div>
+					<!-- table end-->
+				</div>
+			</div>					
+			<!-- 51000 Applications_list_page end-->
         </main>
 		
 	</div>
