@@ -6,76 +6,85 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_Manage_TeamProgress</title>
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="./lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./lib/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>-->
+
+
 </head>
 
 <body>
 	<div class="cover-container">	
 
 		<!-- 01 Navbar -->
-		<!-- <div class="fixed-top"> -->
 		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
-			<!-- Brand and collapse-icon -->
-			<div class="order-1 d-inline-flex py-2">
-				<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
-			</div>
-			<!-- nav-Links -->
-			<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
-				<ul class="navbar-nav nav">
-					<li class="nav-item">
-						<a class="nav-link text-white" href="applications_list.html">Applications</a>
-					</li>
-					<!-- Dropdown -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
-						<ul class="dropdown-menu bg-success py-0">
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
-							</li>
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="#">Report</a>
-							</li>
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="#">Timeslot</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Admin</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">
-							Notification<span class="badge badge-info">4</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!--  nav-right -->
-			<div class="text-white order-2 order-lg-3">
-				<div class="d-inline-flex justify-content-end">
-					<div class="border-left p-3 col-auto">
-						<img src="img/globe.svg"/>
-						<select class="bg-success text-white border-0" ng-model="selectedLanguage">
-							<option name="selectedLanguage" value="English">English</option>
-							<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
-							<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
-						</select>
-					</div>
-					<div class="d-inlink-block border-left p-3 col-auto mr-3">
-						<img class="img-circle" src="img/loginPic.svg"/>
-						<span ng-model="username">Chrismrs Wong</span>
-					</div>
-				</div>
-			</div>
-		</nav>
-		<!-- 01 Navbar end-->
+            <!-- Brand and collapse-icon -->
+            <div class="order-1 d-inline-flex py-2">
+                <button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+            </div>
+            <!-- nav-Links -->
+            <div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+                <ul class="navbar-nav nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="applications_list.html">Applications</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+                        <ul class="dropdown-menu bg-success py-0">
+                            <li class="nav-item">
+                                <a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item text-white" href="#">Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item text-white" href="#">Timeslot</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            Notification<span class="badge badge-info">4</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--  nav-right -->
+            <div class="text-white order-2 order-lg-3">
+                <div class="d-flex justify-content-end">
+                    <div class="border-left py-2 col-auto">
+                        <!--<img src="img/globe.svg"/>-->
+                        <i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
+                        <select class="bg-success text-white border-0" ng-model="selectedLanguage">
+                            <option name="selectedLanguage" value="English">English</option>
+                            <option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+                            <option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+                        </select>
+                    </div>
+                    <div class="d-inlink-flex border-left pt-2 col-auto mr-3">
+                        <div class="float-left mr-3 bg-white text-success border border-circle p-1">
+                            <span for="">CW</span>
+                        </div>
+                        <!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
+                        <!-- <img class="img-circle" src="img/loginPic.svg"/> -->
+                        <span class="float-left" ng-model="username">Chrismrs Wong</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 01 Navbar end-->
 
 
         <main class="container-fluid py-3">
@@ -94,25 +103,41 @@
                         </div>
                         <form class="card-body">
                             <div class="row">
-                                <div class="col-3">
-                                    <label class="control-label border-0 pl-0" for="">Application Number:</label></br>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                                <div class="col-3 px-2">
+                                	<div class="px-3 border rounded">
+	                                    <label class="control-label border-0 pl-0" for="">Type of Application:</label></br>
+	                                    <label class="radio-inline"><input type="radio" name="optradio">NTB</label>
+	                                    <label class="radio-inline"><input type="radio" name="optradio">ETB</label>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <label class="control-label border-0 pl-0" for="">Application Number:</label></br>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                                <div class="col-3 px-2">
+                                	<div class="px-3 border rounded">
+	                                    <label class="control-label border-0 pl-0" for="">Type of RP:</label></br>
+	                                    <label class="radio-inline"><input type="radio" name="optradio">RP</label>
+	                                    <label class="radio-inline"><input type="radio" name="optradio">Non-PR</label>
+                                    </div>
                                 </div>
-                                <div class="col-3">
-                                    <label class="control-label border-0 pl-0" for="">Application Number:</label></br>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 1</label>
-                                    <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+                                <div class="col-4 px-2">
+                                	<div class="px-3 border rounded">
+	                                    <label class="control-label border-0 pl-0" for="">Appointment Date:</label></br>
+	                                    <label class="radio-inline"><input type="radio" name="optradio">From:</label>
+	                                    
+							  			<!--<label for="dtp_input2" class="col-md-2 control-label">Date Picking</label>
+						                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+						                    <input class="form-control" size="16" type="text" value="" readonly>
+						                    <span class="input-group-addon"><span class="fa fa-remove"></span></span>
+											<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+						                </div>
+										<input type="hidden" id="dtp_input2" value="" /><br/>-->
+	                                    
+	                                    
+	                                    <label class="radio-inline"><input type="radio" name="optradio">To:</label>
+                                   	</div>
                                 </div>
                                 
                             </div>
-                            <div class="row">
-                                <button class="btn btn-success col-md-2 offset-md-10" type="submit" >Filter</button>
+                            <div class="row pr-2">
+                                <button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Filter</button>
                             </div>
                         </form>
                     </div>
@@ -128,8 +153,9 @@
                             Table
                         </div>
                         <div class="card-body px-3 pt-0">
+
                             <!-- table-responsive -->
-                            <table class="col-12 table table-striped table-hover table-responsive pl-0">
+                            <table class="col-12 table table-striped table-hover table-responsive px-0">
                                 <thead class="thead-light">
                                     <tr>
                                     <th scope="col"></th>
@@ -223,7 +249,18 @@
 	 $(document).ready(function () {
 	 	dropdownOpen();
 	 	$(document).off('click.bs.dropdown.data-api');
-	 });
+	 	
+//	 	$('.form_date').datetimepicker({
+//	        language:  'fr',
+//	        weekStart: 1,
+//	        todayBtn:  1,
+//			autoclose: 1,
+//			todayHighlight: 1,
+//			startView: 2,
+//			minView: 2,
+//			forceParse: 0
+// 		 });
+    });
 
 	 /**
 	 * 鼠标划过就展开子菜单，免得需要点击才能展开
