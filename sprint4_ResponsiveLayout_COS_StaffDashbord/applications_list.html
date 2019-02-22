@@ -6,8 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_list</title>
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
@@ -17,7 +18,6 @@
 	<div class="cover-container">	
 
 		<!-- 01 Navbar -->
-		<!-- <div class="fixed-top"> -->
 		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
 			<!-- Brand and collapse-icon -->
 			<div class="order-1 d-inline-flex py-2">
@@ -59,18 +59,23 @@
 			</div>
 			<!--  nav-right -->
 			<div class="text-white order-2 order-lg-3">
-				<div class="d-inline-flex justify-content-end">
-					<div class="border-left p-3 col-auto">
-						<img src="img/globe.svg"/>
+				<div class="d-flex justify-content-end">
+					<div class="border-left py-2 col-auto">
+						<!--<img src="img/globe.svg"/>-->
+						<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
 						<select class="bg-success text-white border-0" ng-model="selectedLanguage">
 							<option name="selectedLanguage" value="English">English</option>
 							<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
 							<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
 						</select>
 					</div>
-					<div class="d-inlink-block border-left p-3 col-auto mr-3">
-						<img class="img-circle" src="img/loginPic.svg"/>
-						<span ng-model="username">Chrismrs Wong</span>
+					<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
+						<div class="float-left mr-3 bg-white text-success border border-circle p-1">
+							<span for="">CW</span>
+						</div>
+						<!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
+						<!-- <img class="img-circle" src="img/loginPic.svg"/> -->
+						<span class="float-left" ng-model="username">Chrismrs Wong</span>
 					</div>
 				</div>
 			</div>
@@ -85,43 +90,52 @@
 				<div class="order-last order-xl-first order-lg-first col-12 col-lg-8 pr-lg-2 pr-xl-2 mb-3">
 					<div class="card bg-white h-100">
 						<div class="card-header bg-white text-success font-weight-bold">
-							Filter
+							Search
 						</div>
 						<form class="card-body px-5">
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">Application Number:</label>
-								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
+
+							<div class="row">
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">Application Number:</label>
+									<input class="form-control h-75 pl-3" type="text" placeholder="">
+								</div>
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">Status:</label>
+									<select class="form-control" ng-model="selectedStatus">
+										<option name="selectedStatus" value="English">All status</option>
+									</select>
+								</div>
 							</div>
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">Status:</label>
-								<select class="form-control col-9" ng-model="selectedStatus">
-									<option name="selectedStatus" value="English">All status</option>
-								</select>
-							</div>
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">Customer Name:</label>
-								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
-							</div>
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">Customer ID:</label>
-								<input class="form-control col-9 h-75 py-2 pl-3" type="text" placeholder="customer name,company name,application number,staff name">
+
+							<div class="row">
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">Customer Name:</label>
+									<input class="form-control pl-3" type="text" placeholder="">
+								</div>
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">Customer ID:</label>
+									<input class="form-control pl-3" type="text" placeholder="">
+								</div>
 							</div>
 							
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">Business Centre:</label>
-								<select class="form-control col-9" ng-model="selectedCentre">
-									<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
-									<option name="selectedCentre" value="Centre">Centre</option>
-									<option name="selectedCentre" value="MongKok">Mong Kok</option>
-								</select>
-							</div>
-							<div class="form-group row">
-								<label class="control-label border-0 col-3 pl-0" for="">BBO Assigned:</label>
-								<select class="form-control col-9" ng-model="selectedCentre">
-									<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
-									<option name="selectedCentre" value="Centre">Centre</option>
-									<option name="selectedCentre" value="MongKok">Mong Kok</option>
-								</select>
+							<div class="row">
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">Business Centre:</label>
+									<select class="form-control" ng-model="selectedCentre">
+										<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
+										<option name="selectedCentre" value="Centre">Centre</option>
+										<option name="selectedCentre" value="MongKok">Mong Kok</option>
+									</select>
+								</div>
+								<div class="form-group col-6">
+									<label class="control-label border-0 pl-0" for="">BBO Assigned:</label>
+									<select class="form-control" ng-model="selectedCentre">
+										<option name="selectedCentre" value="Centre">Aaron</option>
+										<option name="selectedCentre" value="Beatrice">Beatrice</option>
+										<option name="selectedCentre" value="Candy">Candy</option>
+										<option name="selectedCentre" value="Danny">Danny</option>
+									</select>
+								</div>
 							</div>
 							<!-- <div class="form-check col-5 offset-3 pl-3">
 								<label class="form-check-label">
@@ -129,7 +143,7 @@
 								</label>
 							</div> -->
 							<div class="row">
-								<button class="btn btn-success col-md-2 offset-md-10" type="submit" >Search</button>
+								<button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Search</button>
 							</div>
 						</form>
 					</div>
@@ -140,10 +154,16 @@
 				<div class="col-12 col-lg-4 pl-lg-2 pl-xl-2 mb-3">
 					<div class="card bg-white h-100">
 						<div class="card-header bg-white text-success font-weight-bold">
-							Summary
+							My Summary
 						</div>
 						<div class="card-body px-5">
-							<!-- Summary-body -->
+							<label for="">Pending CCC allocation</label>
+							<label class="font-weight-bold mx-3" for=""> 23 </label>
+							<a href="#">View</a><br>
+
+							<label for="">Pending for handing</label>
+							<label class="font-weight-bold mx-3" for=""> 17 </label>
+							<a href="#">View</a><br>
 						</div>
 					</div>
 				</div>
@@ -155,15 +175,15 @@
 					<!-- table -->
 					<div class="card bg-white">
 						<div class="card-header bg-white text-success font-weight-bold">
-							Table
+							Application
 						</div>
 						<div class="card-body px-3 pt-3">
 							<!-- table-button -->
-							<div class="row pr-3 mb-3">
-								<button class="btn btn-success col-md-1 offset-md-10" type="submit"  data-toggle="modal" data-target="#myModal">Assign</button>
-								<button class="btn btn-success col-md-1" type="submit" >+Create</button>
-								<!-- modal start -->
-								<div class="modal fade" id="myModal">
+							<div class="d-flex justify-content-end mb-3">
+								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#AssignModal">Assign</button>
+								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#CallAgentModal">Call Agent</button>
+								<!-- AssignModal -->
+								<div class="modal fade" id="AssignModal">
 									<div class="modal-dialog modal-sm">
 										<div class="modal-content">
 											<!-- modal-header -->
@@ -173,93 +193,185 @@
 											</div> -->
 											<!-- modal-body -->
 											<div class="modal-body">
-												<label for="">Assign the 4 cases to</label>
-												<select ng-model="selectedCentre">
-													<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres
-													<option name="selectedCentre" value="Centre">Centre
-													<option name="selectedCentre" value="MongKok">Mong Kok
+												<label for="">Assign the 4 cases to</label><br>
+												<select class="col-12" ng-model="selectedCentre">
+													<option name="selectedCentre" value="Centre">Aaron</option>
+													<option name="selectedCentre" value="Beatrice">Beatrice</option>
+													<option name="selectedCentre" value="Candy">Candy</option>
+													<option name="selectedCentre" value="Danny">Danny</option>
 												</select>
 											</div>
 											<!-- modal-footer -->
 											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-default">Save</button>
+												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
+												<button type="button" class="btn btn-outline-success" onclick="SetAssignModalTimeOut()">Save</button>
+												
+												<!-- bdata-backdrop="false"去除遮罩层  -->
+												<div class="modal fade modal-sm mx-3 pt-3" id="TimeOutAssignModal" role="dialog" data-backdrop="false" aria-hidden="true">
+												    <div class="modal-dialog modal-sm">
+												        <div class="modal-content">
+												            <p class="text-center border border-success mb-0 py-2">
+												                <i class="fa fa-check-circle text-success mr-1" aria-hidden="true"></i>
+												                Save successful !
+												            </p>
+												        </div>
+												    </div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<!-- modal end -->
+								<!-- CallAgentModal -->
+								<div class="modal fade" id="CallAgentModal">
+									<div class="modal-dialog modal-sm">
+										<div class="modal-content">
+											<!-- modal-header -->
+											<!-- <div class="modal-header">
+												<h4 class="modal-title">Assign the 4 cases to</h4>
+												<button type="button" class="close" data-dismiss="modal">&times;</button>
+											</div> -->
+											<!-- modal-body -->
+											<div class="modal-body">
+												<label for="">Assign the 4 cases to</label><br>
+												<select class="col-12" ng-model="selectedCentre">
+													<option name="selectedCentre" value="Centre">Aaron</option>
+													<option name="selectedCentre" value="Beatrice">Beatrice</option>
+													<option name="selectedCentre" value="Candy">Candy</option>
+													<option name="selectedCentre" value="Danny">Danny</option>
+												</select>
+											</div>
+											<!-- modal-footer -->
+											<div class="modal-footer">
+												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
+												<button type="button" class="btn btn-outline-success">Save</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 							<!-- table-button end -->
 							
+							
 							<!-- table-responsive -->
-							<table class="col-12 table table-striped table-hover table-responsive pl-0">
+							<table class="col-12 table table-striped table-hover table-sm table-responsive px-0">
 								<thead>
 									<tr>
 									<th scope="col"></th>
-									<th scope="col">Application ID</th>
+									<th scope="col">ID 
+										<i class="fa fa-sort" aria-hidden="true"></i>
+										<!--<img src="./img/sortby.svg" height="15">-->
+									</th>
+									<th scope="col">Type</th>
+									<th scope="col">Entity Type</th>
+									<th scope="col">Company Name 
+										<i class="fa fa-sort-desc" aria-hidden="true"></i>
+										<!--<img src="./img/sort-down.svg" height="17">-->
+									</th>
+									<th scope="col">Customer ID 
+										<i class="fa fa-sort-desc" aria-hidden="true"></i>
+										<!--<img src="./img/sort-up.svg" height="17">-->
+									</th>
+									<th scope="col">Category</th>
 									<th scope="col">Status</th>
-									<th scope="col">Customer Name</th>
-									<th scope="col">Assigned To</th>
-									<th scope="col">Date Created</th>
-									<th scope="col">BBO Assigned Date</th>
-									<th scope="col">aaa</th>
-									<th scope="col">Application ID</th>
-									<th scope="col">Status</th>
-									<th scope="col">Customer Name</th>
-									<th scope="col">Assigned To</th>
-									<th scope="col">Date Created</th>
-									<th scope="col">BBO Assigned Date</th>
+									<th scope="col">Remark</th>
+									<th scope="col">Appointment Date & Time</th>
+									<th scope="col">Confirmed Venue</th>
+									<th scope="col">Handling Call Agent</th>
+									<th scope="col">Task Due Date</th>
+									<th scope="col">Document Last Upload Date</th>
+									<th scope="col">Last Modified Date</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
 										<td>28881888</td>
+										<td>NTB</td>
+										<td>Corporate</td>
+										<td>Happy House Ltd.</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
-										<td>Chan Tai Man</td>
-										<td>Not assigned</td>
-										<td>12 Dec 2019</td>
-										<td>Not assigned</td>
-										<td>28881888</td>
-										<td>Pending CCC allocation</td>
-										<td>Chan Tai Man</td>
-										<td>Not assigned</td>
-										<td>12 Dec 2019</td>
-										<td>Not assigned1</td>
-										<td>Not assigned2</td>
+										<td class="align-middle text-center">
+											<a href="#" class=""  data-toggle="popover" data-trigger="focus"  data-content="Remark body details ... ">
+												<!--<i class="fa fa-info-circle text-white bg-success rounded-circle" aria-hidden="true"></i>-->
+												<img class="" src="./img/info.svg" height="25">
+											</a>
+										</td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
 										<td>28881888</td>
-										<td>Pending Customer</td>
-										<td>Chan Tai Man</td>
-										<td>Not assigned</td>
-										<td>12 Dec 2019</td>
-										<td>12 Mar 2020</td>
-										<td>28881888</td>
+										<td>NTB</td>
+										<td>Partnership</td>
+										<td>HABC Limited</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
-										<td>Chan Tai Man</td>
-										<td>Not assigned</td>
-										<td>12 Dec 2019</td>
-										<td>Not assigned1</td>
-										<td>Not assigned2</td>	
+										<td></td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>	
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
 										<td>28881888</td>
-										<td>Pending Customer</td>
-										<td>Chan Tai Man</td>
-										<td>Aaron</td>
-										<td>12 Dec 2019</td>
-										<td>12 Mar 2020</td>
-										<td>28881888</td>
+										<td>NTB</td>
+										<td>NPO</td>
+										<td>Pacific Coffee Ltd.</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
-										<td>Chan Tai Man</td>
-										<td>Not assigned</td>
-										<td>12 Dec 2019</td>
-										<td>Not assigned1</td>
-										<td>Not assigned2</td>
+										<td></td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>
+									</tr>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td>28881888</td>
+										<td>NTB</td>
+										<td>Corporate</td>
+										<td>Happy House Ltd.</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
+										<td>Pending CCC allocation</td>
+										<td></td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>
+									</tr>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td>28881888</td>
+										<td>NTB</td>
+										<td>Corporate</td>
+										<td>Pacific Coffee Ltd.</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
+										<td>Pending CCC allocation</td>
+										<td></td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>
 									</tr>
 								</tbody>
 							</table>
@@ -303,6 +415,10 @@
 	 $(document).ready(function () {
 	 	dropdownOpen();
 	 	$(document).off('click.bs.dropdown.data-api');
+	 	
+	 	PopoverRemark();
+	 	
+	 	SetAssignModalTimeOut();
 	 });
 
 	 /**
@@ -318,4 +434,17 @@
 	 	});
 	 }
 	
+	function PopoverRemark(){
+		$('[data-toggle="popover"]').popover( { html : true });
+	}
+	
+	function SetAssignModalTimeOut(){
+		$('#TimeOutAssignModal').modal('show');
+		setTimeout(function(){
+			$("#AssignModal").modal("hide")
+		},500);
+        setTimeout(function(){
+            $("#TimeOutAssignModal").modal("hide")
+        },500);
+	}
 </script>
