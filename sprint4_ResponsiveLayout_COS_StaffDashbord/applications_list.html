@@ -86,20 +86,40 @@
         <main class="container-fluid py-3">
 			<!-- 51000 Applications_list_page -->
 			<div class="row">
-				<!-- Filter -->
-				<div class="order-last order-xl-first order-lg-first col-12 col-lg-8 pr-lg-2 pr-xl-2 mb-3">
+
+				<!-- summary -->
+				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3">
 					<div class="card bg-white h-100">
-						<div class="card-header bg-white text-success font-weight-bold">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
+							My Summary
+						</div>
+						<div class="card-body px-3">
+							<label for="">Pending CCC allocation</label>
+							<label class="font-weight-bold mx-3" for=""> 23 </label>
+							<a href="#">View</a><br>
+
+							<label for="">Pending for handing</label>
+							<label class="font-weight-bold mx-3" for=""> 17 </label>
+							<a href="#">View</a><br>
+						</div>
+					</div>
+				</div>
+				<!-- summary end-->
+
+				<!-- Search -->
+				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3">
+					<div class="card bg-white h-100">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
 							Search
 						</div>
-						<form class="card-body px-5">
+						<form class="card-body px-3">
 
 							<div class="row">
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
 									<label class="control-label border-0 pl-0" for="">Application Number:</label>
-									<input class="form-control h-75 pl-3" type="text" placeholder="">
+									<input class="form-control pl-3" type="text" placeholder="">
 								</div>
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
 									<label class="control-label border-0 pl-0" for="">Status:</label>
 									<select class="form-control" ng-model="selectedStatus">
 										<option name="selectedStatus" value="English">All status</option>
@@ -108,18 +128,18 @@
 							</div>
 
 							<div class="row">
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
 									<label class="control-label border-0 pl-0" for="">Customer Name:</label>
 									<input class="form-control pl-3" type="text" placeholder="">
 								</div>
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
 									<label class="control-label border-0 pl-0" for="">Customer ID:</label>
 									<input class="form-control pl-3" type="text" placeholder="">
 								</div>
 							</div>
 							
 							<div class="row">
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
 									<label class="control-label border-0 pl-0" for="">Business Centre:</label>
 									<select class="form-control" ng-model="selectedCentre">
 										<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
@@ -127,7 +147,7 @@
 										<option name="selectedCentre" value="MongKok">Mong Kok</option>
 									</select>
 								</div>
-								<div class="form-group col-6">
+								<div class="form-group col-12 col-lg-6 pl-lg-2">
 									<label class="control-label border-0 pl-0" for="">BBO Assigned:</label>
 									<select class="form-control" ng-model="selectedCentre">
 										<option name="selectedCentre" value="Centre">Aaron</option>
@@ -142,39 +162,21 @@
 									<input class="form-check-input" type="checkbox" value="">Show only action by me
 								</label>
 							</div> -->
-							<div class="row">
+							<div class="row px-3">
 								<button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Search</button>
 							</div>
 						</form>
 					</div>
 				</div>
-				<!-- Filter end -->
+				<!-- Search end -->
 				
-				<!-- summary -->
-				<div class="col-12 col-lg-4 pl-lg-2 pl-xl-2 mb-3">
-					<div class="card bg-white h-100">
-						<div class="card-header bg-white text-success font-weight-bold">
-							My Summary
-						</div>
-						<div class="card-body px-5">
-							<label for="">Pending CCC allocation</label>
-							<label class="font-weight-bold mx-3" for=""> 23 </label>
-							<a href="#">View</a><br>
-
-							<label for="">Pending for handing</label>
-							<label class="font-weight-bold mx-3" for=""> 17 </label>
-							<a href="#">View</a><br>
-						</div>
-					</div>
-				</div>
-				<!-- summary end-->
 			</div>
 			
 			<div class="row">
 				<div class="col h-100">
 					<!-- table -->
 					<div class="card bg-white">
-						<div class="card-header bg-white text-success font-weight-bold">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
 							Application
 						</div>
 						<div class="card-body px-3 pt-3">
@@ -183,7 +185,7 @@
 								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#AssignModal">Assign</button>
 								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#CallAgentModal">Call Agent</button>
 								<!-- AssignModal -->
-								<div class="modal fade" id="AssignModal">
+								<div class="modal fade" id="AssignModal" data-backdrop="static">
 									<div class="modal-dialog modal-sm">
 										<div class="modal-content">
 											<!-- modal-header -->
@@ -204,10 +206,10 @@
 											<!-- modal-footer -->
 											<div class="modal-footer">
 												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-outline-success" onclick="SetAssignModalTimeOut()">Save</button>
+												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('AssignModalMentionBox','AssignModal')">Save</button>
 												
 												<!-- bdata-backdrop="false"去除遮罩层  -->
-												<div class="modal fade modal-sm mx-3 pt-3" id="TimeOutAssignModal" role="dialog" data-backdrop="false" aria-hidden="true">
+												<div class="modal fade modal-sm mx-3 pt-3" id="AssignModalMentionBox" role="dialog" data-backdrop="false" aria-hidden="true">
 												    <div class="modal-dialog modal-sm">
 												        <div class="modal-content">
 												            <p class="text-center border border-success mb-0 py-2">
@@ -222,7 +224,7 @@
 									</div>
 								</div>
 								<!-- CallAgentModal -->
-								<div class="modal fade" id="CallAgentModal">
+								<div class="modal fade" id="CallAgentModal" data-backdrop="static">
 									<div class="modal-dialog modal-sm">
 										<div class="modal-content">
 											<!-- modal-header -->
@@ -243,14 +245,25 @@
 											<!-- modal-footer -->
 											<div class="modal-footer">
 												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-outline-success">Save</button>
+												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('CallAgentModalMentionBox','CallAgentModal')">Save</button>
+
+												<!-- bdata-backdrop="false"去除遮罩层  -->
+												<div class="modal fade modal-sm mx-3 pt-3" id="CallAgentModalMentionBox" role="dialog" data-backdrop="false" aria-hidden="true">
+													<div class="modal-dialog modal-sm">
+														<div class="modal-content">
+															<p class="text-center border border-success mb-0 py-2">
+																<i class="fa fa-check-circle text-success mr-1" aria-hidden="true"></i>
+																Save successful !
+															</p>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<!-- table-button end -->
-							
 							
 							<!-- table-responsive -->
 							<table class="col-12 table table-striped table-hover table-sm table-responsive px-0">
@@ -293,9 +306,9 @@
 										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
 										<td class="align-middle text-center">
-											<a href="#" class=""  data-toggle="popover" data-trigger="focus"  data-content="Remark body details ... ">
-												<!--<i class="fa fa-info-circle text-white bg-success rounded-circle" aria-hidden="true"></i>-->
-												<img class="" src="./img/info.svg" height="25">
+											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus"  data-content="Remark body details ... ">
+												<i class="fa fa-search fa-2x text-success" aria-hidden="true"></i>
+												<!-- <img class="" src="./img/info.svg" height="25"> -->
 											</a>
 										</td>
 										<td>31 Dec 2020 11:30</td>
@@ -413,12 +426,16 @@
 
 <script type="text/javascript">
 	 $(document).ready(function () {
+		// 鼠标悬停展开dropdown_list
 	 	dropdownOpen();
 	 	$(document).off('click.bs.dropdown.data-api');
-	 	
-	 	PopoverRemark();
-	 	
-	 	SetAssignModalTimeOut();
+		 
+		// 鼠标点击打开popover
+		$('[data-toggle="popover"]').popover( { html : true });
+		 
+		// 设置提醒框定时关闭 
+		SetMentionBox(AssignModal,AssignModalMentionBox);
+		SetMentionBox(CallAgentModal,CallAgentModalMentionBox);
 	 });
 
 	 /**
@@ -433,18 +450,15 @@
 	 		$dropdownMenu.removeClass('d-block');
 	 	});
 	 }
-	
-	function PopoverRemark(){
-		$('[data-toggle="popover"]').popover( { html : true });
-	}
-	
-	function SetAssignModalTimeOut(){
-		$('#TimeOutAssignModal').modal('show');
+
+	 function SetMentionBox(MentionBoxName,ModalName){
+		$("#"+ MentionBoxName).modal('show');
 		setTimeout(function(){
-			$("#AssignModal").modal("hide")
+			$("#"+ ModalName).modal("hide")
 		},500);
         setTimeout(function(){
-            $("#TimeOutAssignModal").modal("hide")
+            $("#"+ MentionBoxName).modal("hide")
         },500);
 	}
+
 </script>

@@ -98,45 +98,47 @@
                 <!-- Filter -->
                 <div class="order-last order-xl-first order-lg-first col-12 mb-3">
                     <div class="card bg-white h-100">
-                        <div class="card-header bg-white text-success font-weight-bold">
+                        <div class="card-header bg-white text-success font-weight-bold pl-3">
                             Filter
                         </div>
-                        <form class="card-body">
+                        <form class="card-body px-3">
                             <div class="row">
-                                <div class="col-3 px-2">
-                                	<div class="px-3 border rounded">
-	                                    <label class="control-label border-0 pl-0" for="">Type of Application:</label></br>
-	                                    <label class="radio-inline"><input type="radio" name="optradio">NTB</label>
-	                                    <label class="radio-inline"><input type="radio" name="optradio">ETB</label>
+                                <div class="col-lg-5 d-lg-inline-flex px-0 mb-3">
+                                    <div class="col-12 col-lg-6 pr-lg-2 mb-3">
+                                    	<div class="px-3 border rounded">
+    	                                    <label class="control-label border-0 pl-0" for="">Type of Application:</label><br>
+    	                                    <label class="checkbox-inline"><input type="checkbox">NTB</label>
+    	                                    <label class="checkbox-inline"><input type="checkbox">ETB</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 px-lg-2">
+                                    	<div class="px-3 border rounded">
+    	                                    <label class="control-label border-0 pl-0" for="">Type of RP:</label><br>
+    	                                    <label class="checkbox-inline"><input type="checkbox">RP</label>
+    	                                    <label class="checkbox-inline"><input type="checkbox">Non-PR</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-3 px-2">
-                                	<div class="px-3 border rounded">
-	                                    <label class="control-label border-0 pl-0" for="">Type of RP:</label></br>
-	                                    <label class="radio-inline"><input type="radio" name="optradio">RP</label>
-	                                    <label class="radio-inline"><input type="radio" name="optradio">Non-PR</label>
+                                <div class="col-lg-7 d-lg-inline-flex px-0">
+                                    <div class="col-12 col-lg-7 px-lg-2 mb-3">
+                                        <div class="px-3 border rounded">
+                                            <label class="control-label border-0 pl-0" for="">Appointment Date:</label><br>
+                                            <label type="text">From:</label>
+                                            02/25/2019
+                                            <label type="text">To:</label>
+                                            02/25/2019
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 pl-lg-2">
+                                        <div class="px-3 border rounded">
+                                            <label class="control-label border-0 pl-0" for="">Type of RP:</label><br>
+                                            <label class="checkbox-inline"><input type="checkbox">RP</label>
+                                            <label class="checkbox-inline"><input type="checkbox">Non-PR</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4 px-2">
-                                	<div class="px-3 border rounded">
-	                                    <label class="control-label border-0 pl-0" for="">Appointment Date:</label></br>
-	                                    <label class="radio-inline"><input type="radio" name="optradio">From:</label>
-	                                    
-							  			<!--<label for="dtp_input2" class="col-md-2 control-label">Date Picking</label>
-						                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-						                    <input class="form-control" size="16" type="text" value="" readonly>
-						                    <span class="input-group-addon"><span class="fa fa-remove"></span></span>
-											<span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-						                </div>
-										<input type="hidden" id="dtp_input2" value="" /><br/>-->
-	                                    
-	                                    
-	                                    <label class="radio-inline"><input type="radio" name="optradio">To:</label>
-                                   	</div>
-                                </div>
-                                
                             </div>
-                            <div class="row pr-2">
+                            <div class="row px-3 mt-3">
                                 <button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Filter</button>
                             </div>
                         </form>
@@ -149,7 +151,7 @@
                 <div class="col h-100">
                     <!-- table -->
                     <div class="card bg-white">
-                        <div class="card-header bg-white text-success font-weight-bold">
+                        <div class="card-header bg-white text-success font-weight-bold pl-3">
                             Table
                         </div>
                         <div class="card-body px-3 pt-0">
@@ -158,7 +160,6 @@
                             <table class="col-12 table table-striped table-hover table-responsive px-0">
                                 <thead class="thead-light">
                                     <tr>
-                                    <th scope="col"></th>
                                     <th scope="col">Application ID</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Customer Name</th>
@@ -172,7 +173,6 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" value=""></th>
                                         <td>28881888</td>
                                         <td>Pending CCC allocation</td>
                                         <td>Chan Tai Man</td>
@@ -184,7 +184,6 @@
                                         <td>Chan Tai Man</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" value=""></th>
                                         <td>28881888</td>
                                         <td>Pending Customer</td>
                                         <td>Chan Tai Man</td>
@@ -196,7 +195,6 @@
                                         <td>Chan Tai Man</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" value=""></th>
                                         <td>28881888</td>
                                         <td>Pending Customer</td>
                                         <td>Chan Tai Man</td>
