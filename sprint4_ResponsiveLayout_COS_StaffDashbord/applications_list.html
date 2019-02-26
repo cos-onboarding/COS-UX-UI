@@ -306,8 +306,8 @@
 										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
 										<td class="align-middle text-center">
-											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus"  data-content="Remark body details ... ">
-												<i class="fa fa-search fa-2x text-success" aria-hidden="true"></i>
+											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" data-content="Remark body details ... ">
+												<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
 												<!-- <img class="" src="./img/info.svg" height="25"> -->
 											</a>
 										</td>
@@ -433,12 +433,16 @@
 		// 鼠标点击打开popover
 		$('[data-toggle="popover"]').popover( { html : true });
 		 
-		// 设置提醒框定时关闭 
-		SetMentionBox(AssignModal,AssignModalMentionBox);
-		SetMentionBox(CallAgentModal,CallAgentModalMentionBox);
+		function setMentionBoxTimeOut(){ 
+			// 设置提醒框定时关闭
+			SetMentionBox("AssignModal","AssignModalMentionBox");
+			SetMentionBox("CallAgentModal","CallAgentModalMentionBox");
+		}
 	 });
-
-	 /**
+	
+	
+	
+	/**
 	 * 鼠标划过就展开子菜单，免得需要点击才能展开
 	 */
 	 function dropdownOpen() {
@@ -454,10 +458,10 @@
 	 function SetMentionBox(MentionBoxName,ModalName){
 		$("#"+ MentionBoxName).modal('show');
 		setTimeout(function(){
-			$("#"+ ModalName).modal("hide")
+			$("#"+ ModalName).modal('hide')
 		},500);
         setTimeout(function(){
-            $("#"+ MentionBoxName).modal("hide")
+            $("#"+ MentionBoxName).modal('hide')
         },500);
 	}
 
