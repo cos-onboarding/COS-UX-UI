@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>StaffDashbord_applications_list</title>
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="./lib/jquery.min.js"></script>
+	<script src="./lib/popper.min.js"></script>
+	<script src="./lib/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="cover-container">	
+
+		<!-- 01 Navbar -->
+		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
+			<!-- Brand and collapse-icon -->
+			<div class="order-1 d-inline-flex py-2">
+				<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+			</div>
+			<!-- nav-Links -->
+			<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+				<ul class="navbar-nav nav">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="applications_list.html">Applications</a>
+					</li>
+					<!-- Dropdown -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+						<ul class="dropdown-menu bg-success py-0">
+							<li class="nav-item">
+								<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
+							</li>
+							<li class="nav-item">
+								<a class="dropdown-item text-white" href="#">Report</a>
+							</li>
+							<li class="nav-item">
+								<a class="dropdown-item text-white" href="#">Timeslot</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">Admin</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">
+							Notification<span class="badge badge-info">4</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--  nav-right -->
+			<div class="text-white order-2 order-lg-3">
+				<div class="d-flex justify-content-end">
+					<div class="border-left py-2 col-auto">
+						<!--<img src="img/globe.svg"/>-->
+						<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
+						<select class="bg-success text-white border-0" ng-model="selectedLanguage">
+							<option name="selectedLanguage" value="English">English</option>
+							<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+							<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+						</select>
+					</div>
+					<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
+						<div class="float-left mr-3 bg-white text-success border border-circle p-1">
+							<span for="">CW</span>
+						</div>
+						<!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
+						<!-- <img class="img-circle" src="img/loginPic.svg"/> -->
+						<span class="float-left" ng-model="username">Chrismrs Wong</span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- 01 Navbar end-->
+
+
+        <main class="container-fluid py-3">
+			<!-- 51000 Applications_list_page -->
+			<div class="row">
+
+				<!-- summary -->
+				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3">
+					<div class="card bg-white h-100">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
+							My Summary
+						</div>
+						<div class="card-body px-3">
+							<label for="">Pending CCC allocation</label>
+							<label class="font-weight-bold mx-3" for=""> 23 </label>
+							<a href="#">View</a><br>
+
+							<label for="">Pending for handing</label>
+							<label class="font-weight-bold mx-3" for=""> 17 </label>
+							<a href="#">View</a><br>
+						</div>
+					</div>
+				</div>
+				<!-- summary end-->
+
+				<!-- Search -->
+				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3">
+					<div class="card bg-white h-100">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
+							Search
+						</div>
+						<form class="card-body px-3">
+
+							<div class="row">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
+									<label class="control-label border-0 pl-0" for="">Application Number:</label>
+									<input class="form-control pl-3" type="text" placeholder="">
+								</div>
+								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
+									<label class="control-label border-0 pl-0" for="">Status:</label>
+									<select class="form-control" ng-model="selectedStatus">
+										<option name="selectedStatus" value="English">All status</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
+									<label class="control-label border-0 pl-0" for="">Customer Name:</label>
+									<input class="form-control pl-3" type="text" placeholder="">
+								</div>
+								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
+									<label class="control-label border-0 pl-0" for="">Customer ID:</label>
+									<input class="form-control pl-3" type="text" placeholder="">
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="form-group col-12 col-lg-6 pr-lg-2">
+									<label class="control-label border-0 pl-0" for="">Business Centre:</label>
+									<select class="form-control" ng-model="selectedCentre">
+										<option name="selectedCentre" value="AllBusinessBankingCentres">All Business Banking Centres</option>
+										<option name="selectedCentre" value="Centre">Centre</option>
+										<option name="selectedCentre" value="MongKok">Mong Kok</option>
+									</select>
+								</div>
+								<div class="form-group col-12 col-lg-6 pl-lg-2">
+									<label class="control-label border-0 pl-0" for="">BBO Assigned:</label>
+									<select class="form-control" ng-model="selectedCentre">
+										<option name="selectedCentre" value="Centre">Aaron</option>
+										<option name="selectedCentre" value="Beatrice">Beatrice</option>
+										<option name="selectedCentre" value="Candy">Candy</option>
+										<option name="selectedCentre" value="Danny">Danny</option>
+									</select>
+								</div>
+							</div>
+							<!-- <div class="form-check col-5 offset-3 pl-3">
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" value="">Show only action by me
+								</label>
+							</div> -->
+							<div class="row px-3">
+								<button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Search</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- Search end -->
+				
+			</div>
+			
+			<div class="row">
+				<div class="col h-100">
+					<!-- Application -->
+					<div class="card bg-white">
+						<div class="card-header bg-white text-success font-weight-bold pl-3">
+							Application
+						</div>
+						<div class="card-body px-3 pt-3">
+							
+							<div class="text-danger text-center border p-5">
+								<label>No Record was found.</label>
+							</div>
+
+						</div>
+					</div>
+					<!-- Application end-->
+				</div>
+			</div>					
+			<!-- 51000 Applications_list_page end-->
+        </main>
+		
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	 $(document).ready(function () {
+		// 鼠标悬停展开dropdown_list
+	 	dropdownOpen();
+	 	$(document).off('click.bs.dropdown.data-api');
+		 
+		// 鼠标点击打开popover
+		$('[data-toggle="popover"]').popover( { html : true });
+		 
+		function setMentionBoxTimeOut(){ 
+			// 设置提醒框定时关闭
+			SetMentionBox("AssignModal","AssignModalMentionBox");
+			SetMentionBox("CallAgentModal","CallAgentModalMentionBox");
+		}
+	 });
+	
+	
+	
+	/**
+	 * 鼠标划过就展开子菜单，免得需要点击才能展开
+	 */
+	 function dropdownOpen() {
+	 	var $dropdownLi = $('li.dropdown');
+	 	var $dropdownMenu = $('ul.dropdown-menu');
+	 	$dropdownLi.mouseover(function() {
+	 		$dropdownMenu.addClass('d-block');
+	 	}).mouseout(function() {
+	 		$dropdownMenu.removeClass('d-block');
+	 	});
+	 }
+
+	 function SetMentionBox(MentionBoxName,ModalName){
+		$("#"+ MentionBoxName).modal('show');
+		setTimeout(function(){
+			$("#"+ ModalName).modal('hide')
+		},500);
+        setTimeout(function(){
+            $("#"+ MentionBoxName).modal('hide')
+        },500);
+	}
+
+</script>
