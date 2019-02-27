@@ -19,72 +19,74 @@
 </head>
 
 <body>
-	<div class="cover-container">	
+	<div class="container-fluid px-0">	
 
-		<!-- 01 Navbar -->
-		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
-            <!-- Brand and collapse-icon -->
-            <div class="order-1 d-inline-flex py-2">
-                <button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
-            </div>
-            <!-- nav-Links -->
-            <div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
-                <ul class="navbar-nav nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="applications_list.html">Applications</a>
-                    </li>
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
-                        <ul class="dropdown-menu bg-success py-0">
-                            <li class="nav-item">
-                                <a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="dropdown-item text-white" href="#">Report</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="dropdown-item text-white" href="#">Timeslot</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Admin</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
-                            Notification<span class="badge badge-info">4</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--  nav-right -->
-            <div class="text-white order-2 order-lg-3">
-                <div class="d-flex justify-content-end">
-                    <div class="border-left py-2 col-auto">
-                        <!--<img src="img/globe.svg"/>-->
-                        <i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
-                        <select class="bg-success text-white border-0" ng-model="selectedLanguage">
-                            <option name="selectedLanguage" value="English">English</option>
-                            <option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
-                            <option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
-                        </select>
-                    </div>
-                    <div class="d-inlink-flex border-left pt-2 col-auto mr-3">
-                        <div class="float-left mr-3 bg-white text-success border border-circle p-1">
-                            <span for="">CW</span>
+		<header class="sticky-top">
+		    <!-- 01 Navbar -->
+    		<nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
+                <!-- Brand and collapse-icon -->
+                <div class="order-1 d-inline-flex py-2">
+                    <button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+                </div>
+                <!-- nav-Links -->
+                <div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+                    <ul class="navbar-nav nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="applications_list.html">Applications</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+                            <ul class="dropdown-menu bg-success py-0">
+                                <li class="nav-item">
+                                    <a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item text-white" href="#">Report</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item text-white" href="#">Timeslot</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">
+                                Notification<span class="badge badge-info">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--  nav-right -->
+                <div class="text-white order-2 order-lg-3">
+                    <div class="d-flex justify-content-end">
+                        <div class="border-left py-2 col-auto">
+                            <!--<img src="img/globe.svg"/>-->
+                            <i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
+                            <select class="bg-success text-white border-0" ng-model="selectedLanguage">
+                                <option name="selectedLanguage" value="English">English</option>
+                                <option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+                                <option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+                            </select>
                         </div>
-                        <!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
-                        <!-- <img class="img-circle" src="img/loginPic.svg"/> -->
-                        <span class="float-left" ng-model="username">Chrismrs Wong</span>
+                        <div class="d-inlink-flex border-left pt-2 col-auto mr-3">
+                            <div class="float-left mr-3 bg-white text-success border border-circle p-1">
+                                <span for="">CW</span>
+                            </div>
+                            <!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
+                            <!-- <img class="img-circle" src="img/loginPic.svg"/> -->
+                            <span class="float-left" ng-model="username">Chrismrs Wong</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-        <!-- 01 Navbar end-->
+            </nav>
+            <!-- 01 Navbar end-->
+		</header>
 
 
         <main class="container-fluid py-3">
@@ -101,9 +103,9 @@
                                 <div class="col-12 col-lg-2 pr-lg-2 mb-3">
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Progess:</label>
-                                        <div class="row pl-3">
-                                            <label class="radio-inline col-6 col-lg-12 "><input type="radio">In Progress</label>
-                                            <label class="radio-inline col-6 col-lg-12"><input type="radio">Completed</label>
+                                        <div id="ProgressRadio" class="row pl-3">
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" name="radioBtn" value="InProgress">In Progress</label>
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" name="radioBtn" value="Completed">Completed</label>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +140,7 @@
                                     <div class="col-12 col-lg-4 pl-lg-2 mb-3">
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Completed Date:</label>
-                                            <div class="row pl-3">
+                                            <div id="CompletedDateRadio" class="row pl-3">
                                                 <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">From:  02/25/2019</label>
                                                 <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">To:  02/25/2019</label>
                                             </div>
@@ -296,21 +298,19 @@
                             
                             <!-- Pagination -->
                             <nav aria-label="Page navigation">
-                                <label class="float-left" for="">Showing 1 to 10 of 57 entries</label>
+                                <label class="float-left" for="">Showing 1 to 10 of 23 entries</label>
                                 <ul class="pagination float-right">
                                     <li class="page-item">
-                                        <a class="page-link text-success" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
+                                        <a class="page-link text-success" href="#" tabindex="-1">Previous
+                                            <!-- <span aria-hidden="true">&laquo;</span> -->
                                         </a>
                                     </li>
                                     <li class="page-item"><a class="page-link text-success" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link text-success" href="#">2</a></li>
                                     <li class="page-item"><a class="page-link text-success" href="#">3</a></li>
                                     <li class="page-item">
-                                        <a class="page-link text-success" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
+                                        <a class="page-link text-success" href="#">Next
+                                            <!-- <span aria-hidden="true">&raquo;</span> -->
                                         </a>
                                     </li>
                                 </ul>
@@ -332,17 +332,20 @@
 	 $(document).ready(function () {
 	 	dropdownOpen();
 	 	$(document).off('click.bs.dropdown.data-api');
-	 	
-//	 	$('.form_date').datetimepicker({
-//	        language:  'fr',
-//	        weekStart: 1,
-//	        todayBtn:  1,
-//			autoclose: 1,
-//			todayHighlight: 1,
-//			startView: 2,
-//			minView: 2,
-//			forceParse: 0
-// 		 });
+         
+        // 控制 Compleded Date 的radioBtn是否可用
+        var selectedRadio = $('#ProgressRadio label input[type="radio"]')
+        selectedRadio.change(function(){
+            var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();
+            console.log(radioVal)
+            if (radioVal === "InProgress"){
+            $('#CompletedDateRadio input[type="checkbox"]').attr("disabled","disabled");
+            }
+            if (radioVal === "Completed"){
+            $('#CompletedDateRadio input[type="checkbox"]').removeAttr("disabled");
+            }
+        })
+
     });
 
 	 /**

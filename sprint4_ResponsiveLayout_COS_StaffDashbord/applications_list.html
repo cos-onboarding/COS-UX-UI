@@ -15,72 +15,74 @@
 </head>
 
 <body>
-	<div class="cover-container">	
+	<div class="container-fluid px-0">	
 
-		<!-- 01 Navbar -->
-		<nav class="navbar navbar-expand-lg sticky-top bg-success navbar-dark py-0">
-			<!-- Brand and collapse-icon -->
-			<div class="order-1 d-inline-flex py-2">
-				<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
-			</div>
-			<!-- nav-Links -->
-			<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
-				<ul class="navbar-nav nav">
-					<li class="nav-item">
-						<a class="nav-link text-white" href="applications_list.html">Applications</a>
-					</li>
-					<!-- Dropdown -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
-						<ul class="dropdown-menu bg-success py-0">
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
-							</li>
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="#">Report</a>
-							</li>
-							<li class="nav-item">
-								<a class="dropdown-item text-white" href="#">Timeslot</a>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">Admin</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="#">
-							Notification<span class="badge badge-info">4</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!--  nav-right -->
-			<div class="text-white order-2 order-lg-3">
-				<div class="d-flex justify-content-end">
-					<div class="border-left py-2 col-auto">
-						<!--<img src="img/globe.svg"/>-->
-						<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
-						<select class="bg-success text-white border-0" ng-model="selectedLanguage">
-							<option name="selectedLanguage" value="English">English</option>
-							<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
-							<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
-						</select>
-					</div>
-					<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
-						<div class="float-left mr-3 bg-white text-success border border-circle p-1">
-							<span for="">CW</span>
+		<header class="sticky-top">
+			<!-- 01 Navbar -->
+			<nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
+				<!-- Brand and collapse-icon -->
+				<div class="order-1 d-inline-flex py-2">
+					<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+				</div>
+				<!-- nav-Links -->
+				<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+					<ul class="navbar-nav nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="applications_list.html">Applications</a>
+						</li>
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+							<ul class="dropdown-menu bg-success py-0">
+								<li class="nav-item">
+									<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
+								</li>
+								<li class="nav-item">
+									<a class="dropdown-item text-white" href="#">Report</a>
+								</li>
+								<li class="nav-item">
+									<a class="dropdown-item text-white" href="#">Timeslot</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#">Admin</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#">
+								Notification<span class="badge badge-info">4</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--  nav-right -->
+				<div class="text-white order-2 order-lg-3">
+					<div class="d-flex justify-content-end">
+						<div class="border-left py-2 col-auto">
+							<!--<img src="img/globe.svg"/>-->
+							<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
+							<select class="bg-success text-white border-0" ng-model="selectedLanguage">
+								<option name="selectedLanguage" value="English">English</option>
+								<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+								<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+							</select>
 						</div>
-						<!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
-						<!-- <img class="img-circle" src="img/loginPic.svg"/> -->
-						<span class="float-left" ng-model="username">Chrismrs Wong</span>
+						<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
+							<div class="float-left mr-3 bg-white text-success border border-circle p-1">
+								<span for="">CW</span>
+							</div>
+							<!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
+							<!-- <img class="img-circle" src="img/loginPic.svg"/> -->
+							<span class="float-left" ng-model="username">Chrismrs Wong</span>
+						</div>
 					</div>
 				</div>
-			</div>
-		</nav>
-		<!-- 01 Navbar end-->
+			</nav>
+			<!-- 01 Navbar end-->
+		</header>
 
 
         <main class="container-fluid py-3">
@@ -234,7 +236,7 @@
 											</div> -->
 											<!-- modal-body -->
 											<div class="modal-body">
-												<label for="">Assign the 4 cases to</label><br>
+												<label for="">Assign the 4 cases to</label><tr>
 												<select class="col-12" ng-model="selectedCentre">
 													<option name="selectedCentre" value="Centre">Aaron</option>
 													<option name="selectedCentre" value="Beatrice">Beatrice</option>
@@ -298,7 +300,7 @@
 								<tbody>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
-										<td>28881888</td>
+										<td><a href="applications_change_log.html">288828888</a></td>
 										<td>NTB</td>
 										<td>Corporate</td>
 										<td>Happy House Ltd.</td>
@@ -306,7 +308,13 @@
 										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
 										<td class="align-middle text-center">
-											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" data-content="Remark body details ... ">
+											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+												data-content="<br> Customer ID <br> 28882888 <br><br> 
+															  Remarks <br> Some remarks content <br><br> 
+															  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+															  Contact Person <br> Johnny Chan <br><br> 
+															  Contact Number <br> 852 3999 8833<br><br>"
+											>
 												<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
 												<!-- <img class="" src="./img/info.svg" height="25"> -->
 											</a>
@@ -320,8 +328,8 @@
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
-										<td>28881888</td>
-										<td>NTB</td>
+										<td><a href="applications_change_log.html">288828888</a></td>
+										<td>ETB</td>
 										<td>Partnership</td>
 										<td>HABC Limited</td>
 										<td>3777388222</td>
@@ -337,8 +345,8 @@
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
-										<td>28881888</td>
-										<td>NTB</td>
+										<td><a href="applications_change_log.html">288828888</a></td>
+										<td>ETB</td>
 										<td>NPO</td>
 										<td>Pacific Coffee Ltd.</td>
 										<td>3777388222</td>
@@ -354,14 +362,25 @@
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
-										<td>28881888</td>
+										<td><a href="applications_change_log.html">288828888</a></td>
 										<td>NTB</td>
 										<td>Corporate</td>
 										<td>Happy House Ltd.</td>
 										<td>3777388222</td>
 										<td>Pending - CCC</td>
 										<td>Pending CCC allocation</td>
-										<td></td>
+										<td class="align-middle text-center">
+											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+												data-content="<br> Customer ID <br> 28882888 <br><br> 
+															  Remarks <br> Some remarks content <br><br> 
+															  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+															  Contact Person <br> Johnny Chan <br><br> 
+															  Contact Number <br> 852 3999 8833<br><br>"
+											>
+												<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+												<!-- <img class="" src="./img/info.svg" height="25"> -->
+											</a>
+										</td>
 										<td>31 Dec 2020 11:30</td>
 										<td>Sheung Wan</td>
 										<td>Aaron Cheung</td>
@@ -371,9 +390,26 @@
 									</tr>
 									<tr>
 										<th scope="row"><input type="checkbox" value=""></th>
-										<td>28881888</td>
-										<td>NTB</td>
-										<td>Corporate</td>
+										<td><a href="applications_change_log.html">288828888</a></td>
+										<td>ETB</td>
+										<td>Partnership</td>
+										<td>HABC Limited</td>
+										<td>3777388222</td>
+										<td>Pending - CCC</td>
+										<td>Pending CCC allocation</td>
+										<td></td>
+										<td>31 Dec 2020 11:30</td>
+										<td>Sheung Wan</td>
+										<td>Aaron Cheung</td>
+										<td>12 Dec 2020</td>
+										<td>30 Dec 2020</td>
+										<td>30 Dec 2020</td>	
+									</tr>
+									<tr>
+										<th scope="row"><input type="checkbox" value=""></th>
+										<td><a href="applications_change_log.html">288828888</a></td>
+										<td>ETB</td>
+										<td>NPO</td>
 										<td>Pacific Coffee Ltd.</td>
 										<td>3777388222</td>
 										<td>Pending - CCC</td>
@@ -386,6 +422,7 @@
 										<td>30 Dec 2020</td>
 										<td>30 Dec 2020</td>
 									</tr>
+									
 								</tbody>
 							</table>
 							<!-- table-responsive end -->
@@ -402,6 +439,11 @@
 									<li class="page-item"><a class="page-link text-success" href="#">1</a></li>
 									<li class="page-item"><a class="page-link text-success" href="#">2</a></li>
 									<li class="page-item"><a class="page-link text-success" href="#">3</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">4</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">5</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">6</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">...</a></li>
+									<li class="page-item"><a class="page-link text-success" href="#">12</a></li>
 									<li class="page-item">
 										<a class="page-link text-success" href="#">Next
 											<!-- <span aria-hidden="true">&raquo;</span> -->
