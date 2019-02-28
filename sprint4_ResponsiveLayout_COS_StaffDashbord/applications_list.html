@@ -8,12 +8,12 @@
 	<title>StaffDashbord_applications_list</title>
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-	
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/> -->
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
-	
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script> -->
 	<script src="./js/app.js"></script>
 	
 </head>
@@ -161,11 +161,6 @@
 									</select>
 								</div>
 							</div>
-							<!-- <div class="form-check col-5 offset-3 pl-3">
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" value="">Show only action by me
-								</label>
-							</div> -->
 							<div class="row px-3">
 								<button class="btn btn-outline-success col-md-2 offset-md-10" type="submit" >Search</button>
 							</div>
@@ -185,9 +180,7 @@
 						<div class="card-body px-3 pt-3">
 							<!-- table-button -->
 							<div class="d-flex justify-content-end mb-3">
-								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#AssignModal">Assign</button>
-								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#CallAgentModal">Call Agent</button>
-								
+								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#AssignModal">Assign Call Agent</button>
 								<!-- AssignModal -->
 								<div class="modal fade" id="AssignModal" data-backdrop="static">
 									<div class="modal-dialog modal-sm">
@@ -210,42 +203,6 @@
 										</div>
 									</div>
 								</div>
-
-								<!-- CallAgentModal -->
-								<div class="modal fade" id="CallAgentModal" data-backdrop="static">
-									<div class="modal-dialog modal-sm">
-										<div class="modal-content">
-											<!-- modal-body -->
-											<div class="modal-body">
-												<label for="">Assign the 4 cases to</label><br>
-												<select class="col-12" ng-model="selectedCentre">
-													<option name="selectedCentre" value="Centre">Aaron</option>
-													<option name="selectedCentre" value="Beatrice">Beatrice</option>
-													<option name="selectedCentre" value="Candy">Candy</option>
-													<option name="selectedCentre" value="Danny">Danny</option>
-												</select>
-											</div>
-											<!-- modal-footer -->
-											<div class="modal-footer">
-												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('CallAgentModal','ToastBox')">Save</button>
-
-												<!-- bdata-backdrop="false"去除遮罩层  -->
-												<div class="modal fade modal-sm mx-3 pt-3" id="CallAgentModalMentionBox" role="dialog" data-backdrop="false" aria-hidden="true">
-													<div class="modal-dialog modal-sm">
-														<div class="modal-content">
-															<p class="text-center border border-success mb-0 py-2">
-																<i class="fa fa-check-circle text-success mr-1" aria-hidden="true"></i>
-																Save successful !
-															</p>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
 								<!--  Mention Toast -->
 								<div aria-live="polite" id="ToastBox" aria-atomic="true" data-autohide="false" style="display: none;position: fixed;top: 0; right: 0;padding: 35px;z-index: 4415;border: 1px solid darkgray;background: white;">
 									<div class="toast">
