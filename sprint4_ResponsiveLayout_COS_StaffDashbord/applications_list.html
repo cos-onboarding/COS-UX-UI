@@ -7,11 +7,15 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_list</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
+	
+	<script src="./js/app.js"></script>
+	
 </head>
 
 <body>
@@ -62,7 +66,6 @@
 				<div class="text-white order-2 order-lg-3">
 					<div class="d-flex justify-content-end">
 						<div class="border-left py-2 col-auto">
-							<!--<img src="img/globe.svg"/>-->
 							<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
 							<select class="bg-success text-white border-0" ng-model="selectedLanguage">
 								<option name="selectedLanguage" value="English">English</option>
@@ -86,9 +89,8 @@
 
 
         <main class="container-fluid py-3">
-			<!-- 51000 Applications_list_page -->
+			
 			<div class="row">
-
 				<!-- summary -->
 				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3">
 					<div class="card bg-white h-100">
@@ -171,7 +173,6 @@
 					</div>
 				</div>
 				<!-- Search end -->
-				
 			</div>
 			
 			<div class="row">
@@ -186,15 +187,11 @@
 							<div class="d-flex justify-content-end mb-3">
 								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#AssignModal">Assign</button>
 								<button class="btn btn-outline-success" type="submit" data-toggle="modal" data-target="#CallAgentModal">Call Agent</button>
+								
 								<!-- AssignModal -->
 								<div class="modal fade" id="AssignModal" data-backdrop="static">
 									<div class="modal-dialog modal-sm">
 										<div class="modal-content">
-											<!-- modal-header -->
-											<!-- <div class="modal-header">
-												<h4 class="modal-title">Assign the 4 cases to</h4>
-												<button type="button" class="close" data-dismiss="modal">&times;</button>
-											</div> -->
 											<!-- modal-body -->
 											<div class="modal-body">
 												<label for="">Assign the 4 cases to</label><br>
@@ -208,35 +205,19 @@
 											<!-- modal-footer -->
 											<div class="modal-footer">
 												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('AssignModalMentionBox','AssignModal')">Save</button>
-												
-												<!-- bdata-backdrop="false"去除遮罩层  -->
-												<div class="modal fade modal-sm mx-3 pt-3" id="AssignModalMentionBox" role="dialog" data-backdrop="false" aria-hidden="true">
-												    <div class="modal-dialog modal-sm">
-												        <div class="modal-content">
-												            <p class="text-center border border-success mb-0 py-2">
-												                <i class="fa fa-check-circle text-success mr-1" aria-hidden="true"></i>
-												                Save successful !
-												            </p>
-												        </div>
-												    </div>
-												</div>
+												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('AssignModal','ToastBox')">Save</button>
 											</div>
 										</div>
 									</div>
 								</div>
+
 								<!-- CallAgentModal -->
 								<div class="modal fade" id="CallAgentModal" data-backdrop="static">
 									<div class="modal-dialog modal-sm">
 										<div class="modal-content">
-											<!-- modal-header -->
-											<!-- <div class="modal-header">
-												<h4 class="modal-title">Assign the 4 cases to</h4>
-												<button type="button" class="close" data-dismiss="modal">&times;</button>
-											</div> -->
 											<!-- modal-body -->
 											<div class="modal-body">
-												<label for="">Assign the 4 cases to</label><tr>
+												<label for="">Assign the 4 cases to</label><br>
 												<select class="col-12" ng-model="selectedCentre">
 													<option name="selectedCentre" value="Centre">Aaron</option>
 													<option name="selectedCentre" value="Beatrice">Beatrice</option>
@@ -247,7 +228,7 @@
 											<!-- modal-footer -->
 											<div class="modal-footer">
 												<button type="button" class="btn btn-outline-success" data-dismiss="modal">Cancel</button>
-												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('CallAgentModalMentionBox','CallAgentModal')">Save</button>
+												<button type="button" class="btn btn-outline-success" onclick="SetMentionBox('CallAgentModal','ToastBox')">Save</button>
 
 												<!-- bdata-backdrop="false"去除遮罩层  -->
 												<div class="modal fade modal-sm mx-3 pt-3" id="CallAgentModalMentionBox" role="dialog" data-backdrop="false" aria-hidden="true">
@@ -264,27 +245,34 @@
 										</div>
 									</div>
 								</div>
+								
+								<!--  Mention Toast -->
+								<div aria-live="polite" id="ToastBox" aria-atomic="true" data-autohide="false" style="display: none;position: fixed;top: 0; right: 0;padding: 35px;z-index: 4415;border: 1px solid darkgray;background: white;">
+									<div class="toast">
+										<div class="toast-body">
+											Save successful !
+										</div>
+									</div>
+								</div>
+								
 							</div>
 							<!-- table-button end -->
 							
 							<!-- table-responsive -->
-							<table class="col-12 table table-striped table-hover table-sm table-responsive px-0">
+							<table class="col-12 table table-striped table-hover table-sm table-responsive px-0" id="ResponsiveTable">
 								<thead>
 									<tr>
 									<th scope="col"></th>
 									<th scope="col">ID 
 										<i class="fa fa-sort" aria-hidden="true"></i>
-										<!--<img src="./img/sortby.svg" height="15">-->
 									</th>
 									<th scope="col">Type</th>
 									<th scope="col">Entity Type</th>
 									<th scope="col">Company Name 
 										<i class="fa fa-sort-desc" aria-hidden="true"></i>
-										<!--<img src="./img/sort-down.svg" height="17">-->
 									</th>
 									<th scope="col">Customer ID 
 										<i class="fa fa-sort-desc" aria-hidden="true"></i>
-										<!--<img src="./img/sort-up.svg" height="17">-->
 									</th>
 									<th scope="col">Category</th>
 									<th scope="col">Status</th>
@@ -422,7 +410,6 @@
 										<td>30 Dec 2020</td>
 										<td>30 Dec 2020</td>
 									</tr>
-									
 								</tbody>
 							</table>
 							<!-- table-responsive end -->
@@ -456,53 +443,10 @@
 					</div>
 					<!-- Application end-->
 				</div>
-			</div>					
-			<!-- 51000 Applications_list_page end-->
+			</div>	
+
         </main>
 		
 	</div>
 </body>
 </html>
-
-<script type="text/javascript">
-	 $(document).ready(function () {
-		// 鼠标悬停展开dropdown_list
-	 	dropdownOpen();
-	 	$(document).off('click.bs.dropdown.data-api');
-		 
-		// 鼠标点击打开popover
-		$('[data-toggle="popover"]').popover( { html : true });
-		 
-		function setMentionBoxTimeOut(){ 
-			// 设置提醒框定时关闭
-			SetMentionBox("AssignModal","AssignModalMentionBox");
-			SetMentionBox("CallAgentModal","CallAgentModalMentionBox");
-		}
-	 });
-	
-	
-	
-	/**
-	 * 鼠标划过就展开子菜单，免得需要点击才能展开
-	 */
-	 function dropdownOpen() {
-	 	var $dropdownLi = $('li.dropdown');
-	 	var $dropdownMenu = $('ul.dropdown-menu');
-	 	$dropdownLi.mouseover(function() {
-	 		$dropdownMenu.addClass('d-block');
-	 	}).mouseout(function() {
-	 		$dropdownMenu.removeClass('d-block');
-	 	});
-	 }
-
-	 function SetMentionBox(MentionBoxName,ModalName){
-		$("#"+ MentionBoxName).modal('show');
-		setTimeout(function(){
-			$("#"+ ModalName).modal('hide')
-		},500);
-        setTimeout(function(){
-            $("#"+ MentionBoxName).modal('hide')
-        },500);
-	}
-
-</script>

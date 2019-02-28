@@ -12,10 +12,9 @@
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
-	<!--<script type="text/javascript" src="./lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="./lib/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>-->
-
-
+	<script src="./js/app.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -90,7 +89,6 @@
 
 
         <main class="container-fluid py-3">
-            <!-- 71000 manage_team_progress_page -->
             <div class="row">
                 <!-- Search -->
                 <div class="order-last order-xl-first order-lg-first col-12 mb-3">
@@ -132,17 +130,35 @@
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Appointment Date:</label>
                                             <div class="row pl-3">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">From 02/25/2019</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">To  02/25/2019</label>
+                                                
+                                                <!-- datepicker -->
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-2">From</label>
+                                                    <input class="" id="AppointmentStartDate" width="70%"/>
+                                                </div>
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-4">To</label>
+                                                    <input class="" id="AppointmentEndDate" width="70%"/>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4 pl-lg-2 mb-3">
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Completed Date:</label>
-                                            <div id="CompletedDateRadio" class="row pl-3">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">From:  02/25/2019</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">To:  02/25/2019</label>
+                                            <div id="CompletedDateBox" class="row pl-3">
+                                                
+                                                <!-- datepicker -->
+                                               <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-2">From</label>
+                                                    <input class="" id="CompletedStartDate" width="70%"/>
+                                                </div>
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-4">To</label>
+                                                    <input class="" id="CompletedEndDate" width="70%"/>
+                                                </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -321,44 +337,8 @@
                     <!-- Results end-->
                 </div>
             </div>	
-            <!-- 71000 manage_team_progress_page end-->
         </main>
 		
 	</div>
 </body>
 </html>
-
-<script type="text/javascript">
-	 $(document).ready(function () {
-	 	dropdownOpen();
-	 	$(document).off('click.bs.dropdown.data-api');
-         
-        // 控制 Compleded Date 的radioBtn是否可用
-        var selectedRadio = $('#ProgressRadio label input[type="radio"]')
-        selectedRadio.change(function(){
-            var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();
-            console.log(radioVal)
-            if (radioVal === "InProgress"){
-            $('#CompletedDateRadio input[type="checkbox"]').attr("disabled","disabled");
-            }
-            if (radioVal === "Completed"){
-            $('#CompletedDateRadio input[type="checkbox"]').removeAttr("disabled");
-            }
-        })
-
-    });
-
-	 /**
-	 * 鼠标划过就展开子菜单，免得需要点击才能展开
-	 */
-	 function dropdownOpen() {
-	 	var $dropdownLi = $('li.dropdown');
-	 	var $dropdownMenu = $('ul.dropdown-menu');
-	 	$dropdownLi.mouseover(function() {
-	 		$dropdownMenu.addClass('d-block');
-	 	}).mouseout(function() {
-	 		$dropdownMenu.removeClass('d-block');
-	 	});
-	 }
-	
-</script>

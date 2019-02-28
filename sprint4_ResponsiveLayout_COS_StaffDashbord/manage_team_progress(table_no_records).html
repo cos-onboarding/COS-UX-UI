@@ -12,9 +12,7 @@
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
-	<!--<script type="text/javascript" src="./lib/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="./lib/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>-->
-
+	<script src="./js/app.js"></script>
 
 </head>
 
@@ -90,7 +88,6 @@
 
 
         <main class="container-fluid py-3">
-            <!-- 71000 manage_team_progress_page -->
             <div class="row">
                 <!-- Search -->
                 <div class="order-last order-xl-first order-lg-first col-12 mb-3">
@@ -175,41 +172,8 @@
                     <!-- Results end-->
                 </div>
             </div>	
-            <!-- 71000 manage_team_progress_page end-->
         </main>
 		
 	</div>
 </body>
 </html>
-
-<script type="text/javascript">
-	 $(document).ready(function () {
-	 	dropdownOpen();
-	 	$(document).off('click.bs.dropdown.data-api');
-	 	
-//	 	$('.form_date').datetimepicker({
-//	        language:  'fr',
-//	        weekStart: 1,
-//	        todayBtn:  1,
-//			autoclose: 1,
-//			todayHighlight: 1,
-//			startView: 2,
-//			minView: 2,
-//			forceParse: 0
-// 		 });
-    });
-
-	 /**
-	 * 鼠标划过就展开子菜单，免得需要点击才能展开
-	 */
-	 function dropdownOpen() {
-	 	var $dropdownLi = $('li.dropdown');
-	 	var $dropdownMenu = $('ul.dropdown-menu');
-	 	$dropdownLi.mouseover(function() {
-	 		$dropdownMenu.addClass('d-block');
-	 	}).mouseout(function() {
-	 		$dropdownMenu.removeClass('d-block');
-	 	});
-	 }
-	
-</script>
