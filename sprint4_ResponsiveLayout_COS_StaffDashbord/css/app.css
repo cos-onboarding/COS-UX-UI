@@ -5,6 +5,22 @@ main {
     border-radius: 100% !important;
 }
 
+
+
+.page-link {
+    color: green !important;
+}
+.page-item.active .page-link {
+    color: white !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+.page-list button {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+
 /* layout < 576px */
 @media only screen and (max-width: 575px) {
 
