@@ -10,15 +10,23 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/angular-moment-picker.min.css">
+
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
     <script src="./lib/bootstrap.min.js"></script>
-    <script src="./lib/bootstrap-table.min.js"></script>
-	<script src="./js/app.js"></script>
+    <script src="./lib/bootstrap-table.min.js"></script>   
+
+    <script src="./js/app.js"></script>    
+
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/moment.js"></script>
+    <script src="./lib/angular-moment-picker.min.js"></script>
+    
 </head>
 
 <body>
-	<div class="container-fluid px-0">	
+	<div class="container-fluid px-0" ng-app="myApp">	
 
 		<header class="sticky-top">
 		    <!-- 01 Navbar -->
@@ -101,7 +109,7 @@
                                 <div class="col-12 col-lg-2 pr-lg-2 mb-3">
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Progess:</label>
-                                        <div id="ProgressRadio" class="row pl-3">
+                                        <div id="ProgressRadio" class="row pl-3 mt-2">
                                             <label class="radio-inline col-6 col-lg-12"><input type="radio" name="radioBtn" value="InProgress">In Progress</label>
                                             <label class="radio-inline col-6 col-lg-12"><input type="radio" name="radioBtn" value="Completed">Completed</label>
                                         </div>
@@ -110,7 +118,7 @@
                                 <div class="col-12 col-lg-2 px-lg-2 mb-3">
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Type of RP:</label>
-                                        <div class="row pl-3">
+                                        <div class="row pl-3 mt-2">
                                             <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">RP</label>
                                             <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">Non-PR</label>
                                         </div>
@@ -120,7 +128,7 @@
                                     <div class="col-12 col-lg-4 px-lg-2 mb-3">
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Type of Application:</label>
-                                            <div class="row pl-3">
+                                            <div class="row pl-3 mt-2">
                                                 <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">NTB</label>
                                                 <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">ETB</label>
                                             </div>
@@ -134,13 +142,23 @@
                                                 <!-- datepicker -->
                                                 <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-1">From</label>
-                                                    <input class="" type="text" placeholder="MM/DD/YYYY">
-                                                    <!-- <input class="" id="AppointmentStartDate" width="70%"/> -->
+                                                    <input class="form-control h-75 my-0" 
+                                                    moment-picker="ctrl1.timepicker"
+                                                    ng-model="singleEntity.startTime"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="false">
+
                                                 </div>
                                                 <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-4">To</label>
-                                                    <input class="" type="text" placeholder="MM/DD/YYYY">
-                                                    <!-- <input class="" id="AppointmentEndDate" width="70%"/> -->
+                                                    <input class="form-control h-75 my-0" 
+                                                    moment-picker="ctrl2.timepicker"
+                                                    ng-model="singleEntity.endTime"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="false">
+
                                                 </div>
 
                                             </div>
@@ -154,13 +172,24 @@
                                                 <!-- datepicker -->
                                                <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-1">From</label>
-                                                    <input class="" type="text" placeholder="MM/DD/YYYY">
-                                                    <!-- <input class="" id="CompletedStartDate" width="70%"/> -->
+                                                    <input class="form-control h-75 " 
+                                                    moment-picker="ctrl3.timepicker"
+                                                    ng-model="singleEntity.startTime1"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="false">
+
+
                                                 </div>
                                                 <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-4">To</label>
-                                                    <input class="" type="text" placeholder="MM/DD/YYYY">
-                                                    <!-- <input class="" id="CompletedEndDate" width="70%"/> -->
+                                                    <input class="form-control h-75" 
+                                                    moment-picker="ctrl4.timepicker"
+                                                    ng-model="singleEntity.endTime1"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="false">
+
                                                 </div>
                                                
                                             </div>

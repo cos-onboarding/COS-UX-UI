@@ -6,7 +6,10 @@ $(document).ready(function () {
     // 鼠标点击打开popover
     $('[data-toggle="popover"]').popover( { html : true });
 
-    // 控制 Compleded Date 的radioBtn是否可用
+    
+    //激活datepicker
+    myApp = angular.module('myApp', ['moment-picker']);
+    // 控制 Compleded Date 的datepicker是否可用
     var selectedRadio = $('#ProgressRadio label input[type="radio"]')
 
     selectedRadio.change(function(){
@@ -20,6 +23,7 @@ $(document).ready(function () {
         };
     })
 
+    
 
  });
 
