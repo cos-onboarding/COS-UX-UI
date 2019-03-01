@@ -6,16 +6,12 @@ $(document).ready(function () {
     // 鼠标点击打开popover
     $('[data-toggle="popover"]').popover( { html : true });
 
-    // 激活table
-    // $('#ResponsiveTable').DataTable({
-	// 	bFilter: false, // 去掉搜索框
-	// 	bLengthChange: false, // 去掉每页显示多少条数据
-	// });
-
     // 控制 Compleded Date 的radioBtn是否可用
     var selectedRadio = $('#ProgressRadio label input[type="radio"]')
+
     selectedRadio.change(function(){
         var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();
+        // console.log(radioVal);
         if (radioVal === "InProgress"){
             $('#CompletedDateBox input').attr("disabled","disabled");
         };
@@ -24,43 +20,6 @@ $(document).ready(function () {
         };
     })
 
-
-    // datepicker
-    var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-    $('#AppointmentStartDate').datepicker({
-        uiLibrary: 'bootstrap4',
-        iconsLibrary: 'fontawesome',
-        minDate: today,
-        maxDate: function () {
-            return $('#AppointmentStartDate').val();
-        }
-    });
-    $('#AppointmentEndDate').datepicker({
-        uiLibrary: 'bootstrap4',
-        iconsLibrary: 'fontawesome',
-        minDate: function () {
-            return $('#AppointmentEndDate').val();
-        }
-    });
-    $('#CompletedStartDate').datepicker({
-        uiLibrary: 'bootstrap4',
-        iconsLibrary: 'fontawesome',
-        minDate: today,
-        maxDate: function () {
-            return $('#AppointmentStartDate').val();
-        }
-    });
-    $('#CompletedEndDate').datepicker({
-        uiLibrary: 'bootstrap4',
-        iconsLibrary: 'fontawesome',
-        minDate: function () {
-            return $('#AppointmentEndDate').val();
-        }
-    });
-
-
-    
-        
 
  });
 

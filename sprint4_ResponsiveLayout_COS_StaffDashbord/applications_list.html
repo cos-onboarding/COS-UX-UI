@@ -8,14 +8,14 @@
 	<title>StaffDashbord_applications_list</title>
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/> -->
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap-table.min.css">
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
 	<script src="./lib/bootstrap.min.js"></script>
-	<!-- <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script> -->
+	<script src="./lib/bootstrap-table.min.js"></script>
 	<script src="./js/app.js"></script>
-	
+
 </head>
 
 <body>
@@ -216,186 +216,468 @@
 							<!-- table-button end -->
 							
 							<!-- table-responsive -->
-							<table class="col-12 table table-striped table-hover table-sm table-responsive px-0" id="ResponsiveTable">
-								<thead>
-									<tr>
-									<th scope="col"></th>
-									<th scope="col">ID 
-										<i class="fa fa-sort" aria-hidden="true"></i>
-									</th>
-									<th scope="col">Type</th>
-									<th scope="col">Entity Type</th>
-									<th scope="col">Company Name 
-										<i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th scope="col">Customer ID 
-										<i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th scope="col">Category</th>
-									<th scope="col">Status</th>
-									<th scope="col">Remark</th>
-									<th scope="col">Appointment Date & Time</th>
-									<th scope="col">Confirmed Venue</th>
-									<th scope="col">Handling Call Agent</th>
-									<th scope="col">Task Due Date</th>
-									<th scope="col">Document Last Upload Date</th>
-									<th scope="col">Last Modified Date</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>NTB</td>
-										<td>Corporate</td>
-										<td>Happy House Ltd.</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td class="align-middle text-center">
-											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-												data-content="<br> Customer ID <br> 28882888 <br><br> 
-															  Remarks <br> Some remarks content <br><br> 
-															  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-															  Contact Person <br> Johnny Chan <br><br> 
-															  Contact Number <br> 852 3999 8833<br><br>"
-											>
-												<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-												<!-- <img class="" src="./img/info.svg" height="25"> -->
-											</a>
-										</td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>
-									</tr>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>ETB</td>
-										<td>Partnership</td>
-										<td>HABC Limited</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td></td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>	
-									</tr>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>ETB</td>
-										<td>NPO</td>
-										<td>Pacific Coffee Ltd.</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td></td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>
-									</tr>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>NTB</td>
-										<td>Corporate</td>
-										<td>Happy House Ltd.</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td class="align-middle text-center">
-											<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-												data-content="<br> Customer ID <br> 28882888 <br><br> 
-															  Remarks <br> Some remarks content <br><br> 
-															  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-															  Contact Person <br> Johnny Chan <br><br> 
-															  Contact Number <br> 852 3999 8833<br><br>"
-											>
-												<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-												<!-- <img class="" src="./img/info.svg" height="25"> -->
-											</a>
-										</td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>
-									</tr>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>ETB</td>
-										<td>Partnership</td>
-										<td>HABC Limited</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td></td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>	
-									</tr>
-									<tr>
-										<th scope="row"><input type="checkbox" value=""></th>
-										<td><a href="applications_change_log.html">288828888</a></td>
-										<td>ETB</td>
-										<td>NPO</td>
-										<td>Pacific Coffee Ltd.</td>
-										<td>3777388222</td>
-										<td>Pending - CCC</td>
-										<td>Pending CCC allocation</td>
-										<td></td>
-										<td>31 Dec 2020 11:30</td>
-										<td>Sheung Wan</td>
-										<td>Aaron Cheung</td>
-										<td>12 Dec 2020</td>
-										<td>30 Dec 2020</td>
-										<td>30 Dec 2020</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="table-responsive">
+								<table class="col-12 table table-striped table-hover px-0"  
+									   data-toggle="table" data-pagination="true">
+									<thead>
+										<tr>
+										<th scope="col"></th>
+										<th scope="col" data-sortable="true" data-field="id">ID</th>
+										<th scope="col" data-sortable="true" data-field="type">Type</th>
+										<th scope="col" data-sortable="true" data-field="entityType">Entity Type</th>
+										<th scope="col" data-sortable="true" data-field="companyName">Company Name</th>
+										<th scope="col" data-sortable="true" data-field="customerId">Customer ID</th>
+										<th scope="col" data-field="category">Category</th>
+										<th scope="col" data-field="status">Status</th>
+										<th scope="col" data-field="remark">Remark</th>
+										<th scope="col" data-sortable="true" data-field="appointmentDate">Appointment Date & Time</th>
+										<th scope="col" data-field="confirmedVenue">Confirmed Venue</th>
+										<th scope="col" data-field="handlingCallAgent">Handling Call Agent</th>
+										<th scope="col" data-field="taskDueDate">Task Due Date</th>
+										<th scope="col" data-field="documentLastUploadDate">Document Last Upload Date</th>
+										<th scope="col" data-field="lastModifiedDate">Last Modified Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388225</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																  Remarks <br> Some remarks content <br><br> 
+																  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																  Contact Person <br> Johnny Chan <br><br> 
+																  Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>30 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388220</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>29 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388221</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>26 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																  Remarks <br> Some remarks content <br><br> 
+																  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																  Contact Person <br> Johnny Chan <br><br> 
+																  Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																	Remarks <br> Some remarks content <br><br> 
+																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																	Contact Person <br> Johnny Chan <br><br> 
+																	Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																	Remarks <br> Some remarks content <br><br> 
+																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																	Contact Person <br> Johnny Chan <br><br> 
+																	Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																	Remarks <br> Some remarks content <br><br> 
+																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																	Contact Person <br> Johnny Chan <br><br> 
+																	Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																	Remarks <br> Some remarks content <br><br> 
+																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																	Contact Person <br> Johnny Chan <br><br> 
+																	Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
+													data-content="<br> Customer ID <br> 28882888 <br><br> 
+																	Remarks <br> Some remarks content <br><br> 
+																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
+																	Contact Person <br> Johnny Chan <br><br> 
+																	Contact Number <br> 852 3999 8833<br><br>"
+												>
+													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
+													<!-- <img class="" src="./img/info.svg" height="25"> -->
+												</a>
+											</td>
+											<td>05 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 							<!-- table-responsive end -->
 							
-							<!-- Pagination -->
-							<nav aria-label="Page navigation">
-								<label class="float-left" for="">Showing 1 to 10 of 57 entries</label>
-								<ul class="pagination float-right">
-									<li class="page-item">
-										<a class="page-link text-success" href="#" tabindex="-1">Previous
-											<!-- <span aria-hidden="true">&laquo;</span> -->
-										</a>
-									</li>
-									<li class="page-item"><a class="page-link text-success" href="#">1</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">2</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">3</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">4</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">5</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">6</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">...</a></li>
-									<li class="page-item"><a class="page-link text-success" href="#">12</a></li>
-									<li class="page-item">
-										<a class="page-link text-success" href="#">Next
-											<!-- <span aria-hidden="true">&raquo;</span> -->
-										</a>
-									</li>
-								</ul>
-							</nav>
-							<!-- Pagination end -->
 						</div>
 					</div>
 					<!-- Application end-->
