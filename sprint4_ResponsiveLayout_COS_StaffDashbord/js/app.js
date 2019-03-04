@@ -34,8 +34,75 @@ app.controller('applicationCtrl', function($scope) {
         $("#AssignToast").slideDown(500).delay(2000).fadeOut(500);
     };
 
+    //table with json data
+    $('#appli_list_table').bootstrapTable({
+        url: 'json/application_list.json',
+          pagination: true,
+        columns: [{
+            checkbox:true
+        }, {
+            field: 'id',
+            title: 'ID',
+            sortable:true,
+            formatter:function(value, row, index){
+                return [
+                '<a href="applications_change_log.html">'+ value +'</a>'
+            ].join("")
+            }
+        },{
+            field: 'type',
+            title: 'Type',
+            sortable:true,
+        }, {
+            field: 'entityType',
+            title: 'Entity Type',
+            sortable:true,
+        }, {
+            field: 'companyName',
+            title: 'Company Name',
+            sortable:true
+        }, {
+            field: 'customerId',
+            title: 'Customer ID',
+            sortable:true
+        }, {
+            field: 'category',
+            title: 'Category'
+        }, {
+            field: 'status',
+            title: 'Status'
+        },{
+            field: 'remark',
+            title: 'Remark',
+            formatter:function(value, row, index){
+                return [
+                '<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>',
+            ].join("")
+            }
+        }, {
+            field: 'appointmentDate',
+            title: 'Appointment Date & Time',
+            sortable:true
+        }, {
+            field: 'confirmedVenue',
+            title: 'Confirmed Venue'
+        }, {
+            field: 'handlingCallAgent',
+            title: 'Handling Call Agent'
+        },  {
+            field: 'taskDueDate',
+            title: 'Handling Call Agent'
+        }, {
+            field: 'documentLastUploadDate',
+            title: 'Document Last Upload Date'
+        }, {
+            field: 'lastModifiedDate',
+            title: 'Last Modified Date'
+        },]
+    });
+
     // click to open popover -> col [Remarks]
-    $('[data-toggle="popover"]').popover( { 
+    $('#appli_list_table > [data-toggle="popover"]').popover( { 
         trigger:'click', 
         title:"Remark Details",
         html: true, 
@@ -52,6 +119,7 @@ app.controller('applicationCtrl', function($scope) {
             $('[data-toggle="popover"]').popover('hide');
         }
     });
+
 
 
 });
