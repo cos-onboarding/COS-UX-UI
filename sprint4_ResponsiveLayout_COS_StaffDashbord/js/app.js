@@ -21,6 +21,10 @@ app.controller('searchCtrl', function($scope) {
 });
 
 app.controller('applicationCtrl', function($scope) { 
+
+    //set content of toast
+    $scope.toastContent = "Save successful !";
+
     //set Assign modal's mentionBox auto-close
     $scope.SaveAssign = function(){
         setTimeout(function(){
@@ -30,8 +34,26 @@ app.controller('applicationCtrl', function($scope) {
         $("#AssignToast").slideDown(500).delay(2000).fadeOut(500);
     };
 
-    // click to open popover ---- col [Remarks]
-    $('[data-toggle="popover"]').popover( { html : true });
+    // click to open popover -> col [Remarks]
+    $('[data-toggle="popover"]').popover( { 
+        trigger:'click', 
+        title:"Remark Details",
+        html: true, 
+        content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
+    });
+    // close popover when click on the area outside of popover 
+    $('body').on('click', function(event) {
+        var target = $(event.target);
+        if (!target.hasClass('popover') 
+                && target.parent('.popover-content').length === 0
+                && target.parent('.popover-title').length === 0
+                && target.parent('.popover').length === 0
+                && target.data("toggle") !== "popover") {
+            $('[data-toggle="popover"]').popover('hide');
+        }
+    });
+
+
 });
 
 // ------------------applications_list end-------------------------
@@ -39,15 +61,16 @@ app.controller('applicationCtrl', function($scope) {
 
 // -----------------Manage_Team_Progress start--------------------------
 app.controller('manageTeamProgressSearchCtrl', function($scope) { 
-    //激活datepicker
+    //activation datepicker
     // myApp = angular.module('myApp', ['moment-picker']);
     
-    // 控制 Compleded Date 的datepicker是否可用
+    // controlling whether the datepicker of 'Compleded Date' is available.
     var selectedRadio = $('#ProgressRadio label input[type="radio"]')
     selectedRadio.change(function(){
         var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();
-        // console.log(radioVal);
         if (radioVal === "InProgress"){
+            $scope.completedDateStart = "";
+            $scope.completedDateEnd = "";
             $('#CompletedDateBox input').attr("disabled","disabled");
         };
         if (radioVal === "Completed"){

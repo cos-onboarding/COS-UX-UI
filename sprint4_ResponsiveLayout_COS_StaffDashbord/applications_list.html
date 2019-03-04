@@ -210,11 +210,10 @@
 									</div>
 								</div>
 								<!--  Mention Toast -->
-								<div aria-live="polite" id="AssignToast" aria-atomic="true" data-autohide="false" 
-								style="display: none;position: fixed;top: 0; right: 0;padding: 35px;z-index: 4415;border: 1px solid darkgray;background: white;">
+								<div class="" id="AssignToast" aria-live="polite" aria-atomic="true" data-autohide="false"
+									style="display: none;position: fixed;top: 0; right: 0;padding: 35px;z-index: 4415;border: 1px solid darkgray;background: white;  ">
 									<div class="toast">
-										<div class="toast-body">
-											Save successful !
+										<div class="toast-body" ng-bind="toastContent">
 										</div>
 									</div>
 								</div>
@@ -257,15 +256,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-													Remarks <br> Some remarks content <br><br> 
-													Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-													Contact Person <br> Johnny Chan <br><br> 
-													Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>30 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -318,16 +309,60 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																  Remarks <br> Some remarks content <br><br> 
-																  Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																  Contact Person <br> Johnny Chan <br><br> 
-																  Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+											</td>
+											<td>05 Dec 2002 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>Partnership</td>
+											<td>HABC Limited</td>
+											<td>3777388223</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>	
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>ETB</td>
+											<td>NPO</td>
+											<td>Pacific Coffee Ltd.</td>
+											<td>3777388224</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td></td>
+											<td>31 Dec 2020 11:30</td>
+											<td>Sheung Wan</td>
+											<td>Aaron Cheung</td>
+											<td>12 Dec 2020</td>
+											<td>30 Dec 2020</td>
+											<td>30 Dec 2020</td>
+										</tr>
+										<tr>
+											<td scope="row"><input type="checkbox" value=""></td>
+											<td><a href="applications_change_log.html">288828888</a></td>
+											<td>NTB</td>
+											<td>Corporate</td>
+											<td>Happy House Ltd.</td>
+											<td>3777388222</td>
+											<td>Pending - CCC</td>
+											<td>Pending CCC allocation</td>
+											<td class="align-middle text-center">
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -380,16 +415,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																	Remarks <br> Some remarks content <br><br> 
-																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																	Contact Person <br> Johnny Chan <br><br> 
-																	Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -442,16 +468,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																	Remarks <br> Some remarks content <br><br> 
-																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																	Contact Person <br> Johnny Chan <br><br> 
-																	Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -504,16 +521,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																	Remarks <br> Some remarks content <br><br> 
-																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																	Contact Person <br> Johnny Chan <br><br> 
-																	Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -566,78 +574,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																	Remarks <br> Some remarks content <br><br> 
-																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																	Contact Person <br> Johnny Chan <br><br> 
-																	Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
-											</td>
-											<td>05 Dec 2020 11:30</td>
-											<td>Sheung Wan</td>
-											<td>Aaron Cheung</td>
-											<td>12 Dec 2020</td>
-											<td>30 Dec 2020</td>
-											<td>30 Dec 2020</td>
-										</tr>
-										<tr>
-											<td scope="row"><input type="checkbox" value=""></td>
-											<td><a href="applications_change_log.html">288828888</a></td>
-											<td>ETB</td>
-											<td>Partnership</td>
-											<td>HABC Limited</td>
-											<td>3777388223</td>
-											<td>Pending - CCC</td>
-											<td>Pending CCC allocation</td>
-											<td></td>
-											<td>31 Dec 2020 11:30</td>
-											<td>Sheung Wan</td>
-											<td>Aaron Cheung</td>
-											<td>12 Dec 2020</td>
-											<td>30 Dec 2020</td>
-											<td>30 Dec 2020</td>	
-										</tr>
-										<tr>
-											<td scope="row"><input type="checkbox" value=""></td>
-											<td><a href="applications_change_log.html">288828888</a></td>
-											<td>ETB</td>
-											<td>NPO</td>
-											<td>Pacific Coffee Ltd.</td>
-											<td>3777388224</td>
-											<td>Pending - CCC</td>
-											<td>Pending CCC allocation</td>
-											<td></td>
-											<td>31 Dec 2020 11:30</td>
-											<td>Sheung Wan</td>
-											<td>Aaron Cheung</td>
-											<td>12 Dec 2020</td>
-											<td>30 Dec 2020</td>
-											<td>30 Dec 2020</td>
-										</tr>
-										<tr>
-											<td scope="row"><input type="checkbox" value=""></td>
-											<td><a href="applications_change_log.html">288828888</a></td>
-											<td>NTB</td>
-											<td>Corporate</td>
-											<td>Happy House Ltd.</td>
-											<td>3777388222</td>
-											<td>Pending - CCC</td>
-											<td>Pending CCC allocation</td>
-											<td class="align-middle text-center">
-												<a href="javascript:void(0);" class=""  data-toggle="popover" data-trigger="focus" 
-													data-content="<br> Customer ID <br> 28882888 <br><br> 
-																	Remarks <br> Some remarks content <br><br> 
-																	Document Last Uploaded Date <br> 31 Dec 2020 <br><br> 
-																	Contact Person <br> Johnny Chan <br><br> 
-																	Contact Number <br> 852 3999 8833<br><br>"
-												>
-													<i class="fa fa-search fa-1x text-success" aria-hidden="true"></i>
-													<!-- <img class="" src="./img/info.svg" height="25"> -->
-												</a>
+												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>

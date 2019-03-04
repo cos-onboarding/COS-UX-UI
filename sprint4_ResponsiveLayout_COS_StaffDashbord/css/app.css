@@ -1,12 +1,13 @@
 main {
     background-color: #eeeeee;
 }
+
+/* nav-right */
 .border-circle{
     border-radius: 100% !important;
 }
 
-
-
+/* table pagination color */
 .page-link {
     color: green !important;
 }
