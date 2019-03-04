@@ -38,7 +38,7 @@ app.controller('applicationCtrl', function($scope) {
 
 
 // -----------------Manage_Team_Progress start--------------------------
-app.controller('searchCtrl', function($scope) { 
+app.controller('manageTeamProgressSearchCtrl', function($scope) { 
     //激活datepicker
     // myApp = angular.module('myApp', ['moment-picker']);
     
