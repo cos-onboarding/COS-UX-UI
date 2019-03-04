@@ -7,27 +7,37 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_Manage_TeamProgress</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
+
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
-	<script src="./lib/bootstrap.min.js"></script>
-	<script src="./js/app.js"></script>
+    <script src="./lib/bootstrap4/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>   
+    
+    
+    <script src="./lib/angularjs1.6.4/angular.min.js"></script>
+    <script src="./lib/datepicker/moment.js"></script>
+    <script src="./lib/datepicker/angular-moment-picker.min.js"></script>
+    
+    <script src="./js/app.js"></script>
 
 </head>
 
 <body>
 	<div class="container-fluid px-0">	
 
-		<header class="sticky-top">
-		    <!-- 01 Navbar -->
-    		<nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
+		<header class="sticky-top" ng-controller="headerCtrl">
+            <!-- 01 Navbar -->
+            <nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
                 <!-- Brand and collapse-icon -->
                 <div class="order-1 d-inline-flex py-2">
                     <button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+                    <a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
                 </div>
                 <!-- nav-Links -->
                 <div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
@@ -64,7 +74,6 @@
                 <div class="text-white order-2 order-lg-3">
                     <div class="d-flex justify-content-end">
                         <div class="border-left py-2 col-auto">
-                            <!--<img src="img/globe.svg"/>-->
                             <i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
                             <select class="bg-success text-white border-0" ng-model="selectedLanguage">
                                 <option name="selectedLanguage" value="English">English</option>
@@ -74,23 +83,21 @@
                         </div>
                         <div class="d-inlink-flex border-left pt-2 col-auto mr-3">
                             <div class="float-left mr-3 bg-white text-success border border-circle p-1">
-                                <span for="">CW</span>
+                                <span ng-bind="simpleUserName"></span>
                             </div>
-                            <!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
-                            <!-- <img class="img-circle" src="img/loginPic.svg"/> -->
-                            <span class="float-left" ng-model="username">Chrismrs Wong</span>
+                            <span class="float-left" ng-bind="fullUserName"></span>
                         </div>
                     </div>
                 </div>
             </nav>
             <!-- 01 Navbar end-->
-		</header>
+        </header>
 
 
-        <main class="container-fluid py-3">
+        <main class="container-fluid py-3" ng-controller="bodyCtrl">
             <div class="row">
                 <!-- Search -->
-                <div class="order-last order-xl-first order-lg-first col-12 mb-3">
+                <div class="order-last order-xl-first order-lg-first col-12 mb-3" ng-controller="manageTeamProgressSearchCtrl">
                     <div class="card bg-white h-100">
                         <div class="card-header bg-white text-success font-weight-bold pl-3">
                             Search
@@ -100,18 +107,19 @@
                                 <div class="col-12 col-lg-2 pr-lg-2 mb-3">
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Progess:</label>
-                                        <div class="row pl-3">
-                                            <label class="radio-inline col-6 col-lg-12 "><input type="radio">In Progress</label>
-                                            <label class="radio-inline col-6 col-lg-12"><input type="radio">Completed</label>
+                                        <div id="ProgressRadio" class="row pl-3 mt-2">
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="InProgress">In Progress</label>
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="Completed">Completed</label>
                                         </div>
+                                        <!-- <label for="">{{progess}}</label> -->
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-2 px-lg-2 mb-3">
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Type of RP:</label>
-                                        <div class="row pl-3">
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">RP</label>
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">Non-PR</label>
+                                        <div class="row pl-3 mt-2">
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="RP">RP</label>
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="Non-PR">Non-PR</label>
                                         </div>
                                     </div>
                                 </div>
@@ -119,9 +127,9 @@
                                     <div class="col-12 col-lg-4 px-lg-2 mb-3">
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Type of Application:</label>
-                                            <div class="row pl-3">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">NTB</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">ETB</label>
+                                            <div class="row pl-3 mt-2">
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="NTB">NTB</label>
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="ETB">ETB</label>
                                             </div>
                                         </div>
                                     </div>
@@ -129,17 +137,60 @@
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Appointment Date:</label>
                                             <div class="row pl-3">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">From 02/25/2019</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">To  02/25/2019</label>
+                                                
+                                                <!-- datepicker -->
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-1">From</label>
+                                                    <input class="form-control h-75 my-0" 
+                                                    moment-picker="ctrl1.timepicker"
+                                                    ng-model="appointmentDateStart"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="true">
+
+                                                </div>
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-4">To</label>
+                                                    <input class="form-control h-75 my-0" 
+                                                    moment-picker="ctrl2.timepicker"
+                                                    ng-model="appointmentDateEnd"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="true">
+
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4 pl-lg-2 mb-3">
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Completed Date:</label>
-                                            <div class="row pl-3">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">From:  02/25/2019</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox">To:  02/25/2019</label>
+                                            <div id="CompletedDateBox" class="row pl-3">
+                                                
+                                                <!-- datepicker -->
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-1">From</label>
+                                                    <input class="form-control h-75 " 
+                                                    moment-picker="ctrl3.timepicker"
+                                                    ng-model="completedDateStart"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="true">
+
+
+                                                </div>
+                                                <div class="col-6 col-lg-12 d-inline-flex">
+                                                    <label class="mr-4">To</label>
+                                                    <input class="form-control h-75" 
+                                                    moment-picker="ctrl4.timepicker"
+                                                    ng-model="completedDateEnd"
+                                                    format="MM/DD/YYYY"
+                                                    ng-model-options="{ updateOn: 'blur' }"
+                                                    show-header="true">
+
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

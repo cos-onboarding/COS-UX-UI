@@ -7,18 +7,27 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_list</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
+	
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
-	<script src="./lib/bootstrap.min.js"></script>
+	<script src="./lib/bootstrap4/bootstrap.min.js"></script>
+	<script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>
+	
+	<script src="./lib/angularjs1.6.4/angular.min.js"></script>
+	<script src="./lib/datepicker/moment.js"></script>
+    <script src="./lib/datepicker/angular-moment-picker.min.js"></script>
+
 	<script src="./js/app.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
 	<div class="container-fluid px-0">	
 
-		<header class="sticky-top">
+		<header class="sticky-top" ng-controller="headerCtrl">
 			<!-- 01 Navbar -->
 			<nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
 				<!-- Brand and collapse-icon -->
@@ -26,7 +35,7 @@
 					<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<a class="navbar-brand ml-2 ml-xl-0 ml-lg-0 mr-2" href="#Staff Dashboard">Brand</a>
+					<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
 				</div>
 				<!-- nav-Links -->
 				<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
@@ -63,7 +72,6 @@
 				<div class="text-white order-2 order-lg-3">
 					<div class="d-flex justify-content-end">
 						<div class="border-left py-2 col-auto">
-							<!--<img src="img/globe.svg"/>-->
 							<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
 							<select class="bg-success text-white border-0" ng-model="selectedLanguage">
 								<option name="selectedLanguage" value="English">English</option>
@@ -73,11 +81,9 @@
 						</div>
 						<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
 							<div class="float-left mr-3 bg-white text-success border border-circle p-1">
-								<span for="">CW</span>
+								<span ng-bind="simpleUserName"></span>
 							</div>
-							<!-- <i class="fa fa-user-circle-o text-white mr-1 mt-1 fa-2x align-middle" aria-hidden="true"></i> -->
-							<!-- <img class="img-circle" src="img/loginPic.svg"/> -->
-							<span class="float-left" ng-model="username">Chrismrs Wong</span>
+							<span class="float-left" ng-bind="fullUserName"></span>
 						</div>
 					</div>
 				</div>
@@ -85,30 +91,30 @@
 			<!-- 01 Navbar end-->
 		</header>
 
-        <main class="container-fluid py-3">
+		<main class="container-fluid py-3">
+			
 			<div class="row">
-
 				<!-- summary -->
-				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3">
+				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3" ng-controller="summaryCtrl">
 					<div class="card bg-white h-100">
 						<div class="card-header bg-white text-success font-weight-bold pl-3">
 							My Summary
 						</div>
 						<div class="card-body px-3">
 							<label for="">Pending CCC allocation</label>
-							<label class="font-weight-bold mx-3" for=""> 23 </label>
+							<label class="font-weight-bold mx-3" ng-bind="pendingCCCAllocation"></label>
 							<a href="#">View</a><br>
 
 							<label for="">Pending for handing</label>
-							<label class="font-weight-bold mx-3" for=""> 17 </label>
+							<label class="font-weight-bold mx-3" ng-bind="pendingForHanding"></label>
 							<a href="#">View</a><br>
 						</div>
 					</div>
 				</div>
 				<!-- summary end-->
-
+	
 				<!-- Search -->
-				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3">
+				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3" ng-controller="searchCtrl">
 					<div class="card bg-white h-100">
 						<div class="card-header bg-white text-success font-weight-bold pl-3">
 							Search
@@ -118,12 +124,13 @@
 							<div class="row">
 								<div class="form-group col-12 col-lg-6 pr-lg-2">
 									<label class="control-label border-0 pl-0" for="">Application Number:</label>
-									<input class="form-control pl-3" type="text" placeholder="">
+									<input class="form-control pl-3" type="text" placeholder="" ng-model="applicationNumber">
 								</div>
 								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
 									<label class="control-label border-0 pl-0" for="">Status:</label>
 									<select class="form-control" ng-model="selectedStatus">
-										<option name="selectedStatus" value="English">All status</option>
+										<option name="selectedStatus" value="All status">All status</option>
+										<option name="selectedStatus" value="Pending CCC Allocation">Pending CCC Allocation</option>
 									</select>
 								</div>
 							</div>
@@ -131,11 +138,11 @@
 							<div class="row">
 								<div class="form-group col-12 col-lg-6 pr-lg-2">
 									<label class="control-label border-0 pl-0" for="">Customer Name:</label>
-									<input class="form-control pl-3" type="text" placeholder="">
+									<input class="form-control pl-3" type="text" placeholder="" ng-model="customerName">
 								</div>
 								<div class="form-group col-12 col-lg-6 pl-lg-2 pl-xl-2">
 									<label class="control-label border-0 pl-0" for="">Customer ID:</label>
-									<input class="form-control pl-3" type="text" placeholder="">
+									<input class="form-control pl-3" type="text" placeholder="" ng-model="customerId">
 								</div>
 							</div>
 							
@@ -150,11 +157,11 @@
 								</div>
 								<div class="form-group col-12 col-lg-6 pl-lg-2">
 									<label class="control-label border-0 pl-0" for="">BBO Assigned:</label>
-									<select class="form-control" ng-model="selectedCentre">
-										<option name="selectedCentre" value="Centre">Aaron</option>
-										<option name="selectedCentre" value="Beatrice">Beatrice</option>
-										<option name="selectedCentre" value="Candy">Candy</option>
-										<option name="selectedCentre" value="Danny">Danny</option>
+									<select class="form-control" ng-model="selectedBBOAssigned">
+										<option name="selectedBBOAssigned" value="Aaron">Aaron</option>
+										<option name="selectedBBOAssigned" value="Beatrice">Beatrice</option>
+										<option name="selectedBBOAssigned" value="Candy">Candy</option>
+										<option name="selectedBBOAssigned" value="Danny">Danny</option>
 									</select>
 								</div>
 							</div>
@@ -165,13 +172,12 @@
 					</div>
 				</div>
 				<!-- Search end -->
-				
 			</div>
 			
 			<div class="row">
 				<div class="col h-100">
 					<!-- Application -->
-					<div class="card bg-white">
+					<div class="card bg-white" ng-controller="applicationCtrl">
 						<div class="card-header bg-white text-success font-weight-bold pl-3">
 							Application
 						</div>

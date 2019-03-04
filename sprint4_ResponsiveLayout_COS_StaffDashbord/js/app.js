@@ -1,17 +1,49 @@
-$(document).ready(function () {
-    // 鼠标悬停展开dropdown_list
-    dropdownOpen();
-    // $(document).off('click.bs.dropdown.data-api');
-     
-    // 鼠标点击打开popover
-    $('[data-toggle="popover"]').popover( { html : true });
+var app = angular.module('myApp', ['moment-picker']);
 
-    
+// -----------------applications_list start--------------------------
+app.controller('headerCtrl', function($scope) { 
+    //init navigation
+    $scope.fullUserName = "Chrismrs Wong";
+    $scope.simpleUserName = "CW";
+    $scope.selectedLanguage = "English";
+
+});
+
+app.controller('summaryCtrl', function($scope) {
+    //init summary
+    $scope.pendingCCCAllocation = 23 ;
+    $scope.pendingForHanding = 17;
+
+});
+
+app.controller('searchCtrl', function($scope) { 
+
+});
+
+app.controller('applicationCtrl', function($scope) { 
+    //set Assign modal's mentionBox auto-close
+    $scope.SaveAssign = function(){
+        setTimeout(function(){
+            $("#AssignModal").modal('hide')
+        },500);
+
+        $("#AssignToast").slideDown(500).delay(2000).fadeOut(500);
+    };
+
+    // click to open popover ---- col [Remarks]
+    $('[data-toggle="popover"]').popover( { html : true });
+});
+
+// ------------------applications_list end-------------------------
+
+
+// -----------------Manage_Team_Progress start--------------------------
+app.controller('searchCtrl', function($scope) { 
     //激活datepicker
-    myApp = angular.module('myApp', ['moment-picker']);
+    // myApp = angular.module('myApp', ['moment-picker']);
+    
     // 控制 Compleded Date 的datepicker是否可用
     var selectedRadio = $('#ProgressRadio label input[type="radio"]')
-
     selectedRadio.change(function(){
         var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();
         // console.log(radioVal);
@@ -22,29 +54,13 @@ $(document).ready(function () {
             $('#CompletedDateBox input').removeAttr("disabled");
         };
     })
+});
 
+// ------------------Manage_Team_Progress end-------------------------
+
+// -----------------applications_change_log start--------------------------
+app.controller('bodyleftCtrl', function($scope) { 
     
+});
 
- });
-
-
-
- // 鼠标划过就展开子菜单，免得需要点击才能展开
- function dropdownOpen() {
-     var $dropdownLi = $('li.dropdown');
-     var $dropdownMenu = $('ul.dropdown-menu');
-     $dropdownLi.mouseover(function() {
-         $dropdownMenu.addClass('d-block');
-     }).mouseout(function() {
-         $dropdownMenu.removeClass('d-block');
-     });
- }
-
-  // 设置提醒框定时关闭
- function SetMentionBox(ModalName,toastName){
-    setTimeout(function(){
-        $("#"+ ModalName).modal('hide')
-    },500);
-
-    $("#"+ toastName).slideDown(500).delay(2000).fadeOut(500);
-}
+// ------------------applications_change_log end-------------------------
