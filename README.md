@@ -5,4 +5,4 @@
 2. datepicker: https://indrimuska.github.io/angular-moment-picker/
 
 #### chrome-debug
-1. chrome-debug: --user-data-dir="c:\ChromeDebug" --test-type --disable-web-security
+1. chrome-debug: 快捷方式-->目标-->：--user-data-dir="c:\ChromeDebug" --test-type --disable-web-security

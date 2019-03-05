@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_list</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
@@ -73,7 +72,7 @@
 				<div class="text-white order-2 order-lg-3">
 					<div class="d-flex justify-content-end">
 						<div class="border-left py-2 col-auto">
-							<i class="fa fa-globe fa-2x text-white mr-2 align-middle" aria-hidden="true"></i>
+							<img height="30px" src="img/globe.svg">
 							<select class="bg-success text-white border-0" ng-model="selectedLanguage">
 								<option name="selectedLanguage" value="English">English</option>
 								<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
@@ -96,6 +95,7 @@
         <main class="container-fluid py-3">
 			
 			<div class="row">
+					
 				<!-- summary -->
 				<div class="col-12 col-lg-4 pr-lg-2 pr-xl-2 mb-3" ng-controller="summaryCtrl">
 					<div class="card bg-white h-100">
@@ -224,7 +224,7 @@
 							<!-- table-responsive -->
 							<div class="table-responsive">
 								<table class="col-12 table table-striped table-hover px-0"  
-										id="appli_list_table">
+										id="appli_list_table" data-pagination="true">
 									<!-- <thead>
 										<tr>
 										<th scope="col"></th>
@@ -255,7 +255,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>30 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -308,7 +308,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2002 11:30</td>
 											<td>Sheung Wan</td>
@@ -361,7 +361,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -414,7 +414,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -467,7 +467,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -520,7 +520,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>
@@ -573,7 +573,7 @@
 											<td>Pending - CCC</td>
 											<td>Pending CCC allocation</td>
 											<td class="align-middle text-center">
-												<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>
+												<img height="30px" src="img/search.svg" data-toggle="popover" aria-hidden="true">
 											</td>
 											<td>05 Dec 2020 11:30</td>
 											<td>Sheung Wan</td>

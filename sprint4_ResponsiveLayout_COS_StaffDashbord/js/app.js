@@ -35,9 +35,9 @@ app.controller('applicationCtrl', function($scope) {
     };
 
     //table with json data
+    // window.sessionStorage.setItem("ID",value);
     $('#appli_list_table').bootstrapTable({
         url: 'json/application_list.json',
-          pagination: true,
         columns: [{
             checkbox:true
         }, {
@@ -47,7 +47,7 @@ app.controller('applicationCtrl', function($scope) {
             formatter:function(value, row, index){
                 return [
                 '<a href="applications_change_log.html">'+ value +'</a>'
-            ].join("")
+                ].join("")
             }
         },{
             field: 'type',
@@ -76,7 +76,7 @@ app.controller('applicationCtrl', function($scope) {
             title: 'Remark',
             formatter:function(value, row, index){
                 return [
-                '<i class="fa fa-search fa-1x text-success btn" data-toggle="popover" aria-hidden="true"></i>',
+                '<img class="btn ml-1" height="40px" src="img/search.svg" data-toggle="popover" aria-hidden="true">',
             ].join("")
             }
         }, {
@@ -102,7 +102,7 @@ app.controller('applicationCtrl', function($scope) {
     });
 
     // click to open popover -> col [Remarks]
-    $('#appli_list_table > [data-toggle="popover"]').popover( { 
+    $('[data-toggle="popover"]').popover( { 
         trigger:'click', 
         title:"Remark Details",
         html: true, 
@@ -151,7 +151,8 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
 
 // -----------------applications_change_log start--------------------------
 app.controller('bodyleftCtrl', function($scope) { 
-    
+    var id =window.sessionStorage.getItem("ID");
+    console.log(id);
 });
 
 // ------------------applications_change_log end-------------------------
