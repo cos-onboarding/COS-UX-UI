@@ -35,93 +35,108 @@ app.controller('applicationCtrl', function($scope) {
     };
 
     //table with json data
-    // window.sessionStorage.setItem("ID",value);
     $('#appli_list_table').bootstrapTable({
         url: 'json/application_list.json',
         columns: [{
-            checkbox:true
+            checkbox:true,
         }, {
             field: 'id',
             title: 'ID',
             sortable:true,
+            align: 'center',
             formatter:function(value, row, index){
-                return [
-                '<a href="applications_change_log.html">'+ value +'</a>'
-                ].join("")
+                // window.sessionStorage.setItem("IDs",value);
+                // console.log(value)
+                var html = '<a href="applications_change_log.html">'+ value +'</a>';
+                return html;
             }
         },{
             field: 'type',
             title: 'Type',
             sortable:true,
+            align: 'center',
         }, {
             field: 'entityType',
             title: 'Entity Type',
             sortable:true,
+            align: 'center',
         }, {
             field: 'companyName',
             title: 'Company Name',
-            sortable:true
+            sortable:true,
+            align: 'center',
         }, {
             field: 'customerId',
             title: 'Customer ID',
-            sortable:true
+            sortable:true,
+            align: 'center',
         }, {
             field: 'category',
-            title: 'Category'
+            title: 'Category',
+            align: 'center',
         }, {
             field: 'status',
-            title: 'Status'
+            title: 'Status',
+            align: 'center',
         },{
             field: 'remark',
             title: 'Remark',
+            align: 'center',
             formatter:function(value, row, index){
-                return [
-                '<img class="btn ml-1" height="40px" src="img/search.svg" data-toggle="popover" aria-hidden="true">',
-            ].join("")
+                var html = '';
+                html += '<img class="btn ml-1" height="40px" src="img/search.svg" data-toggle="popover" aria-hidden="true">';
+                return html;
             }
         }, {
             field: 'appointmentDate',
             title: 'Appointment Date & Time',
-            sortable:true
+            sortable:true,
+            align: 'center',
         }, {
             field: 'confirmedVenue',
-            title: 'Confirmed Venue'
+            title: 'Confirmed Venue',
+            align: 'center',
         }, {
             field: 'handlingCallAgent',
-            title: 'Handling Call Agent'
+            title: 'Handling Call Agent',
+            align: 'center',
         },  {
             field: 'taskDueDate',
-            title: 'Handling Call Agent'
+            title: 'Handling Call Agent',
+            align: 'center',
         }, {
             field: 'documentLastUploadDate',
-            title: 'Document Last Upload Date'
+            title: 'Document Last Upload Date',
+            align: 'center',
         }, {
             field: 'lastModifiedDate',
-            title: 'Last Modified Date'
+            title: 'Last Modified Date',
+            align: 'center',
         },]
+    }).on('all.bs.table', function (e, name, args) {
+        // click to open popover -> col [Remarks]
+        $('[data-toggle="popover"]').popover( { 
+            trigger:'click', 
+            title:"Remark Details",
+            html: true, 
+            content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
+        });
+        // close popover when click on the area outside of popover 
+        $('body').on('click', function(event) {
+            var target = $(event.target);
+            if (!target.hasClass('popover') 
+                    && target.parent('.popover-content').length === 0
+                    && target.parent('.popover-title').length === 0
+                    && target.parent('.popover').length === 0
+                    && target.data("toggle") !== "popover") {
+                $('[data-toggle="popover"]').popover('hide');
+            }
+        }); 
     });
-
-    // click to open popover -> col [Remarks]
-    $('[data-toggle="popover"]').popover( { 
-        trigger:'click', 
-        title:"Remark Details",
-        html: true, 
-        content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
-    });
-    // close popover when click on the area outside of popover 
-    $('body').on('click', function(event) {
-        var target = $(event.target);
-        if (!target.hasClass('popover') 
-                && target.parent('.popover-content').length === 0
-                && target.parent('.popover-title').length === 0
-                && target.parent('.popover').length === 0
-                && target.data("toggle") !== "popover") {
-            $('[data-toggle="popover"]').popover('hide');
-        }
-    });
-
-
-
+   
+    //add Table Header's background color.
+    $('thead').attr('class','thead-light');
+    
 });
 
 // ------------------applications_list end-------------------------
@@ -151,8 +166,8 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
 
 // -----------------applications_change_log start--------------------------
 app.controller('bodyleftCtrl', function($scope) { 
-    var id =window.sessionStorage.getItem("ID");
-    console.log(id);
+    // var id = window.sessionStorage.getItem("IDs");
+    // console.log("id:"+id.length);
 });
 
 // ------------------applications_change_log end-------------------------
