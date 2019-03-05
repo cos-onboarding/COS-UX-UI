@@ -114,7 +114,7 @@ app.controller('applicationCtrl', function($scope) {
             align: 'center',
         },]
     }).on('all.bs.table', function (e, name, args) {
-        // click to open popover -> col [Remarks]
+        // click to open popover -> col [Remark]
         $('[data-toggle="popover"]').popover( { 
             trigger:'click', 
             title:"Remark Details",
