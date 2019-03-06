@@ -6,3 +6,5 @@
 
 #### chrome-debug
 1. chrome-debug: 新建快捷方式-->目标 后添加：--user-data-dir="c:\ChromeDebug" --test-type --disable-web-security
+
+test git 0306
