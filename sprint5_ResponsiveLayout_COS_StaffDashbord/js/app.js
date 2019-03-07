@@ -31,7 +31,7 @@ app.controller('applicationCtrl', function($scope) {
             $("#AssignModal").modal('hide')
         },500);
 
-        $("#AssignToast").slideDown(500).delay(2000).fadeOut(500);
+        $("#AssignToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
     };
 
     //table with json data
