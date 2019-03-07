@@ -20,6 +20,7 @@ main {
     background-color: #28a745 !important;
     border-color: #28a745 !important;
 }
+/* use set the application_list page toast box */
 #AssignToast{
     width: 220px;
     line-height: 100px;
