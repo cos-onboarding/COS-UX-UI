@@ -4,9 +4,7 @@ var app = angular.module('myApp', ['moment-picker']);
 app.controller('headerCtrl', function($scope) { 
     //init navigation
     $scope.fullUserName = "Chrismrs Wong";
-    $scope.simpleUserName = "CW";
-    $scope.selectedLanguage = "English";
-
+    // $scope.simpleUserName = "CW";
 });
 
 app.controller('summaryCtrl', function($scope) {
@@ -45,9 +43,18 @@ app.controller('applicationCtrl', function($scope) {
             sortable:true,
             align: 'center',
             formatter:function(value, row, index){
-                // window.sessionStorage.setItem("IDs",value);
-                // console.log(value)
                 var html = '<a href="applications_change_log.html">'+ value +'</a>';
+                return html;
+            }
+        },
+        {
+            field: 'quick_view',
+            title: 'Quick View',
+            sortable:true,
+            align: 'center',
+            formatter:function(value, row, index){
+                var html = '';
+                html += '<i class="fas fa-binoculars text-success fa-lg" data-toggle="modal" data-target="#quickViewModal"></i>';
                 return html;
             }
         },{
@@ -55,7 +62,8 @@ app.controller('applicationCtrl', function($scope) {
             title: 'Type',
             sortable:true,
             align: 'center',
-        }, {
+        }, 
+         {
             field: 'entityType',
             title: 'Entity Type',
             sortable:true,
@@ -78,15 +86,6 @@ app.controller('applicationCtrl', function($scope) {
             field: 'status',
             title: 'Status',
             align: 'center',
-        },{
-            field: 'remark',
-            title: 'Remark',
-            align: 'center',
-            formatter:function(value, row, index){
-                var html = '';
-                html += '<img class="btn ml-1" height="40px" src="img/search.svg" data-toggle="popover" aria-hidden="true">';
-                return html;
-            }
         }, {
             field: 'appointmentDate',
             title: 'Appointment Date & Time',
@@ -113,30 +112,29 @@ app.controller('applicationCtrl', function($scope) {
             title: 'Last Modified Date',
             align: 'center',
         },]
-    }).on('all.bs.table', function (e, name, args) {
-        // click to open popover -> col [Remark]
-        $('[data-toggle="popover"]').popover( { 
-            trigger:'click', 
-            title:"Remark Details",
-            html: true, 
-            content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
-        });
-        // close popover when click on the area outside of popover 
-        $('body').on('click', function(event) {
-            var target = $(event.target);
-            if (!target.hasClass('popover') 
-                    && target.parent('.popover-content').length === 0
-                    && target.parent('.popover-title').length === 0
-                    && target.parent('.popover').length === 0
-                    && target.data("toggle") !== "popover") {
-                $('[data-toggle="popover"]').popover('hide');
-            }
-        }); 
+    }).on('click-cell.bs.table', function (field, value, row, $element) {
+        // // click to open popover -> col [Remark]
+        // $('[data-toggle="popover"]').popover( { 
+        //     trigger:'click', 
+        //     title:"Remark Details",
+        //     html: true, 
+        //     content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
+        // });
+        // // close popover when click on the area outside of popover 
+        // $('body').on('click', function(event) {
+        //     var target = $(event.target);
+        //     if (!target.hasClass('popover') 
+        //             && target.parent('.popover-content').length === 0
+        //             && target.parent('.popover-title').length === 0
+        //             && target.parent('.popover').length === 0
+        //             && target.data("toggle") !== "popover") {
+        //         $('[data-toggle="popover"]').popover('hide');
+        //     }
+        // }); 
     });
    
-    //add Table Header's background color.
-    $('thead').attr('class','thead-light');
-    
+    // remove table border and add Table Header's background color.
+    $('#appli_list_table').removeClass('table-bordered').find('thead').addClass('thead-light');
 });
 
 // ------------------applications_list end-------------------------
@@ -168,6 +166,11 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
 app.controller('bodyleftCtrl', function($scope) { 
     // var id = window.sessionStorage.getItem("IDs");
     // console.log("id:"+id.length);
+    $scope.ReactivateToastClick = function(){
+        $scope.toastContent = "Save successful !";
+        $("#ReactivateToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
+    }
 });
+
 
 // ------------------applications_change_log end-------------------------

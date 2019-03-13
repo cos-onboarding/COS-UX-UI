@@ -6,10 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_change_log</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+	<link href="./lib/fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
 	<link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
-    <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
 
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
@@ -27,181 +28,247 @@
 <body ng-app="myApp">
 	<div class="container-fluid px-0">	
 
-		<header class="sticky-top" ng-controller="headerCtrl">
-			<!-- 01 Navbar -->
-			<nav class="navbar navbar-expand-lg bg-success navbar-dark py-0">
-				<!-- Brand and collapse-icon -->
-				<div class="order-1 d-inline-flex py-2">
-					<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
-				</div>
-				<!-- nav-Links -->
-				<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
-					<ul class="navbar-nav nav">
-						<li class="nav-item">
-							<a class="nav-link text-white" href="applications_list.html">Applications</a>
-						</li>
-						<!-- Dropdown -->
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
-							<ul class="dropdown-menu bg-success py-0">
+	  	<header class="sticky-top" ng-controller="headerCtrl">
+					<!-- 01 Navbar -->
+					<nav class="navbar  bg-primary navbar-dark py-0 navbar-expand-sm navbar-dark mb-3">
+						<!-- Brand and collapse-icon -->
+						<div class="order-1 d-inline-flex py-2">
+							<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
+						</div>
+						<!-- nav-Links -->
+						<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+							<ul class="navbar-nav nav">
 								<li class="nav-item">
-									<a class="dropdown-item text-white" href="manage_team_progress.html">Team</a>
+									<a class="nav-link text-white" href="applications_list.html">Applications</a>
 								</li>
-								<li class="nav-item">
-									<a class="dropdown-item text-white" href="#">Report</a>
-								</li>
-								<li class="nav-item">
-									<a class="dropdown-item text-white" href="#">Timeslot</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Admin</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link text-white" href="#">
-								Notification<span class="badge badge-info">4</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<!--  nav-right -->
-				<div class="text-white order-2 order-lg-3">
-					<div class="d-flex justify-content-end">
-						<div class="border-left py-2 col-auto">
-							<img height="30px" src="img/globe.svg">
-							<select class="bg-success text-white border-0" ng-model="selectedLanguage">
-								<option name="selectedLanguage" value="English">English</option>
-								<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
-								<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
-							</select>
-						</div>
-						<div class="d-inlink-flex border-left pt-2 col-auto mr-3">
-							<div class="float-left mr-3 bg-white text-success border border-circle p-1">
-								<span ng-bind="simpleUserName"></span>
-							</div>
-							<span class="float-left" ng-bind="fullUserName"></span>
-						</div>
-					</div>
-				</div>
-			</nav>
-			<!-- 01 Navbar end-->
-		</header>
-
-		<main class="container-fluid py-3">
-
-			<div class="row">
-				<div class="col-12 col-lg-3 pr-lg-2 mb-3" ng-controller="bodyleftCtrl">
-					<!-- Application Id -->
-					<div class="card bg-white">
-						<div class="card-header bg-white text-success font-weight-bold pl-3">
-							<a class="mr-2" href="applications_list.html">
-								<img height="40px" src="img/arrow-left.svg">
-							</a>
-							<label class="">Application Id {{28882888}}</label>
-						</div>
-						<div class="card-body px-3">
-							<h6 for="">Status</h6>
-							<label for="">Pending RSO Allocation</label>
-
-							<h6 for="">Appointment</h6>
-							<label for="">31 Dec 2020, 13:30 Central</label>
-
-							<h6 for="">Assigned to:</h6>
-							<label for="">N/A</label>
-						</div>
-					</div>
-					<!-- Checklist -->
-					<div class="card bg-white my-3">
-						<div class="card-header bg-white text-success font-weight-bold pl-3">
-							Checklist
-						</div>
-						<div class="card-body px-3">
-							<label class="pl-0"><input type="checkbox" disabled="true">Booked Time Slot</label>
-						</div>
-					</div>
-					<!-- Workflow -->
-					<div class="card bg-white ">
-						<div class="card-header bg-white text-success font-weight-bold pl-3">
-							Workflow
-						</div>
-						<div class="card-body px-3">
-							<button class="btn btn-outline-success col-12 mb-3">Move forward</button>
-							<button class="btn btn-outline-success col-12">Reject</button>
-						</div>
-					</div>
-				</div>
-	
-				<div class="col-12 col-lg-9">
-					<div class="row">
-						<div class="col-12 pl-lg-2 mb-3">
-							<!-- 02 Navbar -->
-							<nav class="navbar navbar-expand-lg bg-white navbar-dark">
-								<!-- collapse-icon -->
-								<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleSubNavbar">
-									<label class="text-success mr-2">Change options</label>
-									<img height="40px" src="img/arrow-down.svg">
-								</button>
-								<!-- nav-Links -->
-								<div class="collapse navbar-collapse" id="collapsibleSubNavbar">
-									<ul class="navbar-nav nav">
+								<!-- Dropdown -->
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+									<ul class="dropdown-menu py-0">
 										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Form</a>
+											<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Documents</a>
+											<a class="dropdown-item text-dark" href="#">Report</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Email Applicant</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Appointment</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Remark</a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link text-success" href="#">Change Log</a>
+											<a class="dropdown-item text-dark" href="#">Timeslot</a>
 										</li>
 									</ul>
-								</div>
-							</nav>
-							<!-- 02 Navbar end-->
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">Admin</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-white" href="#">
+										Notification<span class="badge badge-info mx-1">518</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-					</div>
-		
-					<!-- main content -->
+						<!--  nav-right -->
+						<div class="text-white order-2 order-lg-3">
+							<div class="col-auto mr-3">
+								<img src="img/avatar.jpg" class="rounded-circle" height="36" alt="Responsive image">
+								<span ng-bind="fullUserName"></span>
+							</div>
+						</div>
+					</nav>
+					<!-- 01 Navbar end-->
+				</header>
+		   <main class="container-fluid py-3">
 					<div class="row">
-						<div class="col-12">
-							<div class="row">
-								<div class="col-12 col-lg-9 px-lg-2 mb-3">
-									<div class="border bg-white p-5 h-100">
-										filter
+					<div class="col-12 col-lg-3 pr-lg-2 mb-3" ng-controller="bodyleftCtrl">
+						<!-- Application Id -->
+						<div class="card bg-secondary text-white">
+							<div class="card-header font-weight-bold pl-3 mt-2 d-flex border-bottom-0">
+								<a class="mr-3" href="applications_list.html">
+									<h1><i class="fas fa-arrow-left cursor"></i></h1>
+								</a>
+								<label class="">Application ID<br><h3>28882888 <i class="cursor text-success fas fa-file-alt fa-sm"></i></h3></label>
+							</div>
+							<div class="card-body px-3">
+								<h6 >Status</h6>
+								<p class="f14">Rejected <i class="fas fa-file-alt cursor text-success fa-lg" data-toggle="modal" data-target="#reactStatusModal"></i></p>
+
+								<h6 >Appointment</h6>
+								<p class="f14">31 Dec 2020, 13:30 Central</p>
+
+								<h6>Assigned to:</h6>
+								<p class="f14">Ben Wong</p>
+							</div>
+						</div>
+							<!-- confirm Reactivate Application Modal -->
+							<div class="modal fade" id="reactStatusModal" tabindex="-1" role="dialog" aria-labelledby="reactStatusModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+											<h5 class="modal-title" id="reactStatusModalLabel">View Reject Reason</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+											</div>
+											<div class="modal-body">
+													<dl>
+															<dt>Rejection Date</dt>
+															<dd class="mb-2">11/3/2019</dd>
+															<dt>Rejection Staff</dt>
+															<dd class="mb-2">7629207500</dd>
+															<dt>Rejection Category </dt>
+															<dd class="mb-2">Hit - DNOA</dd>
+															<dt>Rejection Reason  </dt>
+															<dd class="mb-2">As above.</dd>
+															<dt>Under Enhanced Onboarding Programme</dt>
+															<dd class="mb-2">Yes</dd>
+															<dt>Customer have Hong Kong Nexus</dt>
+															<dd class="mb-2">No</dd>
+														</dl>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-outline-dark px-4 m-auto " data-dismiss="modal" >Close</button>
+											</div>
+										</div>
+									</div>
+							</div>
+						<!-- Checklist -->
+						<div class="card bg-secondary  my-3 py-3 text-white">
+							<div class="card-header font-weight-bold border-bottom-0 py-0">
+									CHECKLIST
+							</div>
+							<div class="card-body">
+								<form>
+										<div class="form-group">
+											<label for="exampleInputPassword1" class="d-block"><input type="checkbox" class="mx-2">Option 1</label>
+											<label for="exampleInputPassword1" class="d-block"><input type="checkbox" class="mx-2">Option 2</label>
+											<label for="exampleInputPassword1" class="d-block"><input type="checkbox" class="mx-2">Option 3</label>
+										</div>
+								</form>
+							</div>
+						</div>
+						<!-- Workflow -->
+						<div class="card bg-secondary text-white">
+							<div class="card-header font-weight-bold pl-3">
+									CHANGE STATUS TO
+							</div>
+							<div class="card-body px-3">
+								<button type="button" class="btn col-12 btn-primary btn-block">Under Review by CM</button>
+								<button type="button" class="btn col-12 btn-primary btn-block" data-toggle="modal" data-target="#confirmReactModal">BBO Processing (Reactivate)</button>
+								<!-- <button type="button" class="btn col-12 btn-primary btn-block disabled">Move Forward diabled</button>
+								<button type="button" class="btn col-12 btn-outline-primary btn-block">Follow up button</button>
+								<button type="button" class="btn col-12 btn-outline-primary btn-block">Follow up button</button>
+								<button type="button" class="btn col-12 btn-outline-primary btn-block">Follow up button</button> -->
+								<a href="reject.html" class="mt-2 d-block">
+										<button type="button" class="btn col-12 btn-outline-warning btn-block" >Reject</button>
+								</a>
+								<!-- <button type="button" class="btn col-12 btn-outline-warning btn-block">Cancel</button> -->
+							</div>
+						</div>
+							<!-- confirm Reactivate Application Modal -->
+						<div class="modal fade" id="confirmReactModal" tabindex="-1" role="dialog" aria-labelledby="confirmReactModalLabel" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+										<h5 class="modal-title" id="confirmReactModalLabel">Reactivate Application</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+										</div>
+										<div class="modal-body">
+												Are you sure you want to reactivate this application?
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-outline-dark px-4" data-dismiss="modal">Cancel</button>
+											<a href="applications_change_log.html">
+												<button type="button" class="btn btn-success px-4" ng-click='ReactivateToastClick()'>Reactivate</button>
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="col-12 col-lg-3 pl-lg-2 mb-3">
-									<div class="border bg-white p-5 h-100">
-										action button
-									</div>
+						</div>
+
+
+					<!--  Mention Toast -->
+					<div class="fixed-top border bg-white  text-center" id="ReactivateToast" aria-live="polite" aria-atomic="true" data-autohide="false">
+							<div class="">
+								<div class="toast-body"  ng-bind="toastContent">
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-12 pl-lg-2">
-									<div class="border bg-white p-5">
-										result table
+						</div>
+
+							
+					</div>
+					<div class="col-12 col-lg-9">
+						<div class="row">
+							<div class="col-12 pl-lg-2 mb-3">
+								<!-- 02 Navbar -->
+								<nav class="navbar navbar-expand-lg bg-white navbar-dark">
+									<!-- collapse-icon -->
+									<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleSubNavbar">
+										<label class="text-success mr-2">Change options</label>
+										<img height="40px" src="img/arrow-down.svg">
+									</button>
+									<!-- nav-Links -->
+									<div class="collapse navbar-collapse" id="collapsibleSubNavbar">
+										<ul class="navbar-nav nav bg-secondary px-1">
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Form</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Documents</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Email Applicant</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Appointment</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Remark</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link text-light" href="#">Change Log</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+								<!-- 02 Navbar end-->
+							</div>
+						</div>
+			
+						<!-- main content -->
+						<div class="row">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-12 col-lg-9 px-lg-2 mb-3">
+										<div class="border bg-white p-5 h-100">
+											filter
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 pl-lg-2 mb-3">
+										<div class="border bg-white p-5 h-100">
+											action button
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 pl-lg-2">
+										<div class="border bg-white p-5">
+											result table
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-			</div>
-
-		</main>
+					</div>
+		   </main>
+			<!-- footer -->
+			<footer class="py-3">
+				<p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p>
+			</footer>
     </div>
 </body>
 </html>
