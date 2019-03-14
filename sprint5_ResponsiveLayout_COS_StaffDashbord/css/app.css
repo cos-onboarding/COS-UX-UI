@@ -21,7 +21,7 @@
 }
 main {
     /* background-color: #eeeeee; */
-    min-height: 600px;
+    /* min-height: 600px; */
 }
 
 /* nav-right */
@@ -59,18 +59,19 @@ main {
 .cursor{
     cursor: pointer;
 }
+.f18{
+    font-size: 18px;
+}
 th {
     color: dimgray;
   }
-  
-  body {
-    color: dimgray;
-  }
-  
-  .card-title {
+body {
+ color: dimgray;
+}
+.card-title {
     text-transform: uppercase;
     font-size: small;
-  }
+}
   
 
 

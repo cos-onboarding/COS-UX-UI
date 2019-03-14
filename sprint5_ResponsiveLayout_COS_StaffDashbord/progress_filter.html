@@ -26,7 +26,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid px-0">	
+	<div class="container-fluid">	
         <header class="sticky-top" ng-controller="headerCtrl">
                 <!-- 01 Navbar -->
             <nav class="navbar  bg-primary navbar-dark py-0 navbar-expand-sm navbar-dark mb-3">
@@ -75,8 +75,8 @@
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Progess:</label>
                                         <div id="ProgressRadio" class="row pl-3 mt-2">
-                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="InProgress">In Progress</label>
-                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="Completed">Completed</label>
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="InProgress">&nbsp;In Progress</label>
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="Completed">&nbsp;Completed</label>
                                         </div>
                                         <!-- <label for="">{{progess}}</label> -->
                                     </div>
@@ -85,8 +85,8 @@
                                     <div class="border pt-2">
                                         <label class="control-label border-0 col-12" for="">Type of RP:</label>
                                         <div class="row pl-3 mt-2">
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="RP">RP</label>
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="Non-PR">Non-PR</label>
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="RP">&nbsp;RP</label>
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="Non-PR">&nbsp;Non-PR</label>
                                         </div>
                                     </div>
                                 </div>
@@ -95,8 +95,8 @@
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Type of Application:</label>
                                             <div class="row pl-3 mt-2">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="NTB">NTB</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="ETB">ETB</label>
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="NTB">&nbsp;NTB</label>
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="ETB">&nbsp;ETB</label>
                                             </div>
                                         </div>
                                     </div>
@@ -108,21 +108,23 @@
                                                 <!-- datepicker -->
                                                 <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-1">From</label>
-                                                    <input class="form-control h-75 my-0" 
-                                                    moment-picker="ctrl1.timepicker"
-                                                    ng-model="appointmentDateStart"
-                                                    format="MM/DD/YYYY"
-                                                    ng-model-options="{ updateOn: 'blur' }"
-                                                    show-header="true">
+                                                    <input class="form-control h-75 mr-3" 
+                                                        placeholder="Please select a date"
+                                                        moment-picker="ctrl1.timepicker"
+                                                        ng-model="appointmentDateStart"
+                                                        format="MM/DD/YYYY"
+                                                        ng-model-options="{ updateOn: 'blur' }"
+                                                        show-header="true">
                                                 </div>
                                                 <div class="col-6 col-lg-12 d-inline-flex">
-                                                    <label class="mr-4">To</label>
-                                                    <input class="form-control h-75 my-0" 
-                                                    moment-picker="ctrl2.timepicker"
-                                                    ng-model="appointmentDateEnd"
-                                                    format="MM/DD/YYYY"
-                                                    ng-model-options="{ updateOn: 'blur' }"
-                                                    show-header="true">
+                                                    <label class="mr-3">To&nbsp;</label>
+                                                    <input class="form-control h-75 mr-3" 
+                                                        placeholder="Please select a date"
+                                                        moment-picker="ctrl2.timepicker"
+                                                        ng-model="appointmentDateEnd"
+                                                        format="MM/DD/YYYY"
+                                                        ng-model-options="{ updateOn: 'blur' }"
+                                                        show-header="true">
                                                 </div>
 
                                             </div>
@@ -132,26 +134,26 @@
                                         <div class="border pt-2">
                                             <label class="control-label border-0 col-12" for="">Completed Date:</label>
                                             <div id="CompletedDateBox" class="row pl-3">
-                                                
                                                 <!-- datepicker -->
                                                <div class="col-6 col-lg-12 d-inline-flex">
                                                     <label class="mr-1">From</label>
-                                                    <input class="form-control h-75 " 
-                                                    moment-picker="ctrl3.timepicker"
-                                                    ng-model="completedDateStart"
-                                                    format="MM/DD/YYYY"
-                                                    ng-model-options="{ updateOn: 'blur' }"
-                                                    show-header="true">
+                                                    <input class="form-control h-75 mr-3" 
+                                                        moment-picker="ctrl3.timepicker"
+                                                        placeholder="Please select a date"
+                                                        ng-model="completedDateStart"
+                                                        format="MM/DD/YYYY"
+                                                        ng-model-options="{ updateOn: 'blur' }"
+                                                        show-header="true">
                                                 </div>
                                                 <div class="col-6 col-lg-12 d-inline-flex">
-                                                    <label class="mr-4">To</label>
-                                                    <input class="form-control h-75" 
-                                                    moment-picker="ctrl4.timepicker"
-                                                    ng-model="completedDateEnd"
-                                                    format="MM/DD/YYYY"
-                                                    ng-model-options="{ updateOn: 'blur' }"
-                                                    show-header="true">
-
+                                                    <label class="mr-3">To&nbsp;</label>
+                                                    <input class="form-control h-75 mr-3" 
+                                                        placeholder="Please select a date"
+                                                        moment-picker="ctrl4.timepicker"
+                                                        ng-model="completedDateEnd"
+                                                        format="MM/DD/YYYY"
+                                                        ng-model-options="{ updateOn: 'blur' }"
+                                                        show-header="true">
                                                 </div>
                                                
                                             </div>
@@ -202,7 +204,10 @@
                 </div>
             </div>	
         </main>
-		
+        <!-- footer -->
+        <footer class="py-5">
+            <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p>
+        </footer>
 	</div>
 </body>
 </html>

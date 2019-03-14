@@ -25,9 +25,9 @@ app.controller('applicationCtrl', function($scope) {
 
     //set Assign modal's mentionBox auto-close
     $scope.SaveAssign = function(){
-        setTimeout(function(){
-            $("#AssignModal").modal('hide')
-        },500);
+        // setTimeout(function(){
+        //     $("#AssignModal").modal('hide')
+        // },500);
 
         $("#AssignToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
     };
@@ -169,8 +169,8 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
 app.controller('bodyleftCtrl', function($scope) { 
     // var id = window.sessionStorage.getItem("IDs");
     // console.log("id:"+id.length);
+    $scope.toastContent2 = "Save successful !";
     $scope.ReactivateToastClick = function(){
-        $scope.toastContent = "Save successful !";
         $("#ReactivateToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
     }
 });

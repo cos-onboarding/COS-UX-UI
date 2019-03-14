@@ -73,9 +73,9 @@
 							<div class="card bg-secondary text-white">
 								<div class="card-header font-weight-bold pl-3 mt-2 d-flex border-bottom-0">
 									<a class="mr-3" href="applications_list.html">
-										<h1><i class="fas fa-arrow-left cursor"></i></h1>
+										<h1><i class="fas fa-arrow-left cursor" ></i></h1>
 									</a>
-									<label class="">Application ID<br><h3>28882888 <i class="cursor text-success fas fa-file-alt fa-sm"></i></h3></label>
+									<label class="">Application ID<br><h3>28882888 <i class="cursor text-success fas fa-file-alt fa-sm" data-toggle="modal" data-target="#remarkModal"></i></h3></label>
 								</div>
 								<div class="card-body px-3 pt-0">
 									<dl>
@@ -87,6 +87,36 @@
 										<dd class="">Ben Wong</dd>
 									</dl>
 								</div>
+							</div>
+								<!-- ApplicationID Remark Modal -->
+								<div class="modal fade" id="remarkModal" tabindex="-1" role="dialog" aria-labelledby="remarkModalLabel" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-scrollable" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+												<h5 class="modal-title" id="remarkModalLabel">Remark</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+												</div>
+												<div class="modal-body">
+													<div>
+														<h6>Ben Wong <span class="float-right">31 Dec 2019 23:59</span></h6>
+														<p>This customer cannot understand Chinese.</p>
+													</div>
+													<div class="mt-4">
+														<h6>Andy Chau <span class="float-right">1 Jan 2020 23:59</span></h6>
+														<p>Yes he can understand.</p>
+													</div>
+													<div class="mt-4">
+														<h6>Write a comment</h6>
+														<textarea class="form-control" id="message-text" rows="5"></textarea>
+													</div>
+												</div>
+												<div class="modal-footer border-top-0">
+													<button type="button" class="btn btn-success px-4 m-auto " data-dismiss="modal" >Post</button>
+												</div>
+											</div>
+										</div>
 							</div>
 								<!-- confirm Reactivate Application Modal -->
 							<div class="modal fade" id="reactStatusModal" tabindex="-1" role="dialog" aria-labelledby="reactStatusModalLabel" aria-hidden="true">
@@ -169,24 +199,22 @@
 												<span aria-hidden="true">&times;</span>
 											</button>
 											</div>
-											<div class="modal-body">
+											<div class="modal-body mb-5">
 													Are you sure you want to reactivate this application?
 											</div>
-											<div class="modal-footer">
+											<div class="modal-footer border-top-0">
 												<button type="button" class="btn btn-outline-dark px-4" data-dismiss="modal">Cancel</button>
-												<a href="applications_change_log.html">
-													<button type="button" class="btn btn-success px-4" ng-click='ReactivateToastClick()'>Reactivate</button>
-												</a>
+												<!-- <a href="applications_change_log.html"> -->
+													<button type="button" class="btn btn-success px-4" data-dismiss="modal" ng-click='ReactivateToastClick()'>Reactivate</button>
+												<!-- </a> -->
 											</div>
 										</div>
 									</div>
 							</div>
 
 						<!--  Mention Toast -->
-						  <div class="fixed-top border bg-white  text-center" id="ReactivateToast" aria-live="polite" aria-atomic="true" data-autohide="false">
-								<div class="">
-									<div class="toast-body"  ng-bind="toastContent">
-									</div>
+							<div class="fixed-top border bg-white  text-center" id="ReactivateToast" aria-live="polite" aria-atomic="true" data-autohide="false">
+								<div class="toast-body font-weight-bold f18" ng-bind="toastContent2">
 								</div>
 							</div>
 
