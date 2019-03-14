@@ -20,7 +20,7 @@
 
 }
 main {
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
     min-height: 600px;
 }
 
@@ -59,6 +59,18 @@ main {
 .cursor{
     cursor: pointer;
 }
-
+th {
+    color: dimgray;
+  }
+  
+  body {
+    color: dimgray;
+  }
+  
+  .card-title {
+    text-transform: uppercase;
+    font-size: small;
+  }
+  
 
 

@@ -35,11 +35,12 @@ app.controller('applicationCtrl', function($scope) {
     //table with json data
     $('#appli_list_table').bootstrapTable({
         url: 'json/application_list.json',
+        // height:500,
         columns: [{
             checkbox:true,
         }, {
             field: 'id',
-            title: 'ID',
+            title: 'Application ID',
             sortable:true,
             align: 'center',
             formatter:function(value, row, index){
@@ -132,15 +133,16 @@ app.controller('applicationCtrl', function($scope) {
         //     }
         // }); 
     });
+     // remove table's border 
+     $('#appli_list_table,#progress_table').removeClass('table-bordered');
    
-    // remove table border and add Table Header's background color.
-    $('#appli_list_table').removeClass('table-bordered').find('thead').addClass('thead-light');
 });
 
 // ------------------applications_list end-------------------------
 
 
-// -----------------Manage_Team_Progress start--------------------------
+
+// -----------------Progress start--------------------------
 app.controller('manageTeamProgressSearchCtrl', function($scope) { 
     //activation datepicker
     // myApp = angular.module('myApp', ['moment-picker']);
@@ -158,6 +160,7 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
             $('#CompletedDateBox input').removeAttr("disabled");
         };
     })
+    $('#progress_table').removeClass('table-bordered');
 });
 
 // ------------------Manage_Team_Progress end-------------------------
