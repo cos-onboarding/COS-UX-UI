@@ -75,6 +75,15 @@ app.controller('applicationCtrl', function($scope) {
             sortable:true,
             align: 'center',
         }, {
+            field: 'remark',
+            title: 'Remark',
+            align: 'center',
+            formatter:function(value, row, index){
+                var html = '';
+                html += '<i class="cursor text-success fas fa-file-alt fa-lg" data-toggle="modal" data-target="#ApplistRemarkModal"></i>';
+                return html;
+            }
+        },{
             field: 'customerId',
             title: 'Customer ID',
             sortable:true,
@@ -148,6 +157,8 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
     // myApp = angular.module('myApp', ['moment-picker']);
     
     // controlling whether the datepicker of 'Compleded Date' is available.
+    $scope.ischeckedRP = true;
+    $scope.ischeckedAppli = true;
     var selectedRadio = $('#ProgressRadio label input[type="radio"]')
     selectedRadio.change(function(){
         var radioVal = $('#ProgressRadio label input[type="radio"]:checked').val();

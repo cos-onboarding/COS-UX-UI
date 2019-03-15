@@ -6,11 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_Manage_Team_Progress</title>
-	<link rel="stylesheet" href="css/app.css">
+  
+    <link href="./lib/fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
-
+    <link rel="stylesheet" href="css/app.css">
+    
 	<script src="./lib/jquery.min.js"></script>
 	<script src="./lib/popper.min.js"></script>
     <script src="./lib/bootstrap4/bootstrap.min.js"></script>
@@ -26,7 +28,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid">	
+	<div class="container-fluid px-0">	
         <header class="sticky-top" ng-controller="headerCtrl">
                 <!-- 01 Navbar -->
             <nav class="navbar  bg-primary navbar-dark py-0 navbar-expand-sm navbar-dark mb-3">
@@ -56,14 +58,18 @@
                 <!--  nav-right -->
                 <div class="text-white order-2 order-lg-3">
                     <div class="col-auto mr-3">
-                        <img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image">
+                        <!-- <img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image"> -->
+                        <i class="far fa-user fa-lg"></i> 
                         <span ng-bind="fullUserName"></span>
                     </div>
                 </div>
             </nav>
                 <!-- 01 Navbar end-->
         </header>
-        <main class="container-fluid py-3">
+        <main class="container-fluid">
+            <div class="row">
+                <h5 class="p-1 ml-3">TEAM PROGRESS</h5>
+            </div>
             <div class="row">
                 <!-- Search -->
                 <div class="order-last order-xl-first order-lg-first col-12 mb-3" ng-controller="manageTeamProgressSearchCtrl">
@@ -73,36 +79,35 @@
                             <div class="row">
                                 <div class="col-12 col-lg-2 pr-lg-2 mb-3">
                                     <div class="border pt-2">
-                                        <label class="control-label border-0 col-12" for="">Progess:</label>
+                                        <label class="control-label border-0 col-12" >Progess:</label>
                                         <div id="ProgressRadio" class="row pl-3 mt-2">
-                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="InProgress">&nbsp;In Progress</label>
+                                            <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="InProgress" ng-checked="true">&nbsp;In Progress</label>
                                             <label class="radio-inline col-6 col-lg-12"><input type="radio" ng-model="progess" name="radioBtn" value="Completed">&nbsp;Completed</label>
                                         </div>
-                                        <!-- <label for="">{{progess}}</label> -->
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-2 px-lg-2 mb-3">
                                     <div class="border pt-2">
-                                        <label class="control-label border-0 col-12" for="">Type of RP:</label>
+                                        <label class="control-label border-0 col-12" >Type of RP:</label>
                                         <div class="row pl-3 mt-2">
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="RP">&nbsp;RP</label>
-                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="Non-PR">&nbsp;Non-PR</label>
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="RP" ng-checked='ischeckedRP'>&nbsp;RP</label>
+                                            <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfRP" name="checkBtn" value="Non-PR" ng-checked='ischeckedRP'>&nbsp;Non-PR</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 d-lg-inline-flex px-0">
                                     <div class="col-12 col-lg-4 px-lg-2 mb-3">
                                         <div class="border pt-2">
-                                            <label class="control-label border-0 col-12" for="">Type of Application:</label>
+                                            <label class="control-label border-0 col-12" >Type of Application:</label>
                                             <div class="row pl-3 mt-2">
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="NTB">&nbsp;NTB</label>
-                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="ETB">&nbsp;ETB</label>
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="NTB" ng-checked='ischeckedAppli'>&nbsp;NTB</label>
+                                                <label class="checkbox-inline col-6 col-lg-12"><input type="checkbox" ng-model="typeOfApplication" name="checkBtn1" value="ETB" ng-checked='ischeckedAppli'>&nbsp;ETB</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 col-lg-4 px-lg-2 mb-3">
                                         <div class="border pt-2">
-                                            <label class="control-label border-0 col-12" for="">Appointment Date:</label>
+                                            <label class="control-label border-0 col-12">Appointment Date:</label>
                                             <div class="row pl-3">
                                                 
                                                 <!-- datepicker -->
@@ -143,6 +148,7 @@
                                                         ng-model="completedDateStart"
                                                         format="MM/DD/YYYY"
                                                         ng-model-options="{ updateOn: 'blur' }"
+                                                        ng-disabled = true
                                                         show-header="true">
                                                 </div>
                                                 <div class="col-6 col-lg-12 d-inline-flex">
@@ -151,6 +157,7 @@
                                                         placeholder="Please select a date"
                                                         moment-picker="ctrl4.timepicker"
                                                         ng-model="completedDateEnd"
+                                                        ng-disabled = true
                                                         format="MM/DD/YYYY"
                                                         ng-model-options="{ updateOn: 'blur' }"
                                                         show-header="true">

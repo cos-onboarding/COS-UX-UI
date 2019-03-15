@@ -57,7 +57,8 @@
 						<!--  nav-right -->
 						<div class="text-white order-2 order-lg-3">
 							<div class="col-auto mr-3">
-								<img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image">
+								<!-- <img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image"> -->
+								<i class="far fa-user fa-lg"></i> 
 								<span ng-bind="fullUserName"></span>
 							</div>
 						</div>
@@ -92,7 +93,7 @@
 								<div class="modal fade" id="remarkModal" tabindex="-1" role="dialog" aria-labelledby="remarkModalLabel" aria-hidden="true">
 										<div class="modal-dialog modal-dialog-scrollable" role="document">
 											<div class="modal-content">
-												<div class="modal-header">
+												<div class="modal-header border-bottom-0">
 												<h5 class="modal-title" id="remarkModalLabel">Remark</h5>
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 													<span aria-hidden="true">&times;</span>
@@ -122,7 +123,7 @@
 							<div class="modal fade" id="reactStatusModal" tabindex="-1" role="dialog" aria-labelledby="reactStatusModalLabel" aria-hidden="true">
 										<div class="modal-dialog" role="document">
 											<div class="modal-content">
-												<div class="modal-header">
+												<div class="modal-header border-bottom-0">
 												<h5 class="modal-title" id="reactStatusModalLabel">View Reject Reason</h5>
 												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 													<span aria-hidden="true">&times;</span>
@@ -144,7 +145,7 @@
 																<dd class="mb-2">No</dd>
 															</dl>
 												</div>
-												<div class="modal-footer">
+												<div class="modal-footer border-top-0">
 													<button type="button" class="btn btn-outline-dark px-4 m-auto " data-dismiss="modal" >Close</button>
 												</div>
 											</div>
@@ -225,11 +226,12 @@
 								<div class="col-sm-9">
 										<div class="card bg-secondary text-light">
 											<div class="card-body d-flex">
-												<div class="btn-group mx-auto" >
+												<div class="btn-group mx-auto " >
 													<button type="button" class="btn btn-primary active ">Form</button>
 													<button type="button" class="btn btn-primary ">Documents</button>
 													<button type="button" class="btn btn-primary ">Email Applicant</button>
-													<button type="button" class="btn btn-primary ">Changes</button>
+													<button type="button" class="btn btn-primary ">Appointment</button>
+													<button type="button" class="btn btn-primary ">Change Log</button>
 													<button type="button" class="btn btn-primary ">Archival</button>
 												</div>
 											</div>

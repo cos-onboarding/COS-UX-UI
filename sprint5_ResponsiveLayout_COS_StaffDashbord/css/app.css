@@ -49,13 +49,6 @@ main {
     left: auto;
     display: none;
 }
-#rejectModalLabel .modal-body h5{
-    /* border-right: #28a745;
-    border-width: 5px;
-    width: 10px;
-    height: 10px; */
-    border-left:1px dashed #000
-}
 .cursor{
     cursor: pointer;
 }
@@ -64,7 +57,7 @@ main {
 }
 th {
     color: dimgray;
-  }
+}
 body {
  color: dimgray;
 }
@@ -72,6 +65,8 @@ body {
     text-transform: uppercase;
     font-size: small;
 }
-  
+.card-header{
+    background-color: inherit;
+}
 
 

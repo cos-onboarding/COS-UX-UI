@@ -55,7 +55,8 @@
 				<!--  nav-right -->
 				<div class="text-white order-2 order-lg-3">
 					<div class="col-auto mr-3">
-						<img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image">
+						<!-- <img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image"> -->
+						<i class="far fa-user fa-lg"></i> 
 						<span ng-bind="fullUserName"></span>
 					</div>
 				</div>
@@ -209,11 +210,11 @@
 									<div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalTitle" aria-hidden="true">
 										<div class="modal-dialog modal-dialog-scrollable" role="document">
 										<div class="modal-content">
-											<div class="modal-header">
-											<h5 class="modal-title" >Quick View</h5> 
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
+											<div class="modal-header border-bottom-0">
+												<h5 class="modal-title" >Quick View</h5> 
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
 											</div>
 											<div class="modal-body">
 													<dl>
@@ -237,14 +238,38 @@
 														<dd>123456789</dd>
 														<dt>Document Last Uploaded Date</dt>
 														<dd>31 Dec 2018</dd>
-														<dt>Remark</dt>
-														<dd>sdfdsfewrwer</dd>
 													</dl> 
 											</div>
-											<div class="modal-footer">
-											<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+											<div class="modal-footer border-top-0">
+												<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
 											</div>
 										</div>
+										</div>
+									</div>
+										<!-- ApplicationList Remark Modal -->
+									<div class="modal fade" id="ApplistRemarkModal" tabindex="-1" role="dialog" aria-labelledby="ApplistRemarkModalLabel" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-scrollable" role="document">
+											<div class="modal-content">
+												<div class="modal-header border-bottom-0">
+													<h5 class="modal-title" id="ApplistRemarkModalLabel">Remark</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<div>
+														<h6>Ben Wong <span class="float-right">31 Dec 2019 23:59</span></h6>
+														<p>This customer cannot understand Chinese.</p>
+													</div>
+													<div class="mt-4">
+														<h6>Write a comment</h6>
+														<textarea class="form-control" id="message-text" rows="5"></textarea>
+													</div>
+												</div>
+												<div class="modal-footer border-top-0">
+													<button type="button" class="btn btn-primary px-4 m-auto " data-dismiss="modal" >Post</button>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
