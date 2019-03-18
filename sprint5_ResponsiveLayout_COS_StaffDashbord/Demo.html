@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>StaffDashbord_applications_list</title>
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+	<link href="./lib/fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="./lib/jquery.min.js"></script>   
+	<script src="./lib/popper.min.js"></script>
+	<script src="./lib/bootstrap4/bootstrap.min.js"></script>
+	<script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>
+	
+	<script src="./lib/angularjs1.6.4/angular.min.js"></script>
+	<script src="./lib/datepicker/moment.js"></script>
+    <script src="./lib/datepicker/angular-moment-picker.min.js"></script>
+
+	<script src="./js/app.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <div style="margin: 100px 100px"> 
+        <div class="py-3" id="attenBtns">  
+            <button type="button" class="btn btn-success px-4" data-id="2" data-index="2">Attention #202</button>
+            <button type="button" class="btn btn-success px-4" data-id="2" data-index="4">Attention #204</button>
+            <button type="button" class="btn btn-success px-4" data-id="3" data-index="3">Attention #303</button>
+            <button type="button" class="btn btn-success px-4" data-id="11" data-index="32">Attention #1132</button>
+        </div>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" >#1</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">#2</a>
+              <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">#3</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">AAA:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">bbb:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">ccc:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">DDD:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">EEE:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">FFF:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">FFF:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">GGG:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">HHHH:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                    <label for="recipient-name" class="col-form-label">JJJJ:</label>
+                    <input type="text" class="form-control"   value="7629207500">
+                </div>
+                <div class="form-group w-50">
+                        <label for="recipient-name" class="col-form-label">rrrr:</label>
+                        <input type="text" class="form-control"   value="7629207500">
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function(){
+        $('#attenBtns button').click(function(){
+            // 获取需要传入两个参数 id 和 需要定位的 filed的index
+            var id = $(this).data("id");
+            var index = $(this).data("index");
+            // 获取当前点击的Nav 的头和内容
+            var navCurrent = $('.nav a')[id-1];
+            var navs_contCurrent = $('.tab-content>div')[id-1];
+            $(navCurrent).addClass("active").siblings().removeClass("active");
+            $(navs_contCurrent).attr("class","active show tab-pane fade").siblings().attr("class","tab-pane fade");
+            // 获取到需要定位的文本框
+            var inputsCurrent = $(navs_contCurrent).find('input')[index-1];
+            $(inputsCurrent).focus();
+        })
+    })
+</script>
+</html>
