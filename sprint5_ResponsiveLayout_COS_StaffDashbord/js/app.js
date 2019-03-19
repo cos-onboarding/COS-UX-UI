@@ -55,7 +55,7 @@ app.controller('applicationCtrl', function($scope) {
             align: 'center',
             formatter:function(value, row, index){
                 var html = '';
-                html += '<i class="fas fa-binoculars text-success fa-lg" data-toggle="modal" data-target="#quickViewModal"></i>';
+                html += '<i data-toggle="modal" data-target="#quickViewModal"><img src="img/binoculars-solid.svg" height="16" alt="Responsive image"></i>';
                 return html;
             }
         },{
@@ -80,7 +80,9 @@ app.controller('applicationCtrl', function($scope) {
             align: 'center',
             formatter:function(value, row, index){
                 var html = '';
-                html += '<i class="cursor text-success fas fa-file-alt fa-lg" data-toggle="modal" data-target="#ApplistRemarkModal"></i>';
+                // html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-regular.svg" height="16" alt="Responsive image"></i>';
+                // html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-solid.svg" height="16" alt="Responsive image"></i>';
+                html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-alt-solid.svg" height="16" alt="Responsive image"></i>';
                 return html;
             }
         },{

@@ -57,8 +57,7 @@
 						<!--  nav-right -->
 						<div class="text-white order-2 order-lg-3">
 							<div class="col-auto mr-3">
-								<!-- <img src="img/avatar.jpg" class="rounded-circle" width="35" height="35" alt="Responsive image"> -->
-								<i class="far fa-user fa-lg"></i> 
+								<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 								<span ng-bind="fullUserName"></span>
 							</div>
 						</div>
@@ -74,14 +73,30 @@
 							<div class="card bg-secondary text-white">
 								<div class="card-header font-weight-bold pl-3 mt-2 d-flex border-bottom-0">
 									<a class="mr-3" href="applications_list.html">
-										<h1><i class="fas fa-arrow-left cursor" ></i></h1>
+										<div class="cursor pt-2" id="arrow_back">
+											<img src="img/arrow-left-solid.svg" height="30" alt="Responsive image">
+											<img src="img/arrow-left-solid-hover.svg" height="30" alt="Responsive image">
+										</div>
 									</a>
-									<label class="">Application ID<br><h3>28882888 <i class="cursor text-success fas fa-file-alt fa-sm" data-toggle="modal" data-target="#remarkModal"></i></h3></label>
+									<label class="">Application ID<br>
+										<h3>28882888 
+											<span class="cursor" data-toggle="modal" data-target="#remarkModal" id="AppliId_icon">
+												<img src="img/file-alt-solid.svg" height="20" alt="Responsive image">
+												<img src="img/file-alt-solid-hover.svg" height="20" alt="Responsive image">
+											</span>
+										</h3>
+									</label>
 								</div>
 								<div class="card-body px-3 pt-0">
 									<dl>
 										<dt>Status</dt>
-										<dd>Rejected <a href="#"><i class="fas fa-file-alt" data-toggle="modal" data-target="#reactStatusModal"></i></a></dd>
+										<dd>
+											Rejected 
+											<span class="cursor" data-toggle="modal" data-target="#reactStatusModal" id="Rejected_icon">
+												<img src="img/file-alt-solid.svg" height="15" alt="Responsive image">
+												<img src="img/file-alt-solid-hover.svg" height="15" alt="Responsive image">
+											</span>
+										</a></dd>
 										<dt>Appointment</dt>
 										<dd>31 Dec 2018, 13:30, Central</dd>
 										<dt>Assigned To</dt>
@@ -185,9 +200,9 @@
 									<button type="button" class="btn col-12 btn-outline-primary btn-block">Follow up button</button>
 									<button type="button" class="btn col-12 btn-outline-primary btn-block">Follow up button</button> -->
 									<a href="reject.html" class="mt-2 d-block">
-											<button type="button" class="btn col-12 btn-outline-warning btn-block" >Reject</button>
+											<button type="button" class="btn col-12 btn-warning btn-block" >Reject</button>
 									</a>
-									<!-- <button type="button" class="btn col-12 btn-outline-warning btn-block">Cancel</button> -->
+									<!-- <button type="button" class="btn col-12 btn-warning btn-block">Cancel</button> -->
 								</div>
 							</div>
 								<!-- confirm Reactivate Application Modal -->
