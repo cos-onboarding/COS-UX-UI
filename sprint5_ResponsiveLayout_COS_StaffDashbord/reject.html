@@ -26,18 +26,18 @@
 
 <body ng-app="myApp">
 	<div class="container-fluid px-0">	
-		<header class="sticky-top" ng-controller="headerCtrl">
+		<header class="sticky-top  bg-primary clearfix row" ng-controller="headerCtrl">
 			<!-- 01 Navbar -->
-			<nav class="navbar  bg-primary navbar-dark py-0 navbar-expand-sm navbar-dark mb-3">
+			<nav class="navbar  navbar-dark pl-4  col-12 col-sm-8 navbar-expand-md">
 				<!-- Brand and collapse-icon -->
-				<div class="order-1 d-inline-flex py-2">
+				<div class="py-2">
 					<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
 				</div>
 				<!-- nav-Links -->
-				<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
+				<div class="collapse navbar-collapse" id="collapsibleNavbar">
 					<ul class="navbar-nav nav">
 						<li class="nav-item">
 							<a class="nav-link text-white" href="applications_list.html">Applications</a>
@@ -67,14 +67,15 @@
 						</li>
 					</ul>
 				</div>
-				<!--  nav-right -->
-				<div class="text-white order-2 order-lg-3">
-					<div class="col-auto mr-3">
-						<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
-						<span ng-bind="fullUserName"></span>
-					</div>
-				</div>
+				
 			</nav>
+			<!--  nav-right -->
+			<div class="text-white my-3  col-12 col-sm-4 text-md-right">
+				<div class="col-auto mr-3">
+					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
+					<span ng-bind="fullUserName"></span>
+				</div>
+			</div>
 			<!-- 01 Navbar end-->
 		</header>
 		<!-- content start -->

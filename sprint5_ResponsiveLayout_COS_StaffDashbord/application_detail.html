@@ -28,41 +28,57 @@
 <body ng-app="myApp">
 	<div class="container-fluid px-0">	
 
-			<header class="sticky-top" ng-controller="headerCtrl">
-					<!-- 01 Navbar -->
-					<nav class="navbar  bg-primary navbar-dark py-0 navbar-expand-sm navbar-dark mb-3">
-						<!-- Brand and collapse-icon -->
-						<div class="order-1 d-inline-flex py-2">
-							<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<a class="navbar-brand mx-2 ml-xl-0 mr-lg-3" href="#Staff Dashboard">Staff Dashboard</a>
-						</div>
-						<!-- nav-Links -->
-						<div class="collapse navbar-collapse order-3 order-lg-2 " id="collapsibleNavbar">
-							<ul class="navbar-nav">
-								<li class="nav-item"> <a class="nav-link" href="applications_list.html">Applications</a> </li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Manage</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="manage_team_progress.html">Team Progress</a>
-										<a class="dropdown-item" href="#">Timeslot</a>
-										<a class="dropdown-item" href="#">MI Report</a>
-									</div>
-								</li>
-								<li class="nav-item"> <a class="nav-link" href="#">Admin</a> </li>
-								<li class="nav-item"> <a class="nav-link d-flex align-items-center" href="#">Notification <span class="ml-1 badge badge-info badge-pill">520</span></a> </li>
-							</ul>
-						</div>
-						<!--  nav-right -->
-						<div class="text-white order-2 order-lg-3">
-							<div class="col-auto mr-3">
-								<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
-								<span ng-bind="fullUserName"></span>
-							</div>
-						</div>
-					</nav>
-					<!-- 01 Navbar end-->
+			<header class="sticky-top  bg-primary clearfix row" ng-controller="headerCtrl">
+				<!-- 01 Navbar -->
+				<nav class="navbar  navbar-dark pl-4  col-12 col-sm-8 navbar-expand-md">
+					<!-- Brand and collapse-icon -->
+					<div class="py-2">
+						<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
+					</div>
+					<!-- nav-Links -->
+					<div class="collapse navbar-collapse  " id="collapsibleNavbar">
+						<ul class="navbar-nav nav">
+							<li class="nav-item">
+								<a class="nav-link text-white" href="applications_list.html">Applications</a>
+							</li>
+							<!-- Dropdown -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+								<ul class="dropdown-menu py-0">
+									<li class="nav-item">
+										<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item text-dark" href="#">Report</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item text-dark" href="#">Timeslot</a>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="#">Admin</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link text-white" href="#">
+									Notification<span class="badge badge-info mx-1">518</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+				</nav>
+				<!--  nav-right -->
+				<div class="text-white my-3  col-12 col-sm-4 text-md-right">
+					<div class="col-auto mr-3">
+						<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
+						<span ng-bind="fullUserName"></span>
+					</div>
+				</div>
+				<!-- 01 Navbar end-->
 			</header>
 				<!-- main content start-->
 		   <main class="container-fluid">
@@ -238,16 +254,16 @@
 						  <!-- content right -->
 						<div class="col-lg-9 col-sm-9">
 							<div class="row mb-3">
-								<div class="col-sm-9">
+								<div class="col-sm-9 col-lg-12">
 										<div class="card bg-secondary text-light">
 											<div class="card-body d-flex">
-												<div class="btn-group mx-auto " >
-													<button type="button" class="btn btn-primary active ">Form</button>
-													<button type="button" class="btn btn-primary ">Documents</button>
-													<button type="button" class="btn btn-primary ">Email Applicant</button>
-													<button type="button" class="btn btn-primary ">Appointment</button>
-													<button type="button" class="btn btn-primary ">Change Log</button>
-													<button type="button" class="btn btn-primary ">Archival</button>
+												<div class="btn-group mx-auto row" >
+													<button type="button" class="btn  btn-primary active ">Form</button>
+													<button type="button" class="btn  btn-primary ">Documents</button>
+													<button type="button" class="btn  btn-primary ">Email Applicant</button>
+													<button type="button" class="btn  btn-primary ">Appointment</button>
+													<button type="button" class="btn  btn-primary ">Change Log</button>
+													<button type="button" class="btn  btn-primary ">Archival</button>
 												</div>
 											</div>
 										</div>
