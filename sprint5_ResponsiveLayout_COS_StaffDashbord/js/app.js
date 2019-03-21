@@ -28,8 +28,7 @@ app.controller('applicationCtrl', function($scope) {
         // setTimeout(function(){
         //     $("#AssignModal").modal('hide')
         // },500);
-
-        $("#AssignToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
+        $("#AssignToast").toast('show')
     };
 
     //table with json data
@@ -184,7 +183,7 @@ app.controller('bodyleftCtrl', function($scope) {
     // console.log("id:"+id.length);
     $scope.toastContent2 = "Save successful !";
     $scope.ReactivateToastClick = function(){
-        $("#ReactivateToast").delay(1000).slideDown(500).delay(2000).fadeOut(500);
+        $("#ReactivateToast").toast('show')
     }
 });
 

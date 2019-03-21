@@ -72,7 +72,7 @@
 					
 				</nav>
 				<!--  nav-right -->
-				<div class="text-white my-3  col-12 col-sm-4 text-md-right">
+				<div class="text-white my-3 pt-2 col-12 col-sm-4 text-md-right">
 					<div class="col-auto mr-3">
 						<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 						<span ng-bind="fullUserName"></span>
@@ -244,10 +244,12 @@
 									</div>
 							</div>
 
-						<!--  Mention Toast -->
-							<div class="fixed-top border bg-white  text-center" id="ReactivateToast" aria-live="polite" aria-atomic="true" data-autohide="false">
-								<div class="toast-body font-weight-bold f18" ng-bind="toastContent2">
-								</div>
+							<!-- toast Message -->
+							<div class="toast bg-info fixed-top w-75 mr-sm-3 py-2"  id="ReactivateToast" data-autohide="true" data-animation="true" data-delay="1500">
+									<div class="toast-header bg-info">
+										<button type="button" class="ml-auto mb-1 close" data-dismiss="toast">&times;</button>
+									</div>
+									<div class="toast-body text-light pt-0" ng-bind="toastContent2"></div>
 							</div>
 
 						</div>

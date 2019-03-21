@@ -19,10 +19,6 @@
 @media only screen and (min-width: 1200px) {
 
 }
-main {
-    /* background-color: #eeeeee; */
-    /* min-height: 600px; */
-}
 /* nav-right */
 .border-circle{
     border-radius: 100% !important;
@@ -42,10 +38,8 @@ main {
 }
 /* use set the application_list page toast box */
 #AssignToast,#ReactivateToast{
-    width: 220px;
-    line-height: 100px;
     left: auto;
-    display: none;
+    top: 90px;
 }
 .cursor{
     cursor: pointer;
