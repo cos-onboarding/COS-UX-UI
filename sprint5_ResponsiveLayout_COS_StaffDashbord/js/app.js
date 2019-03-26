@@ -4,17 +4,28 @@ var app = angular.module('myApp', ['moment-picker']);
 app.controller('headerCtrl', function($scope) { 
     //init navigation
     $scope.fullUserName = "Chrismrs Wong";
-    // $scope.simpleUserName = "CW";
+
 });
 
-app.controller('summaryCtrl', function($scope) {
-    //init summary
-    $scope.pendingCCCAllocation = 23 ;
+app.controller('myCaseCtrl', function($scope) {
+    //init MY CASES
+    $scope.pendingCCCAllocation = 23;
     $scope.pendingForHanding = 17;
+    $scope.All = 18;
 
 });
 
 app.controller('searchCtrl', function($scope) { 
+
+    $scope.Status = ["a", "b", "c"];
+    $scope.selectedStatus = "a";
+    
+    $scope.BusinessCenters = ["1", "2", "3","4","5","6","7"];
+    $scope.selectedBusinessCenter = "1";
+
+    $scope.BBOAssigneds = ["a", "b", "c"];
+    $scope.selectedBBOAssigned = "a";
+    
 
 });
 
