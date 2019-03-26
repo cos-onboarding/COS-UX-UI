@@ -163,8 +163,8 @@ app.controller('applicationCtrl', function($scope) {
 
 
 
-// -----------------Progress start--------------------------
-app.controller('manageTeamProgressSearchCtrl', function($scope) { 
+// -----------------Progress_filter start--------------------------
+app.controller('progressFilterCtrl', function($scope) { 
     //activation datepicker
     // myApp = angular.module('myApp', ['moment-picker']);
     
@@ -186,9 +186,9 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
     $('#progress_table').removeClass('table-bordered');
 });
 
-// ------------------Manage_Team_Progress end-------------------------
+// ------------------Progress_filter end-------------------------
 
-// -----------------applications_change_log start--------------------------
+// -----------------application_detail start--------------------------
 app.controller('bodyleftCtrl', function($scope) { 
     // var id = window.sessionStorage.getItem("IDs");
     // console.log("id:"+id.length);
@@ -199,4 +199,18 @@ app.controller('bodyleftCtrl', function($scope) {
 });
 
 
-// ------------------applications_change_log end-------------------------
+// ------------------application_detail end-------------------------
+
+
+
+
+// -----------------notification start--------------------------
+app.controller('bodyCtrl', function($scope) { 
+    $scope.todayCounts = 12;
+    $scope.yesterdayCounts = 5;
+    $scope.thisWeekCounts = 4;
+    $scope.olderCounts = 1;
+    
+});
+// ------------------notification end-------------------------
+
