@@ -43,7 +43,7 @@ app.controller('applicationCtrl', function($scope) {
             sortable:true,
             align: 'center',
             formatter:function(value, row, index){
-                var html = '<a href="applications_change_log.html">'+ value +'</a>';
+                var html = '<a href="application_detail.html">'+ value +'</a>';
                 return html;
             }
         },

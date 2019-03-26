@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_change_log</title>
+
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
-	<link href="./lib/fontawesome/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
 	<link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
-	<script src="./lib/jquery.min.js"></script>
-	<script src="./lib/popper.min.js"></script>
+	<script src="./lib/bootstrap4/jquery.min.js"></script>
+	<script src="./lib/bootstrap4/popper.min.js"></script>
     <script src="./lib/bootstrap4/bootstrap.min.js"></script>
     <script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>   
     
@@ -27,59 +27,57 @@
 
 <body ng-app="myApp">
 	<div class="container-fluid px-0">	
-
-			<header class="sticky-top  bg-primary clearfix row" ng-controller="headerCtrl">
-				<!-- 01 Navbar -->
-				<nav class="navbar  navbar-dark pl-4  col-12 col-sm-8 navbar-expand-md">
-					<!-- Brand and collapse-icon -->
-					<div class="py-2">
-						<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
-					</div>
-					<!-- nav-Links -->
-					<div class="collapse navbar-collapse  " id="collapsibleNavbar">
-						<ul class="navbar-nav nav">
-							<li class="nav-item">
-								<a class="nav-link text-white" href="applications_list.html">Applications</a>
-							</li>
-							<!-- Dropdown -->
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
-								<ul class="dropdown-menu py-0">
-									<li class="nav-item">
-										<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
-									</li>
-									<li class="nav-item">
-										<a class="dropdown-item text-dark" href="#">Report</a>
-									</li>
-									<li class="nav-item">
-										<a class="dropdown-item text-dark" href="#">Timeslot</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-white" href="#">Admin</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link text-white" href="#">
-									Notification<span class="badge badge-info mx-1">518</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					
-				</nav>
-				<!--  nav-right -->
-				<div class="text-white my-3 pt-2 col-12 col-sm-4 text-md-right">
-					<div class="col-auto mr-3">
-						<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
-						<span ng-bind="fullUserName"></span>
-					</div>
+		
+		<!-- header -->
+		<header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
+			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
+				<!-- Brand and collapse-icon -->
+				<div class="">
+					<button class="navbar-toggler px-2 mr-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand mr-2" href="#">Staff Dashboard</a>
 				</div>
-				<!-- 01 Navbar end-->
-			</header>
+				<!-- nav-Links -->
+				<div class="collapse navbar-collapse  " id="collapsibleNavbar">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="application_list.html">Applications</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+							<ul class="dropdown-menu py-0">
+								<li class="nav-item">
+									<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
+								</li>
+								<li class="nav-item">
+									<a class="dropdown-item text-dark" href="#">Report</a>
+								</li>
+								<li class="nav-item">
+									<a class="dropdown-item text-dark" href="#">Timeslot</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#">Admin</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#">
+								Notification<span class="badge badge-info mx-1">518</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!--  nav-right -->
+			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
+				<div class="col-auto mr-3">
+					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
+					<span ng-bind="fullUserName"></span>
+				</div>
+			</div>
+		</header>
+				
 				<!-- main content start-->
 		   <main class="container-fluid">
 					<div class="row">
@@ -88,7 +86,7 @@
 								<!-- Application Id -->
 							<div class="card bg-secondary text-white">
 								<div class="card-header font-weight-bold pl-3 mt-2 d-flex border-bottom-0">
-									<a class="mr-3" href="applications_list.html">
+									<a class="mr-3" href="application_list.html">
 										<div class="cursor pt-2" id="arrow_back">
 											<img src="img/arrow-left-solid.svg" height="30" alt="Responsive image">
 											<img src="img/arrow-left-solid-hover.svg" height="30" alt="Responsive image">
