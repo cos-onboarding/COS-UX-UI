@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>StaffDashbord_applications_change_log</title>
+	<title></title>
 
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
@@ -26,7 +26,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid px-0">	
+	<div class="container-fluid">	
 		
 		<!-- header -->
 		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
@@ -71,7 +71,7 @@
 			</nav>
 			<!--  nav-right -->
 			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
-				<div class="col-auto mr-3">
+				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
 				</div>
@@ -82,7 +82,7 @@
 		   <main class="container-fluid">
 					<div class="row">
 						<!-- content left -->
-						<div class="col-12 col-lg-3 mb-3" ng-controller="bodyleftCtrl">
+						<div class="col-12 col-lg-3 mb-3 px-0 pr-lg-3" ng-controller="bodyleftCtrl">
 							<!-- Application Id -->
 							<div class="card bg-secondary text-white">
 								<div class="card-header font-weight-bold pl-3 mt-2 d-flex border-bottom-0">
@@ -95,10 +95,8 @@
 									<label class="">Application ID<br>
 										<h3>28882888 
 											<span class="cursor" data-toggle="modal" data-target="#remarkModal" id="AppliId_icon">
-												<!-- <img src="img/file-alt-solid.svg" height="20" alt="Responsive image">
-												<img src="img/file-alt-solid-hover.svg" height="20" alt="Responsive image"> -->
-												<img src="img/comment-empty.svg" height="20" alt="Responsive image">
-												<img src="img/comment-attention.svg" height="20" alt="Responsive image">
+												<img src="img/comment-empty-transparent.svg" height="20" alt="Responsive image">
+												<img src="img/comment-empty.svg" height="20" alt="Responsive image">											
 											</span>
 										</h3>
 									</label>
@@ -109,15 +107,17 @@
 										<dd>
 											Rejected 
 											<span class="cursor" data-toggle="modal" data-target="#reactStatusModal" id="Rejected_icon">
-												<!-- <img src="img/file-alt-solid.svg" height="15" alt="Responsive image">
-												<img src="img/file-alt-solid-hover.svg" height="15" alt="Responsive image"> -->
-												<img src="img/comment-empty.svg" height="18" alt="Responsive image">
-												<img src="img/comment-attention.svg" height="18" alt="Responsive image">
+												<img src="img/comment-attention.svg" height="17" alt="Responsive image">
+												<img src="img/comment-filled.svg" height="17" alt="Responsive image">
 											</span>
 										</dd>
 										<dt>Appointment</dt>
 										<dd>31 Dec 2018, 13:30, Central</dd>
 										<dt>Assigned To</dt>
+										<dd class="">Ben Wong</dd>
+										<dt>Risk Rating</dt>
+										<dd class="">Medium</dd>
+										<dt>Adjusted Risk Rating</dt>
 										<dd class="">Ben Wong</dd>
 									</dl>
 								</div>
@@ -255,8 +255,9 @@
 						</div>
 						<!-- content right -->
 						<div class="col-lg-9">
+							
 							<div class="row mb-3">
-								<div class="col-12 pl-lg-0 pr-3">
+								<div class="col-12 px-0">
 									<div class="card bg-secondary text-light">
 										<div class="card-body d-flex">
 											<div class="btn-group mx-auto row" >
@@ -271,22 +272,85 @@
 									</div>
 								</div>
 							</div>
+
+							<div class="row">
+								<div class="col-12 d-flex px-0 mb-3">
+									<h5 class="mr-auto">Application Form
+										<span class="cursor" data-toggle="modal" data-target="#applicationFormModal">
+											<img src="img/comment-empty.svg" height="20" alt="Responsive image">
+										</span>
+									</h5>
+									<button class="btn btn-default text-success py-0" type="submit">
+										<span class="cursor" data-toggle="modal" data-target="#applicationFormModal">
+											<img src="img/save.svg" height="20" alt="Responsive image">
+										</span>
+										Save
+									</button>
+									<select class="border" ng-model="selectedLanguage">
+										<option name="selectedLanguage" value="English">English</option>
+										<option name="selectedLanguage" value="T.Chinese">T.Chinese</option>
+										<option name="selectedLanguage" value="S.Chinese">S.Chinese</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Application Form modal -->
+							<div class="modal fade" id="applicationFormModal" tabindex="-1" role="dialog" aria-labelledby="remarkModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-scrollable" role="document">
+									<div class="modal-content">
+										<div class="modal-header border-bottom-0">
+											<h5 class="modal-title">Comment</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div>
+												<h6>Ben Wong <span class="float-right">31 Dec 2019 23:59</span></h6>
+												<p>This customer cannot understand Chinese.</p>
+											</div>
+											<div class="mt-4">
+												<h6>Andy Chau <span class="float-right">1 Jan 2020 23:59</span></h6>
+												<p>Yes he can understand.</p>
+											</div>
+											<div class="mt-4">
+												<h6>Write a comment</h6>
+												<textarea class="form-control" id="comment-text" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="modal-footer border-top-0">
+											<label class="checkbox-inline">
+												<input type="checkbox" ng-model="attention" name="checkBtn" value="" ng-checked="isAttention">
+												&nbsp;Attention
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" ng-model="endorsement" name="checkBtn" value="" ng-checked="isEndorsement">
+												&nbsp;Endorsement
+											</label>
+											<button type="button" class="btn btn-success px-4 ml-auto">Post</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
 							<div class="row">
 								<div class="col-12">
 									<div class="row">
-										<div class="col-12 col-lg-9 pr-lg-2 pl-lg-0 mb-3">
+										<div class="col-12 col-lg-9 pr-lg-2 mb-3 px-0">
 											<div class="border bg-white p-5 h-100">
 												filter
 											</div>
 										</div>
-										<div class="col-12 col-lg-3 pl-lg-2 mb-3">
+										<div class="col-12 col-lg-3 pl-lg-2 mb-3 px-0">
 											<div class="border bg-white p-5 h-100">
 												action button
 											</div>
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-12 pl-lg-0">
+										<div class="col-12 px-0">
 											<div class="border bg-white p-5">
 												result table
 											</div>

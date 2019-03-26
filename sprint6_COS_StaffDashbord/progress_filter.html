@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>StaffDashbord_Manage_Team_Progress</title>
+	<title></title>
   
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
@@ -27,7 +27,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid px-0">	
+	<div class="container-fluid">	
         
         <!-- header -->
         <header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
@@ -72,7 +72,7 @@
             </nav>
 			<!--  nav-right -->
 			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
-				<div class="col-auto mr-3">
+				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
 				</div>
@@ -80,12 +80,16 @@
         </header>
         
         <main class="container-fluid">
+           
             <div class="row">
-                <h5 class="p-1 ml-3">Team Progress</h5>
+                <div class="col-12 px-0 py-1">
+                    <h5>Team Progress</h5>
+                </div>
             </div>
+
             <div class="row">
                 <!-- Search -->
-                <div class="order-last order-xl-first order-lg-first col-12 mb-3" ng-controller="progressFilterCtrl">
+                <div class="col-12 mb-3 px-0" ng-controller="progressFilterCtrl">
                     <div class="card bg-white h-100">
                         <form class="card-body px-3 pt-3">
                             <h5 class="card-title">Search</h5>
@@ -191,7 +195,7 @@
             </div>
 
             <div class="row">
-                <div class="col h-100">
+                <div class="col h-100  px-0">
                     <!-- Results -->
                     <div class="card bg-white">
                         <div class="card-body px-3">

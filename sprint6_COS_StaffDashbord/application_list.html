@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>StaffDashbord_applications_list</title>
+	<title></title>
 
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
@@ -26,7 +26,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid px-0">	
+	<div class="container-fluid">	
 		<!-- header -->
 		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
 			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
@@ -70,7 +70,7 @@
 			</nav>
 			<!--  nav-right -->
 			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
-				<div class="col-auto mr-3">
+				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
 				</div>
@@ -80,7 +80,7 @@
         <main class="container-fluid">
 			<div class="row">
 				<!-- MY CASES -->
-				<div class="col-12 col-lg-4 mb-3">
+				<div class="col-12 col-lg-4 mb-3 px-1 pr-lg-3">
 					<div class="card" ng-controller="myCaseCtrl">
 						<div class="card-body">
 							<h6 class="card-title small">MY CASES</h6>
@@ -103,7 +103,7 @@
 				</div>
 				<!-- MY CASES end-->
 				<!-- SEARCH -->
-				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3" ng-controller="searchCtrl">
+				<div class="col-12 col-lg-8 px-1 mb-3" ng-controller="searchCtrl">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title small">SEARCH</h5>
@@ -147,13 +147,16 @@
 			</div>
 
 			<div class="row">
-				<div class="col h-100">
+				<div class="col h-100 px-1">
 					<!-- RESULTS -->
 					<div class="card bg-white" ng-controller="applicationCtrl">
 						<div class="card-body">
 							<div class="d-flex align-items-center">
 								<h5 class="card-title mr-auto small">RESULTS</h5>
-								<button class="btn btn-link pr-0" type="button" data-toggle="modal" data-target="#assignCallAgentModal"><img src="img/hand-point-right-regular.svg" height="18" alt="Responsive image"> Assign Call Agent</button>
+								<button class="btn btn-link pr-0" type="button" data-toggle="modal" data-target="#assignCallAgentModal">
+									<img src="img/hand-point-right-regular.svg" height="18" alt="Responsive image"> 
+									Assign Call Agent
+								</button>
 							</div>
 							<div class="d-flex justify-content-end ">
 								<!-- Assign Call Agent Modal -->
