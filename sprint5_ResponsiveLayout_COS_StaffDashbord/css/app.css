@@ -77,3 +77,6 @@ body {
     display: inline-block;
 }
 /* application_detail page icon End */
+.bp-container{
+    z-index: auto;
+}
