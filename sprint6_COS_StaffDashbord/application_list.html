@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>StaffDashbord_applications_list</title>
+
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
-	<link href="./lib/fontawesome/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
 	<link rel="stylesheet" href="css/app.css">
-	<script src="./lib/jquery.min.js"></script>   
-	<script src="./lib/popper.min.js"></script>
+	
+	<script src="./lib/bootstrap4/jquery.min.js"></script>   
+	<script src="./lib/bootstrap4/popper.min.js"></script>
 	<script src="./lib/bootstrap4/bootstrap.min.js"></script>
 	<script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>
 	
@@ -26,25 +27,24 @@
 
 <body ng-app="myApp">
 	<div class="container-fluid px-0">	
-		<header class="sticky-top  bg-primary clearfix row" ng-controller="headerCtrl">
-			<!-- 01 Navbar -->
-			<nav class="navbar  navbar-dark pl-4  col-12 col-sm-8 navbar-expand-md">
+		<!-- header -->
+		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
+			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
 				<!-- Brand and collapse-icon -->
-				<div class="py-2">
-					<button class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<div class="">
+					<button class="navbar-toggler px-2 mr-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<a class="navbar-brand mx-2 ml-xl-0 ml-lg-0" href="#Staff Dashboard">Staff Dashboard</a>
+					<a class="navbar-brand mr-2" href="#">Staff Dashboard</a>
 				</div>
 				<!-- nav-Links -->
 				<div class="collapse navbar-collapse  " id="collapsibleNavbar">
-					<ul class="navbar-nav nav">
+					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link text-white" href="applications_list.html">Applications</a>
+							<a class="nav-link" href="application_list.html">Applications</a>
 						</li>
-						<!-- Dropdown -->
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
 							<ul class="dropdown-menu py-0">
 								<li class="nav-item">
 									<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
@@ -58,135 +58,112 @@
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">Admin</a>
+							<a class="nav-link" href="notification.html">Admin</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-white" href="#">
+							<a class="nav-link" href="#">
 								Notification<span class="badge badge-info mx-1">518</span>
 							</a>
 						</li>
 					</ul>
 				</div>
-				
 			</nav>
 			<!--  nav-right -->
-			<div class="text-white my-3 pt-2 col-12 col-sm-4 text-md-right">
+			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
 				<div class="col-auto mr-3">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
 				</div>
 			</div>
-			<!-- 01 Navbar end-->
 		</header>
-		<!-- content start -->
+
         <main class="container-fluid">
 			<div class="row">
 				<!-- MY CASES -->
-				<div class="col-sm-4">
+				<div class="col-12 col-lg-4 mb-3">
+					<div class="card" ng-controller="myCaseCtrl">
+						<div class="card-body">
+							<h6 class="card-title small">MY CASES</h6>
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+									Pending CCC Allocation
+									<span class="badge badge-primary badge-pill" ng-bind="pendingCCCAllocation"></span>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+									Pending for handling
+									<span class="badge badge-primary badge-pill" ng-bind="pendingForHanding"></span>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+									All
+									<span class="badge badge-primary badge-pill" ng-bind="All"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- MY CASES end-->
+				<!-- SEARCH -->
+				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3" ng-controller="searchCtrl">
 					<div class="card">
 						<div class="card-body">
-						<h5 class="card-title">My Cases</h5>
-						<div class="list-group">
-							<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-							Pending CCC Allocation
-							<span class="badge badge-primary badge-pill">18</span>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-							Pending for handling
-							<span class="badge badge-primary badge-pill">22</span>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"> All
-							<span class="badge badge-primary badge-pill">40</span>
-							</a>
-						</div>
-						</div>
-					</div>
-			
-					</div>
-				<!-- MY CASES end-->
-				<!-- Search -->
-				<div class="col-12 col-lg-8 pl-lg-2 pl-xl-2 mb-3" ng-controller="searchCtrl">
-					<div class="card mb-3">
-						<div class="card-body">
-							<h5 class="card-title">Search</h5>
+							<h5 class="card-title small">SEARCH</h5>
 							<form>
-							<div class="row" >
-								<div class="col-sm-4 mb-3">
-								<h6>Application Number</h6>
-								<input type="text" class="form-control" placeholder="First name">
+								<div class="row" >
+									<div class="col-sm-4 mb-3">
+										<h6>Application Number</h6>
+										<input type="text" class="form-control" placeholder="First name">
+									</div>
+									<div class="col-sm-4 mb-3">
+										<h6>Customer ID</h6>
+										<input type="text" class="form-control" >
+									</div>
+									<div class="col-sm-4 mb-3">
+										<h6>Customer Name</h6>
+										<input type="text" class="form-control" >
+									</div>
 								</div>
-								<div class="col-sm-4 mb-3">
-								<h6>Customer ID</h6>
-								<input type="text" class="form-control" >
+								<div class="row">
+									<div class="col-sm-4 mb-3">
+										<h6>Status</h6>
+										<select class="form-control" ng-model="selectedStatus" ng-options="s for s in Status"></select>
+									</div>
+									<div class="col-sm-4 mb-3">
+										<h6>Business Center</h6>
+										<select class="form-control" ng-model="selectedBusinessCenter" ng-options="s for s in BusinessCenters"></select>
+									</div>
+									<div class="col-sm-4 mb-3">
+										<h6>BBO Assigned</h6>
+										<select class="form-control" ng-model="selectedBBOAssigned" ng-options="s for s in BBOAssigneds"></select>
+									</div>
 								</div>
-								<div class="col-sm-4 mb-3">
-								<h6>Customer Name</h6>
-								<input type="text" class="form-control" >
+								<div class="row d-flex justify-content-end">
+									<button type="button" class="btn btn-primary mr-3">Search</button>
 								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-4 mb-3">
-								<h6>Status</h6>
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-								</div>
-								<div class="col-sm-4 mb-3">
-								<h6>Business Center</h6>
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-								</div>
-								<div class="col-sm-4 mb-3">
-								<h6>BBO Assigned</h6>
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-								</div>
-							</div>
-							<div class="row mb-3d -flex justify-content-end">
-								<button type="button" class="btn btn-primary mr-3">Search</button>
-							</div>
 							</form>
-				
 						</div>
-						</div>
+					</div>
 				</div>
-				<!-- Search end -->
+				<!-- SEARCH end -->
 			</div>
+
 			<div class="row">
 				<div class="col h-100">
-					<!-- Application -->
+					<!-- RESULTS -->
 					<div class="card bg-white" ng-controller="applicationCtrl">
 						<div class="card-body">
 							<div class="d-flex align-items-center">
-								<h5 class="card-title mr-auto">Results</h5>
-								<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-link"><img src="img/hand-point-right-regular.svg" height="16" alt="Responsive image"> Assign Call Agent</button>
+								<h5 class="card-title mr-auto small">RESULTS</h5>
+								<button class="btn btn-link pr-0" type="button" data-toggle="modal" data-target="#assignCallAgentModal"><img src="img/hand-point-right-regular.svg" height="18" alt="Responsive image"> Assign Call Agent</button>
 							</div>
-							<!-- table-button -->
 							<div class="d-flex justify-content-end ">
-								<!-- The Assign Call Agent Modal -->
-								<div class="modal" id="myModal">
+								<!-- Assign Call Agent Modal -->
+								<div class="modal" id="assignCallAgentModal">
 									<div class="modal-dialog">
 										<div class="modal-content">
-											<!-- Modal Header -->
 											<div class="modal-header">
 												<h5 class="modal-title">Assign Call Agent</h5>
-												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<button class="close" type="button" data-dismiss="modal">&times;</button>
 											</div>
-											<!-- Modal body -->
 											<div class="modal-body">
 												<h6>Assign the 4 cases to</h6>
 												<select class="form-control">
@@ -197,7 +174,6 @@
 													<option>Eddie</option>
 												</select>
 											</div>
-											<!-- Modal footer -->
 											<div class="modal-footer">
 												<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 												<button type="button" class="btn btn-primary" data-dismiss="modal" id="myBtn" ng-click="SaveAssign()">Confirm</button>
@@ -205,7 +181,7 @@
 										</div>
 									</div>
 								</div>
-								<!-- toast Message -->
+								<!-- toast Message for Assign Call Agent Modal's save btn-->
 								<div class="toast bg-info fixed-top w-75 mr-sm-3 py-2"  id="AssignToast" data-autohide="true" data-animation="true" data-delay="1500">
 									<div class="toast-header bg-info">
 										<button type="button" class="ml-auto mb-1 close" data-dismiss="toast">&times;</button>
@@ -213,7 +189,6 @@
 									<div class="toast-body text-light pt-0" ng-bind="toastContent"></div>
 								</div>
 							</div>
-							<!-- table-button end -->
 							
 							<!-- table-responsive -->
 							<div class="table-responsive">
@@ -221,6 +196,7 @@
 								</table>
 							</div>
 							<!-- table-responsive end -->
+
 							<!-- table's Quick View Modal -->
 							<div class="modal fade" id="quickViewModal" tabindex="-1" role="dialog" aria-labelledby="quickViewModalTitle" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -232,28 +208,28 @@
 										</button>
 									</div>
 									<div class="modal-body">
-											<dl>
-												<dt>Customer ID</dt>
-												<dd>123456789</dd>
-												<dt>Document Last Uploaded Date</dt>
-												<dd>31 Dec 2018</dd>
-												<dt>Customer ID</dt>
-												<dd>123456789</dd>
-												<dt>Document Last Uploaded Date</dt>
-												<dd>31 Dec 2018</dd>
-												<dt>Customer ID</dt>
-												<dd>123456789</dd>
-												<dt>Document Last Uploaded Date</dt>
-												<dd>31 Dec 2018</dd>
-												<dt>Customer ID</dt>
-												<dd>123456789</dd>
-												<dt>Document Last Uploaded Date</dt>
-												<dd>31 Dec 2018</dd>
-												<dt>Customer ID</dt>
-												<dd>123456789</dd>
-												<dt>Document Last Uploaded Date</dt>
-												<dd>31 Dec 2018</dd>
-											</dl> 
+										<dl>
+											<dt>Customer ID</dt>
+											<dd>123456789</dd>
+											<dt>Document Last Uploaded Date</dt>
+											<dd>31 Dec 2018</dd>
+											<dt>Customer ID</dt>
+											<dd>123456789</dd>
+											<dt>Document Last Uploaded Date</dt>
+											<dd>31 Dec 2018</dd>
+											<dt>Customer ID</dt>
+											<dd>123456789</dd>
+											<dt>Document Last Uploaded Date</dt>
+											<dd>31 Dec 2018</dd>
+											<dt>Customer ID</dt>
+											<dd>123456789</dd>
+											<dt>Document Last Uploaded Date</dt>
+											<dd>31 Dec 2018</dd>
+											<dt>Customer ID</dt>
+											<dd>123456789</dd>
+											<dt>Document Last Uploaded Date</dt>
+											<dd>31 Dec 2018</dd>
+										</dl> 
 									</div>
 									<div class="modal-footer border-top-0">
 										<button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
@@ -261,7 +237,8 @@
 								</div>
 								</div>
 							</div>
-								<!-- ApplicationList Remark Modal -->
+
+							<!-- table's Remark Modal -->
 							<div class="modal fade" id="ApplistRemarkModal" tabindex="-1" role="dialog" aria-labelledby="ApplistRemarkModalLabel" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-scrollable" role="document">
 									<div class="modal-content">
@@ -287,13 +264,13 @@
 									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
-					<!-- Application end-->
+					<!-- RESULTS end-->
 				</div>
 			</div>	
         </main>
-		<!-- content end -->
 		
 		<!-- footer -->
 		<footer class="py-5">

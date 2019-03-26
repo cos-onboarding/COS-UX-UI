@@ -4,17 +4,28 @@ var app = angular.module('myApp', ['moment-picker']);
 app.controller('headerCtrl', function($scope) { 
     //init navigation
     $scope.fullUserName = "Chrismrs Wong";
-    // $scope.simpleUserName = "CW";
+
 });
 
-app.controller('summaryCtrl', function($scope) {
-    //init summary
-    $scope.pendingCCCAllocation = 23 ;
+app.controller('myCaseCtrl', function($scope) {
+    //init MY CASES
+    $scope.pendingCCCAllocation = 23;
     $scope.pendingForHanding = 17;
+    $scope.All = 18;
 
 });
 
 app.controller('searchCtrl', function($scope) { 
+
+    $scope.Status = ["a", "b", "c"];
+    $scope.selectedStatus = "a";
+    
+    $scope.BusinessCenters = ["1", "2", "3","4","5","6","7"];
+    $scope.selectedBusinessCenter = "1";
+
+    $scope.BBOAssigneds = ["a", "b", "c"];
+    $scope.selectedBBOAssigned = "a";
+    
 
 });
 
@@ -43,7 +54,7 @@ app.controller('applicationCtrl', function($scope) {
             sortable:true,
             align: 'center',
             formatter:function(value, row, index){
-                var html = '<a href="applications_change_log.html">'+ value +'</a>';
+                var html = '<a href="application_detail.html">'+ value +'</a>';
                 return html;
             }
         },
@@ -152,8 +163,8 @@ app.controller('applicationCtrl', function($scope) {
 
 
 
-// -----------------Progress start--------------------------
-app.controller('manageTeamProgressSearchCtrl', function($scope) { 
+// -----------------Progress_filter start--------------------------
+app.controller('progressFilterCtrl', function($scope) { 
     //activation datepicker
     // myApp = angular.module('myApp', ['moment-picker']);
     
@@ -175,9 +186,9 @@ app.controller('manageTeamProgressSearchCtrl', function($scope) {
     $('#progress_table').removeClass('table-bordered');
 });
 
-// ------------------Manage_Team_Progress end-------------------------
+// ------------------Progress_filter end-------------------------
 
-// -----------------applications_change_log start--------------------------
+// -----------------application_detail start--------------------------
 app.controller('bodyleftCtrl', function($scope) { 
     // var id = window.sessionStorage.getItem("IDs");
     // console.log("id:"+id.length);
@@ -188,4 +199,18 @@ app.controller('bodyleftCtrl', function($scope) {
 });
 
 
-// ------------------applications_change_log end-------------------------
+// ------------------application_detail end-------------------------
+
+
+
+
+// -----------------notification start--------------------------
+app.controller('bodyCtrl', function($scope) { 
+    $scope.todayCounts = 12;
+    $scope.yesterdayCounts = 5;
+    $scope.thisWeekCounts = 4;
+    $scope.olderCounts = 1;
+    
+});
+// ------------------notification end-------------------------
+
