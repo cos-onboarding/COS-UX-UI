@@ -134,26 +134,7 @@ app.controller('applicationCtrl', function($scope) {
             title: 'Last Modified Date',
             align: 'center',
         },]
-    }).on('click-cell.bs.table', function (field, value, row, $element) {
-        // // click to open popover -> col [Remark]
-        // $('[data-toggle="popover"]').popover( { 
-        //     trigger:'click', 
-        //     title:"Remark Details",
-        //     html: true, 
-        //     content:"<br> Customer ID <br> 28882888 <br><br>Remarks <br> Some remarks content <br><br>Document Last Uploaded Date <br> 31 Dec 2020 <br><br>Contact Person <br> Johnny Chan <br><br>Contact Number <br> 852 3999 8833<br><br>",
-        // });
-        // // close popover when click on the area outside of popover 
-        // $('body').on('click', function(event) {
-        //     var target = $(event.target);
-        //     if (!target.hasClass('popover') 
-        //             && target.parent('.popover-content').length === 0
-        //             && target.parent('.popover-title').length === 0
-        //             && target.parent('.popover').length === 0
-        //             && target.data("toggle") !== "popover") {
-        //         $('[data-toggle="popover"]').popover('hide');
-        //     }
-        // }); 
-    });
+    })
      // remove table's border 
      $('#appli_list_table,#progress_table').removeClass('table-bordered');
    
@@ -165,9 +146,6 @@ app.controller('applicationCtrl', function($scope) {
 
 // -----------------Progress_filter start--------------------------
 app.controller('progressFilterCtrl', function($scope) { 
-    //activation datepicker
-    // myApp = angular.module('myApp', ['moment-picker']);
-    
     // controlling whether the datepicker of 'Compleded Date' is available.
     $scope.ischeckedRP = true;
     $scope.ischeckedAppli = true;
@@ -190,8 +168,6 @@ app.controller('progressFilterCtrl', function($scope) {
 
 // -----------------application_detail start--------------------------
 app.controller('bodyleftCtrl', function($scope) { 
-    // var id = window.sessionStorage.getItem("IDs");
-    // console.log("id:"+id.length);
     $scope.toastContent2 = "Save successful !";
     $scope.ReactivateToastClick = function(){
         $("#ReactivateToast").toast('show')
@@ -199,10 +175,23 @@ app.controller('bodyleftCtrl', function($scope) {
 });
 
 
+// Application Form's Tab
+$(function(){
+    $('#attenBtns span').click(function(){
+        // 获取需要传入两个参数 tab 的id 和 需要定位的 filed的index
+        var id = $(this).data("id");
+        var index = $(this).data("index");
+        // 获取当前点击的Nav 的头和内容
+        var navCurrent = $('.nav a')[id-1];
+        var navs_contCurrent = $('.tab-content>div')[id-1];
+        $(navCurrent).addClass("active").siblings().removeClass("active");
+        $(navs_contCurrent).attr("class","active show tab-pane fade").siblings().attr("class","tab-pane fade");
+        // 获取到需要定位的文本框
+        var inputsCurrent = $(navs_contCurrent).find('input')[index-1];
+        $(inputsCurrent).focus();
+    })
+})
 // ------------------application_detail end-------------------------
-
-
-
 
 // -----------------notification start--------------------------
 app.controller('bodyCtrl', function($scope) { 
@@ -210,7 +199,6 @@ app.controller('bodyCtrl', function($scope) {
     $scope.yesterdayCounts = 5;
     $scope.thisWeekCounts = 4;
     $scope.olderCounts = 1;
-    
 });
 // ------------------notification end-------------------------
 

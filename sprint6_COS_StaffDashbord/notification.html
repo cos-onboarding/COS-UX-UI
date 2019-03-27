@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>StaffDashbord_applications_list</title>
+	<title></title>
 
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
@@ -26,7 +26,7 @@
 </head>
 
 <body ng-app="myApp">
-	<div class="container-fluid px-0">	
+	<div class="container-fluid">	
 		
 		<!-- header -->
 		<header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
@@ -71,7 +71,7 @@
 			</nav>
 			<!--  nav-right -->
 			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
-				<div class="col-auto mr-3">
+				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
 				</div>
@@ -79,9 +79,9 @@
 		</header>
 
 		<!-- content start -->
-		<main class="container-fluid py-3">
+		<main class="container-fluid py-1">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 px-1">
 					<h5>Notifications</h5>
 					<div class="card" ng-controller="bodyCtrl">
 						
