@@ -272,25 +272,86 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-12">
-									<div class="row">
-										<div class="col-12 col-lg-9 pr-lg-2 pl-lg-0 mb-3">
-											<div class="border bg-white p-5 h-100">
-												filter
+								<div class="col-lg-12" id="attenBtns">
+									<span class="badge m-1 cursor badge-primary" data-id="1" data-index="2">#COMP002</span>
+									<span class="badge m-1 cursor badge-primary" data-id="1" data-index="4">#COMP004</span>
+									<span class="badge m-1 cursor badge-primary" data-id="1" data-index="3">#COMP003</span>
+									<span class="badge m-1 cursor badge-primary" data-id="2" data-index="3">#CONT003</span>
+									<span class="badge m-1 cursor badge-warning" data-id="5" data-index="1">#PROD228 Endorse Needed</span>
+								</div>
+								<div class="col-lg-12 my-1">
+									<nav>
+										<div class="nav nav-tabs" id="nav-tab" role="tablist">
+											<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" >A. Company Details</a>
+											<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">B. Contact Details</a>
+											<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">C. Details of Connected Parties</a>
+											<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">D. Business Details</a>
+											<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">E. Products & Services Details</a>
 											</div>
-										</div>
-										<div class="col-12 col-lg-3 pl-lg-2 mb-3">
-											<div class="border bg-white p-5 h-100">
-												action button
+									</nav>
+									<div class="tab-content" id="nav-tabContent">
+											<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">AAA:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">bbb:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">ccc:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+														<label for="recipient-name" class="col-form-label">ccc:</label>
+														<input type="text" class="form-control"   value="7629207500">
+												</div>
 											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-12 pl-lg-0">
-											<div class="border bg-white p-5">
-												result table
+											<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">DDD:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">EEE:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">FFF:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">FFF:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
 											</div>
-										</div>
+											<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">GGG:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">HHHH:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">JJJJ:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+													<div class="form-group w-50">
+																	<label for="recipient-name" class="col-form-label">rrrr:</label>
+																	<input type="text" class="form-control"   value="7629207500">
+															</div>
+											</div>
+											<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+											</div>
+											<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+													<div class="form-group w-50">
+															<label for="recipient-name" class="col-form-label">555:</label>
+															<input type="text" class="form-control"   value="7629207500">
+													</div>
+											</div>
 									</div>
 								</div>
 							</div>
@@ -304,4 +365,21 @@
 			</footer>
     </div>
 </body>
+<script>
+	$(function(){
+			$('#attenBtns span').click(function(){
+					// 获取需要传入两个参数 tab 的id 和 需要定位的 filed的index
+					var id = $(this).data("id");
+					var index = $(this).data("index");
+					// 获取当前点击的Nav 的头和内容
+					var navCurrent = $('.nav a')[id-1];
+					var navs_contCurrent = $('.tab-content>div')[id-1];
+					$(navCurrent).addClass("active").siblings().removeClass("active");
+					$(navs_contCurrent).attr("class","active show tab-pane fade").siblings().attr("class","tab-pane fade");
+					// 获取到需要定位的文本框
+					var inputsCurrent = $(navs_contCurrent).find('input')[index-1];
+					$(inputsCurrent).focus();
+			})
+	})
+</script>
 </html>
