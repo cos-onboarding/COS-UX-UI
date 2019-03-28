@@ -92,7 +92,7 @@ app.controller('applicationCtrl', function($scope) {
                 var html = '';
                 // html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-regular.svg" height="16" alt="Responsive image"></i>';
                 // html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-solid.svg" height="16" alt="Responsive image"></i>';
-                html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/file-alt-solid.svg" height="16" alt="Responsive image"></i>';
+                html += '<i data-toggle="modal" data-target="#ApplistRemarkModal"><img src="img/comment-empty.svg" height="16" alt="Responsive image"></i>';
                 return html;
             }
         },{

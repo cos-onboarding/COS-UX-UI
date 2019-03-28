@@ -118,9 +118,23 @@
 								<dt>Assigned To</dt>
 								<dd class="">Ben Wong</dd>
 								<dt>Risk Rating</dt>
-								<dd class="">Medium</dd>
+								<dd>
+									<span class="badge badge-warning mr-1">Medium</span>
+									<span class="cursor" id="refresh_icon">
+										<img src="img/refresh-solid.svg" height="17" alt="Responsive image">
+										<img src="img/refresh-hollow.svg" height="17" alt="Responsive image">
+									</span>
+									<!-- <dd class="badge badge-danger">High</dd>
+										<dd class="badge badge-info">Undetermined</dd> -->
+								</dd>
 								<dt>Adjusted Risk Rating</dt>
-								<dd class="">Ben Wong</dd>
+								<dd>
+									<span class="badge badge-success mr-1">Low</span>
+									<span class="cursor" id="edit_icon">
+										<img src="img/edit-solid.svg" height="17" alt="Responsive image">
+										<img src="img/edit-hollow.svg" height="17" alt="Responsive image">
+									</span>
+								</dd>
 							</dl>
 						</div>
 					</div>
@@ -192,8 +206,8 @@
 					<!-- Checklist -->
 					<div class="card bg-secondary my-3  text-light">
 						<div class="card-body">
+							<h5 class="card-title">Checklist</h5>
 							<form>
-								<h5 class="card-title">Checklist</h5>
 								<div class="form-check">
 									<label class="form-check-label">
 										<input type="checkbox" class="form-check-input" value="">Option 1
@@ -291,12 +305,12 @@
 					<div class="row">
 						<div class="col-12 d-flex px-0 mb-3">
 							<h5 class="mr-auto">Application Form
-								<span class="cursor" data-toggle="modal" data-target="#applicationFormModal">
+								<span class="cursor" data-toggle="modal" data-target="#commentModal">
 									<img src="img/comment-empty.svg" height="20" alt="Responsive image">
 								</span>
 							</h5>
 							<button class="btn btn-default text-success py-0" type="submit">
-								<span class="cursor" data-toggle="modal" data-target="#applicationFormModal">
+								<span class="cursor" data-toggle="modal" data-target="#saveModal">
 									<img src="img/save.svg" height="20" alt="Responsive image">
 								</span>
 								Save
@@ -309,47 +323,6 @@
 						</div>
 					</div>
 					<!-- main body title end -->
-
-					<!-- Application Form modal -->
-					<div class="modal fade" id="applicationFormModal" tabindex="-1" role="dialog" aria-labelledby="remarkModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-scrollable" role="document">
-							<div class="modal-content">
-								<div class="modal-header border-bottom-0">
-									<h5 class="modal-title">Comment</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body">
-									<div>
-										<h6>Ben Wong <span class="float-right">31 Dec 2019 23:59</span></h6>
-										<p>This customer cannot understand Chinese.</p>
-									</div>
-									<div class="mt-4">
-										<h6>Andy Chau <span class="float-right">1 Jan 2020 23:59</span></h6>
-										<p>Yes he can understand.</p>
-									</div>
-									<div class="mt-4">
-										<h6>Write a comment</h6>
-										<textarea class="form-control" id="comment-text" rows="5"></textarea>
-									</div>
-								</div>
-								<div class="modal-footer border-top-0">
-									<label class="checkbox-inline">
-										<input type="checkbox" ng-model="attention" name="checkBtn" value="" ng-checked="isAttention">
-										&nbsp;Attention
-									</label>
-									<label class="checkbox-inline">
-										<input type="checkbox" ng-model="endorsement" name="checkBtn" value="" ng-checked="isEndorsement">
-										&nbsp;Endorsement
-									</label>
-									<button type="button" class="btn btn-success px-4 ml-auto">Post</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Application Form modal end -->
-
 
 					<!-- Application Form body -->
 					<div class="row">
@@ -365,20 +338,18 @@
 						
 						<div class="col-lg-12 my-1">
 							<!-- Application Form section tab -->
-							<nav>
-								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a class="nav-item nav-link active" id="nav-A-tab" data-toggle="tab" href="#nav-A" role="tab" aria-controls="nav-A" aria-selected="true" >A. Company Details</a>
-									<a class="nav-item nav-link" id="nav-B-tab" data-toggle="tab" href="#nav-B" role="tab" aria-controls="nav-B" aria-selected="false">B. Contact Details</a>
-									<a class="nav-item nav-link" id="nav-C-tab" data-toggle="tab" href="#nav-C" role="tab" aria-controls="nav-C" aria-selected="false">C. Details of Connected Parties</a>
-									<a class="nav-item nav-link" id="nav-D-tab" data-toggle="tab" href="#nav-D" role="tab" aria-controls="nav-D" aria-selected="false">D. Business Details</a>
-									<a class="nav-item nav-link" id="nav-E-tab" data-toggle="tab" href="#nav-E" role="tab" aria-controls="nav-E" aria-selected="false">E. Products & Services Details</a>
-								</div>
-							</nav>
+							<div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-A-tab" data-toggle="tab" href="#nav-A" role="tab" aria-controls="nav-A" aria-selected="true" >A. Company Details</a>
+								<a class="nav-item nav-link" id="nav-B-tab" data-toggle="tab" href="#nav-B" role="tab" aria-controls="nav-B" aria-selected="false">B. Contact Details</a>
+								<a class="nav-item nav-link" id="nav-C-tab" data-toggle="tab" href="#nav-C" role="tab" aria-controls="nav-C" aria-selected="false">C. Details of Connected Parties</a>
+								<a class="nav-item nav-link" id="nav-D-tab" data-toggle="tab" href="#nav-D" role="tab" aria-controls="nav-D" aria-selected="false">D. Business Details</a>
+								<a class="nav-item nav-link" id="nav-E-tab" data-toggle="tab" href="#nav-E" role="tab" aria-controls="nav-E" aria-selected="false">E. Products & Services Details</a>
+							</div>
 
 							<div class="tab-content" id="nav-tabContent">
 								<!--  Section A body-->
 								<div class="tab-pane fade show active" id="nav-A" role="tabpanel" aria-labelledby="nav-A-tab">
-									<div class="form-group w-50">
+									<!-- <div class="form-group w-50">
 											<label for="recipient-name" class="col-form-label">AAA:</label>
 											<input type="text" class="form-control"   value="7629207500">
 									</div>
@@ -394,6 +365,52 @@
 										<label for="recipient-name" class="col-form-label">ccc:</label>
 										<input type="text" class="form-control"   value="7629207500">
 									</div>
+									<p>-------------------------------------------</p> -->
+									
+									<form>
+										<h4 class="card-title">Nature of Business</h4>
+
+										<div class="form-group">
+											<label>Select the most relevant key financial data for the business</label> 
+											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/comment-empty.svg" height="14" alt="Responsive image"></a>
+											<div class="radio">
+												<label ><input type="radio" name="optradio" checked>Annual revenue</label>
+											</div>
+											<div class="radio">
+												<label><input type="radio" name="optradio">Asset size</label>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label>Risk Rating</label>
+											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/comment-empty.svg" height="14" alt="Responsive image"></a>
+											<input class="form-control" type="text" placeholder="Medium">
+										</div>
+
+										<div class="form-group">
+											<label for="">Adjusted Risk Rating</label>
+											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/question.svg" height="16" alt="Responsive image"></a>
+											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/comment-empty.svg" height="14" alt="Responsive image"></a>
+											<select class="form-control">
+												<option value="">Please Select</option>
+												<option value="1">SCC</option>
+												<option value="2">High</option>
+												<option value="3">option 3</option>
+												<option value="4">option 4 is very very very very very very very very very very very very very very very very very very very very very very very very very very very long</option>
+											</select>
+										</div>
+
+										<button class="btn btn-link" type="submit">
+											<img class="mr-1" src="img/plus.svg" height="16" alt="Responsive image">Add
+										</button>
+										<button class="btn btn-link" type="submit">
+											<img class="mr-1" src="img/minus.svg" height="16" alt="Responsive image">Delete
+										</button>
+									
+
+
+
+									</form>
 								</div>
 								<!--  Section A body end -->
 
@@ -475,5 +492,45 @@
 		</footer>
 
 	</div>
+
+
+
+
+	<!-- question set comment Modal -->
+	<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header border-bottom-0">
+					<h5 class="modal-title" id="commentModalLabel">Comment</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div>
+						<h6>Ben Wong <span class="float-right">31 Dec 2019 23:59</span></h6>
+						<p>This customer cannot understand Chinese.</p>
+					</div>
+					<div class="mt-4">
+						<h6>Andy Chau <span class="float-right">1 Jan 2020 23:59</span></h6>
+						<p>Yes he can understand.</p>
+					</div>
+					<div class="mt-4">
+						<h6>Write a comment</h6>
+						<textarea class="form-control" id="comment-text" rows="5"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer border-top-0">
+					<button type="button" class="btn btn-success px-4 m-auto " data-dismiss="modal" >Post</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- question set comment Modal end -->
+
+
+
+
+
 </body>
 </html>
