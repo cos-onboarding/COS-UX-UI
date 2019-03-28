@@ -64,6 +64,7 @@ th {
 }
 body {
     color: dimgray;
+    min-width: 992px;
 }
 .card-title {
     text-transform: uppercase;
