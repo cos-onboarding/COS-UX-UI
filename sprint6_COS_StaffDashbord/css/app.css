@@ -36,17 +36,14 @@
 
 
 /* select box'color of selected */
-select > option:hover {
-    -webkit-appearance: none;   /* google */
-    -moz-appearance: none;  /* firefox */
-    appearance: none;       /* IE */
-    background-color: #28a745;
+/* select{
+	appearance:none !important; 
+	-moz-appearance:none !important; 
+	-webkit-appearance:none !important;  
 }
-/* select > option:hover {
+select > option:hover {
     background-color: #28a745 !important;
 } */
-
-
 
 /* use set the application_list page toast box */
 #AssignToast,#ReactivateToast{
@@ -64,6 +61,7 @@ th {
 }
 body {
     color: dimgray;
+    /* background-color: #F7F5F4; */
     min-width: 992px;
 }
 .card-title {
@@ -78,6 +76,8 @@ body {
 #arrow_back:hover img:first-child,
 #Rejected_icon img:last-child,
 #Rejected_icon:hover img:first-child,
+#status_icon img:last-child,
+#status_icon:hover img:first-child,
 #edit_icon img:last-child,
 #edit_icon:hover img:first-child,
 #refresh_icon img:last-child,
@@ -89,6 +89,7 @@ body {
 }
 #arrow_back:hover img:last-child,
 #Rejected_icon:hover img:last-child,
+#status_icon:hover img:last-child,
 #edit_icon:hover img:last-child,
 #refresh_icon:hover img:last-child,
 #AppliId_icon:hover img:last-child
@@ -99,6 +100,7 @@ body {
 .bp-container{
     z-index: auto;
 }
+<<<<<<< HEAD
 /* Application status step start */
 .stepper--horizontal .step {
   padding: 0;
@@ -158,3 +160,5 @@ body {
     color: #212529;
  }
  /* Application status step end */
+=======
+>>>>>>> f1f7993de23418055cbb180e030bac9d9a3fc06d
