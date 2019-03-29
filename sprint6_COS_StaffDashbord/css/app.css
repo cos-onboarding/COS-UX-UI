@@ -100,7 +100,6 @@ body {
 .bp-container{
     z-index: auto;
 }
-<<<<<<< HEAD
 /* Application status step start */
 .stepper--horizontal .step {
   padding: 0;
@@ -160,5 +159,3 @@ body {
     color: #212529;
  }
  /* Application status step end */
-=======
->>>>>>> f1f7993de23418055cbb180e030bac9d9a3fc06d
