@@ -36,17 +36,14 @@
 
 
 /* select box'color of selected */
-select > option:hover {
-    -webkit-appearance: none;   /* google */
-    -moz-appearance: none;  /* firefox */
-    appearance: none;       /* IE */
-    background-color: #28a745;
+/* select{
+	appearance:none !important; 
+	-moz-appearance:none !important; 
+	-webkit-appearance:none !important;  
 }
-/* select > option:hover {
+select > option:hover {
     background-color: #28a745 !important;
 } */
-
-
 
 /* use set the application_list page toast box */
 #AssignToast,#ReactivateToast{
@@ -64,6 +61,7 @@ th {
 }
 body {
     color: dimgray;
+    /* background-color: #F7F5F4; */
     min-width: 992px;
 }
 .card-title {
