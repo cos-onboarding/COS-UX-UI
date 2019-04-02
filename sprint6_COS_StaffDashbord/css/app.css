@@ -35,16 +35,6 @@
 }
 
 
-/* select box'color of selected */
-.selectize-control.single .selectize-input.dropdown-active:after {
-    border-color: transparent transparent #0d6c29 transparent !important;
-}
-.selectize-dropdown .active {
-    background-color: #0d6c29 !important;
-}
-.selectize-input.dropdown-active::before {
-    background: #0d6c29 !important;
-}
 /* use set the application_list page toast box */
 #AssignToast,#ReactivateToast{
     left: auto;
@@ -71,6 +61,7 @@ body {
 .card-header{
     background-color: inherit;
 }
+
 /* application_detail page icon Start */
 #arrow_back img:last-child,
 #arrow_back:hover img:first-child,
@@ -97,6 +88,7 @@ body {
     display: inline-block;
 }
 /* application_detail page icon End */
+
 .bp-container{
     z-index: auto;
 }

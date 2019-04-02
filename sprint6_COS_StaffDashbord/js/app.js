@@ -195,10 +195,10 @@ $(function(){
 
 // -----------------notification start--------------------------
 app.controller('bodyCtrl', function($scope) { 
-    $scope.todayCounts = 12;
-    $scope.yesterdayCounts = 5;
-    $scope.thisWeekCounts = 4;
-    $scope.olderCounts = 1;
+    // $scope.todayCounts = 12;
+    // $scope.yesterdayCounts = 5;
+    // $scope.thisWeekCounts = 4;
+    // $scope.olderCounts = 1;
 });
 // ------------------notification end-------------------------
 
