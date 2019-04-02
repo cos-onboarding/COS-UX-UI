@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
+	<link rel="stylesheet" href="selectize.css">
+	
 	<script src="./lib/bootstrap4/jquery.min.js"></script>
 	<script src="./lib/bootstrap4/popper.min.js"></script>
     <script src="./lib/bootstrap4/bootstrap.min.js"></script>
@@ -21,7 +23,7 @@
     <script src="./lib/angularjs1.6.4/angular.min.js"></script>
     <script src="./lib/datepicker/moment.js"></script>
     <script src="./lib/datepicker/angular-moment-picker.min.js"></script>
-    
+    <script src="selectize.js"></script>
     <script src="./js/app.js"></script>
 </head>
 
@@ -399,7 +401,7 @@
 											<label for="">Adjusted Risk Rating</label>
 											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/question.svg" height="16" alt="Responsive image"></a>
 											<a href="#" data-toggle="modal" data-target="#commentModal"><img src="img/comment-empty.svg" height="14" alt="Responsive image"></a>
-											<select class="form-control">
+											<select class="selectize form-control ">
 												<option value="">Please Select</option>
 												<option value="1">SCC</option>
 												<option value="2">High</option>
@@ -542,3 +544,9 @@
 
 </body>
 </html>
+
+<script>
+		$(function() {
+			$('select').selectize(options);
+		});
+		</script>

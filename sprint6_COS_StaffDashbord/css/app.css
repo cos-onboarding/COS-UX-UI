@@ -36,15 +36,15 @@
 
 
 /* select box'color of selected */
-/* select{
-	appearance:none !important; 
-	-moz-appearance:none !important; 
-	-webkit-appearance:none !important;  
+.selectize-control.single .selectize-input.dropdown-active:after {
+    border-color: transparent transparent #0d6c29 transparent !important;
 }
-select > option:hover {
-    background-color: #28a745 !important;
-} */
-
+.selectize-dropdown .active {
+    background-color: #0d6c29 !important;
+}
+.selectize-input.dropdown-active::before {
+    background: #0d6c29 !important;
+}
 /* use set the application_list page toast box */
 #AssignToast,#ReactivateToast{
     left: auto;
