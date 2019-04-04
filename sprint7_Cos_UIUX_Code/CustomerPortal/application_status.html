@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4-table/bootstrap-table.min.css">
+    <link rel="stylesheet" type="text/css" href="./lib/datepicker/angular-moment-picker.min.css">
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="./lib/bootstrap4/jquery.min.js"></script>   
+	<script src="./lib/bootstrap4/popper.min.js"></script>
+	<script src="./lib/bootstrap4/bootstrap.min.js"></script>
+	<script src="./lib/bootstrap4-table/bootstrap-table.min.js"></script>
+	
+	<script src="./lib/angularjs1.6.4/angular.min.js"></script>
+	<script src="./lib/datepicker/moment.js"></script>
+    <script src="./lib/datepicker/angular-moment-picker.min.js"></script>
+
+	<script src="./js/app.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+	<div class="container-fluid">	
+			
+
+		<!-- header -->
+		<header class="sticky-top row mb-3" ng-controller="headerCtrl">
+			<div class="col-12 d-flex pt-2 pb-3 bg-white">
+				<img class="" src="img/hase.svg" height="40">
+				<ul class="nav ml-auto">
+					<!-- <li class="nav-item ">
+						<a class="nav-link active text-dark" href="#">ENG</a>
+					</li>
+					<li><span class="nav-link">|</span></li> -->
+					<li class="nav-item ">
+						<a class="nav-link text-dark" href="#">繁</a>
+					</li>
+					<li><span class="nav-link">|</span></li>
+					<li class="nav-item">
+						<a class="nav-link text-dark" href="#">簡</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="col-12 bg-primary text-white py-3">
+				<h3>My Application Status</h3>
+			</nav>
+
+		</header>
+
+		<!-- content start -->
+        <main class="container-fluid">
+            <div class="row border">
+				<div class="col-12 pb-3">
+					<h5 class="py-3 border-bottom">Please provide the following information for application status checking.</h5>
+					<h5>Application Information</h5>
+					<form class="clearfix">
+						<div class="form-group">
+							<label>Application ID</label>
+							<a href="#" data-toggle="modal" data-target="#infoModal"><img src="img/info.svg" height="20" alt="Responsive image"></a>
+							<input class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Customer Identification No</label>
+							<a href="#" data-toggle="modal" data-target="#infoModal"><img src="img/info.svg" height="20" alt="Responsive image"></a>
+							<input class="form-control">
+						</div>
+						<a class="d-flex justify-content-end" href="application_statuscheck.html">
+							<button type="button" class="btn btn-secondary btn-block col-sm-2">
+								<span>Login Now</span>
+								<img src="img/arrow-right-white.svg" height="13px" alt="Responsive image">
+							</button>
+						</a>
+					</form>
+				</div>
+
+			</div>
+        </main>
+		<!-- content end -->
+	
+		<!-- footer -->
+		<footer class="row py-3">
+			<div class="col-12 px-0 py-5 border-top">
+				<!-- <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p> -->
+				<div class="col-12 d-flex">
+					<span>© Hang Seng Bank Limited</span>
+					<img class="ml-auto" src="img/hsbc_logo.svg">
+				</div>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>
