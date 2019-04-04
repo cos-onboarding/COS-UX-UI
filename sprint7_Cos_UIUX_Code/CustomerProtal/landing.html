@@ -29,7 +29,7 @@
 	<div class="container-fluid">	
 		
 		<!-- header -->
-		<header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
+		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
 			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
 				<!-- Brand and collapse-icon -->
 				<div class="">
@@ -79,42 +79,46 @@
 		</header>
 
 		<!-- content start -->
-        <main class="container-fluid py-3">
-            <div class="container border">
+        <main class="container-fluid">
+            <div class="row border">
 
-				<div class="col-sm-8">
-					<h2 class="text-center text-secondary mb-5">Check Your Application Status</h2>
-					<table class="w-100 text-center d-none d-sm-block">
-						<tr>
-							<td width="30%"><img src="img/icon-fillin.svg" class="mb-3"></td>
-						</tr>
-						<tr>
-							<td valign="top">
-								<h6>Get Status Updates</h6>
-								<p class="small">Get status updating of your application</p>
-							</td>
-						</tr>
-					</table>
+				<div class="col-12 offset-2">
+					<div class="col-sm-8">
+						<h2 class="text-center text-secondary mb-5">Check Your Application Status</h2>
+						<table class="w-100 text-center d-none d-sm-block">
+							<tr>
+								<td width="30%"><img src="img/icon-fillin.svg" class="mb-3"></td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<h6>Get Status Updates</h6>
+									<p class="small">Get status updating of your application</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="text-center my-5 col-sm-4 offset-sm-2">
+						<a href="application_status.html">
+							<button type="button" class="btn col-12 btn-secondary btn-block">
+								<span>Get it Now</span>
+								<img src="img/arrow-right-white.svg" height="13px" alt="Responsive image">
+							</button>
+						</a>
+					</div>
 				</div>
-				<div class="text-center my-5 col-sm-4 offset-sm-2">
-					<a href="application_status.html">
-						<button type="button" class="btn col-12 btn-secondary btn-block">
-							<span>Get it Now</span>
-							<img src="img/arrow-right-white.svg" height="13px" alt="Responsive image">
-						</button>
-					</a>
-				</div>
-
+				
 			</div>
         </main>
 		<!-- content end -->
 	
 		<!-- footer -->
-		<footer class="row py-5">
-			<!-- <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p> -->
-			<div class="col-12 d-flex">
-				<span>© Hang Seng Bank Limited</span>
-				<img class="ml-auto" src="img/hsbc_logo.svg">
+		<footer class="row py-3">
+			<div class="col-12 px-0 py-5 border-top">
+				<!-- <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p> -->
+				<div class="col-12 d-flex">
+					<span>© Hang Seng Bank Limited</span>
+					<img class="ml-auto" src="img/hsbc_logo.svg">
+				</div>
 			</div>
 		</footer>
 	</div>
