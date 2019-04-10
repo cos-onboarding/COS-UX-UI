@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  color: #000;
+  background-color: #fff;
+  font-size: large;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+}
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    table {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    div.divFooter {
+      position: fixed;
+      bottom: 0;
+    }
+
+}
