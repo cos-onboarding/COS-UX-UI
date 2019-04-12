@@ -29,8 +29,8 @@
 	<div class="container-fluid">	
 		
 		<!-- header -->
-		<header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
-			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
+		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
+			<nav class="navbar navbar-dark col-8 navbar-expand-lg">
 				<!-- Brand and collapse-icon -->
 				<div class="">
 					<button class="navbar-toggler px-2 mr-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,13 +48,13 @@
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
 							<ul class="dropdown-menu py-0">
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
+									<a class="dropdown-item" href="progress_filter.html" >Team</a>
 								</li>
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="#">Report</a>
+									<a class="dropdown-item" href="#">Report</a>
 								</li>
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="#">Timeslot</a>
+									<a class="dropdown-item" href="#">Timeslot</a>
 								</li>
 							</ul>
 						</li>
@@ -70,7 +70,7 @@
 				</div>
 			</nav>
 			<!--  nav-right -->
-			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
+			<div class="text-white my-3 col-4 text-md-right">
 				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
@@ -79,27 +79,27 @@
 		</header>
 
 		<!-- content start -->
-        <main class="container-fluid py-3">
-            <div class="container">
-				<h5 class="p-3 ">Reject Application</h5>
+        <main class="row py-3">
+			<h5 class="p-3 col-12">Reject Application</h5>
+            <div class="col-8 m-auto">
                 <form class="p-3 clearfix card">
-                    <div class="form-group w-50">
-                            <label for="recipient-name" class="col-form-label">Rejected Date:</label>
+                    <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Rejected Date</label>
                             <p>11/3/2019</p>
                     </div>
-                    <div class="form-group w-50">
-                            <label for="recipient-name" class="col-form-label">Rejected Staff:</label>
+                    <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Rejected Staff</label>
                             <input type="text" class="form-control" readonly value="7629207500">
                     </div>
-                    <div class="form-group w-50">
-                        <label for="recipient-name" class="col-form-label">Rejection Category:</label>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Rejection Category</label>
                         <select id="inputState" class="form-control" >
                             <option selected>Hit - DNOA</option>
                             <option>Hit - Sanction</option>
                         </select>
 					</div>
-					<div class="form-group w-50">
-                        <label for="recipient-name" class="col-form-label">Rejection Email:</label>
+					<div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Rejection Email</label>
                         <select id="inputState1" class="form-control" >
                             <option>Email Template A</option>
                             <option>Email Template B</option>
@@ -108,7 +108,7 @@
                     </div>
                     <!-- <div class="w-50"></div> -->
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">Reject Detail:</label>
+                        <label for="message-text" class="col-form-label">Reject Detail</label>
                         <textarea class="form-control" id="message-text" rows="5"></textarea>
                     </div>
                     <div class="form-group mt-4">
@@ -127,9 +127,10 @@
 					</div>
 					<div class="text-right">
 						<a  href="application_detail.html">
-							<button type="button" class="btn btn-outline-dark px-4" >Cancel</button>
+							<!-- <button type="button" class="btn btn-outline-dark px-4" >Cancel</button> -->
+							<button type="button" class="btn btn-link px-4" >Cancel</button>
 						</a>
-						<button type="button" class="btn btn-success px-4" data-toggle="modal" data-target="#rejectMsgModal">Preview</button>
+						<button type="button" class="btn btn-primary px-4" data-toggle="modal" data-target="#rejectMsgModal">Preview</button>
 					</div>
                 </form>
 			</div>
@@ -174,8 +175,8 @@
 		<!-- content end -->
 	
 		<!-- footer -->
-		<footer class="row py-3">
-			<div class="col-12 px-0 py-5 border-top">
+		<footer class="row">
+			<div class="col-12 px-0 py-3">
 				<!-- <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p> -->
 				<div class="col-12 d-flex">
 					<span>© Hang Seng Bank Limited</span>
