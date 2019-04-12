@@ -189,7 +189,18 @@ $(function(){
         // 获取到需要定位的文本框
         var inputsCurrent = $(navs_contCurrent).find('input')[index-1];
         $(inputsCurrent).focus();
+    });
+    // header 部分点击下拉导航
+    $('#collapsibleNavbar .nav-item ul li a').click(function(){
+        $(this).css({
+            "background": "green",
+            "color": "#fff"
+        }).parent().siblings().find('a').css({
+            "background": "#fff",
+            "color": "#212529"
+        })
     })
+
 })
 // ------------------application_detail end-------------------------
 
@@ -201,4 +212,3 @@ app.controller('bodyCtrl', function($scope) {
     // $scope.olderCounts = 1;
 });
 // ------------------notification end-------------------------
-
