@@ -337,7 +337,7 @@ Application Level Buttons
                         <div class="row">
 
                         <div class="form-group col">
-                          <label for="field">Related Question Sharing row (e.g. Last Name, First Name) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="fas fa-comment-dots"></i></a>
+                          <label for="field">Related Question Sharing row (e.g. Last Name, First Name) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment-dots"></i></a>
                           <input class="form-control" id="field">
                         </div>
 
@@ -1180,7 +1180,7 @@ address of the above Business Integrated Account
           <br/>
           <br/>
 
-          <h1>6.0 Overlays</h1>
+          <h1>6.0 Modals</h1>
 
 
 
@@ -1215,6 +1215,7 @@ address of the above Business Integrated Account
 
       <a href="#" data-toggle="modal" data-target="#commentModal">Chat Modal</a><br/>
       <a href="#" data-toggle="modal" data-target="#quickViewModal">View Only Modal</a><br/>
+      <a href="#" data-toggle="modal" data-target="#errorModal">Error Modal</a><br/>
       <a href="#" data-toggle="modal" data-target="#assignCallAgentModal">Confirmation Modal</a><br/>
 
 
@@ -1535,6 +1536,39 @@ address of the above Business Integrated Account
       </div>
     </div>
   </div>
+
+
+
+
+
+
+    <!-- The Error Modal -->
+    <div class="modal" id="errorModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title ">Error</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row">
+                      <div class="col-2"> <h1> <i class="fas fa-exclamation-triangle text-danger"></i></h1> </div>
+                      <div class="col-10"> Due to this reason, that has happened. Try do this and that to resolve the issue.</div>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
 
 
