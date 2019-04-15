@@ -29,8 +29,8 @@
 	<div class="container-fluid">	
 		
 		<!-- header -->
-		<header class="sticky-top bg-primary row pl-3" ng-controller="headerCtrl">
-			<nav class="navbar navbar-dark col-12 col-sm-8 navbar-expand-md">
+		<header class="sticky-top bg-primary row mb-3" ng-controller="headerCtrl">
+			<nav class="navbar navbar-dark col-8 navbar-expand-lg">
 				<!-- Brand and collapse-icon -->
 				<div class="">
 					<button class="navbar-toggler px-2 mr-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,13 +48,13 @@
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop" >Manage</a>
 							<ul class="dropdown-menu py-0">
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="manage_team_progress.html">Team</a>
+									<a class="dropdown-item" href="progress_filter.html">Team</a>
 								</li>
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="#">Report</a>
+									<a class="dropdown-item" href="#">Report</a>
 								</li>
 								<li class="nav-item">
-									<a class="dropdown-item text-dark" href="#">Timeslot</a>
+									<a class="dropdown-item" href="#">Timeslot</a>
 								</li>
 							</ul>
 						</li>
@@ -70,7 +70,7 @@
 				</div>
 			</nav>
 			<!--  nav-right -->
-			<div class="text-white my-3 col-12 col-sm-4 text-md-right">
+			<div class="text-white my-3 col-4 text-md-right">
 				<div class="col-auto">
 					<img src="img/user-solid.svg" class="rounded-circle" height="20" alt="Responsive image">
 					<span ng-bind="fullUserName"></span>
@@ -82,7 +82,6 @@
 		<main class="container-fluid py-1">
 			<div class="row">
 				<div class="col-12 px-1">
-					<h5>Notifications</h5>
 					<div class="card" ng-controller="bodyCtrl">
 						
 						<div class="card-body">
@@ -194,8 +193,8 @@
 									<a class="dropdown-item" href="#">All</a>
 								</div>
 							</div>
-							<div class="p-2">rows per page</div>
-							<ul class="pagination ml-auto">
+							<div class="pt-1 px-2">rows per page</div>
+							<ul class="pagination ml-auto mr-1 mb-3">
 								<li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
 								<li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
 								<li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
@@ -213,8 +212,8 @@
 		<!-- content end -->
 	
 		<!-- footer -->
-		<footer class="row py-3">
-			<div class="col-12 px-0 py-5 border-top">
+		<footer class="row">
+			<div class="col-12 px-0 py-3">
 				<!-- <p class="text-center">2019 - 2020 Hang Seng Staff Dashboard</p> -->
 				<div class="col-12 d-flex">
 					<span>© Hang Seng Bank Limited</span>
