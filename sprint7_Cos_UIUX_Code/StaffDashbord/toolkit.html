@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Component Style for Staff Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="cosstyle.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap4/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+
+<body >
+
+  <div class="jumbotron">
+    <h1>Component Style</h1>
+    <p>This is a building blocks collections for the Staff Dashboard</p>
+  </div>
+
+
+  <h1 class="ml-3">1.0 Navigation</h1>
+
+
+  <nav class="navbar navbar-expand bg-primary navbar-dark mb-3">
+    <a class="navbar-brand" href="#">Staff Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"> <a class="nav-link active" href="#">Applications</a> </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Manage
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Team Progress</a>
+            <a class="dropdown-item" href="#">Timeslot</a>
+            <a class="dropdown-item" href="#">MI Report</a>
+          </div>
+        </li>
+
+        <li class="nav-item"> <a class="nav-link" href="#">Admin</a> </li>
+        <li class="nav-item"> <a class="nav-link d-flex align-items-center" href="#">Notification <span class="ml-1 badge badge-info badge-pill">520</span></a> </li>
+
+      </ul>
+
+      <div class="ml-auto text-light">
+        <i class="fas fa-user"></i>
+        Chan, Wing Sze Wincy
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <div class="container-fluid">
+
+    <!-- form level buttons -->
+
+
+
+
+    <div class="row mb-3">
+      <div class="col-9">
+Application Level Buttons
+      <nav class="navbar navbar-expand bg-secondary navbar-dark mb-3">
+          <ul class="navbar-nav">
+            <li class="nav-item active"> <a class="nav-link" href="#">Form</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Documents</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Appointment</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Changes</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Archival</a> </li>
+          </ul>
+      </nav>
+
+</div>
+</div>
+
+
+
+    <!-- tabs -->
+    <div class="row mb-3">
+      <div class="col-9">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">A. Company Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">B. Contact Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">C. Details of Connected Parties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">D. Business Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">E. Products & Services Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h1>2.0 Title and Text</h1>
+
+    <div class="row mb-3">
+      <div class="col-2">
+        <h5>Page Title</h5>
+        <h5>Modal Title</h5>
+      </div>
+      <div class="col-2">
+        <h4 class="card-title">Section Title</h4>
+      </div>
+      <div class="col-2">
+        <dt>Table Header</dt>
+        <dt>dt</dt>
+      </div>
+      <div class="col-2">
+        <label>Field Label</label>
+        <p>Paragraph</p>
+        <dd>dd</dd>
+      </div>
+    </div>
+
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h1>3.0 Forms</h1>
+
+    <h2>3.1 Regular Form</h2>
+
+                    <!-- Reject form -->
+
+                    <div class="row mb-3">
+                      <div class="col-2">
+                      </div>
+                      <div class="col-8">
+                        <div class="card">
+                          <div class="card-body">
+
+                            <h4 class="card-title">Card title</h4>
+                            <div class="mb-3">
+                              <label for="validationServer01">First name</label>
+                              <input type="text" class="form-control" id="validationServer01" placeholder="First name" value="" required>
+                            </div>
+
+                            <div class="form-row">
+                              <div class="col-6 mb-3">
+                                <label for="validationServer01">First name</label>
+                                <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
+                                <div class="valid-feedback">
+                                  Looks good!
+                                </div>
+                              </div>
+                              <div class="col-6 mb-3">
+                                <label for="validationServer01">First name</label>
+                                <input type="text" class="form-control is-invalid" id="validationServer01" placeholder="First name" value="Mark" required>
+                                <div class="invalid-feedback">
+                                  Please choose a username.
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                            <div class="form-row">
+
+
+                              <div class="col-6 mb-3">
+                                <label for="validationServer01">First name</label>
+
+
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    Default checkbox
+                                  </label>
+                                </div>
+
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                                  <label class="form-check-label" for="defaultCheck2">
+                                    Disabled checkbox
+                                  </label>
+                                </div>
+
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    Default radio
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    Second default radio
+                                  </label>
+                                </div>
+                                <div class="form-check disabled">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                                  <label class="form-check-label" for="exampleRadios3">
+                                    Disabled radio
+                                  </label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                  <label class="form-check-label" for="inlineCheckbox1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                  <label class="form-check-label" for="inlineCheckbox2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                                  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                                </div>
+
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+                                    <label class="form-check-label" for="invalidCheck3">
+                                      Agree to terms and conditions
+                                    </label>
+                                    <div class="invalid-feedback">
+                                      You must agree before submitting.
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="exampleFormControlFile1">Example file input</label>
+                                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+
+                              </div>
+
+
+                            </div>
+
+
+
+
+                            <div class="form-row d-flex justify-content-end">
+                              <button class="btn btn-link" type="submit">Cancel</button><button class="btn btn-primary ml-1" type="submit">Submit form</button>
+                            </div>
+
+
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <h2>3.2 Question Set Samples </h2>
+
+
+
+
+                    <!-- tabs -->
+                    <div class="row mb-3">
+                      <div class="col-9">
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">A. Company Details</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">B. Contact Details</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">C. Details of Connected Parties</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link disabled" href="#">D. Business Details</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link disabled" href="#">E. Products & Services Details</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                    <div class="col-9">
+                      <h4 class="card-title">Sub Section Header</h4>
+
+                      <form action="/action_page.php">
+
+                        <div class="form-group">
+                          <label for="email">Radio Buttons</label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="optradio" checked>Yes
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="radio" class="form-check-input" name="optradio">No
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="field">Text Field </label> <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="fas fa-question-circle"></i></a> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a> (Optional)
+                          <input class="form-control" id="field">
+                          <button type="submit" class="btn btn-link"><i class="fas fa-plus"></i> Add Field</button>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="field">Text Field </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment-dots"></i></a>
+                          <input class="form-control" id="field">
+                          <button type="submit" class="btn btn-link"><i class="fas fa-minus"></i> Delete Field</button>
+                        </div>
+
+                        <div class="row">
+
+                        <div class="form-group col">
+                          <label for="field">Related Question Sharing row (e.g. Last Name, First Name) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment-dots"></i></a>
+                          <input class="form-control" id="field">
+                        </div>
+
+                        <div class="form-group col">
+                          <label for="field">Related Question Sharing Row </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <input class="form-control" id="field">
+                        </div>
+
+                      </div>
+
+                        <div class="form-group">
+                          <label for="field">Single Question with multiple sections (e.g. area code + phone number) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <div class="form-row">
+                            <div class="col-3">
+                              <input class="form-control" id="field">
+                            </div>
+                            <div class="col-9">
+                              <input class="form-control" id="field">
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <label for="field">Single Question with multiple sections (e.g. currency + amount) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <div class="form-row">
+                            <div class="col-3">
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                <option>USD</option>
+                                <option>HKD</option>
+                                <option>RMB</option>
+                              </select>
+                             </div>
+                            <div class="col-9">
+                              <input class="form-control" id="field">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="field">Input with character limits (8) </label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                        <div class="input-group">
+                          <input size="1" maxlength="8" type="text" aria-label="First name" class="form-control">
+                        </div>
+
+</div>
+
+                        <div class="form-group">
+                          <label for="sel1">Select list</label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+
+
+                        <div class="form-group">
+                          <label for="sel1">Checkboxes</label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" value="">Option 1
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" value="">Option 2
+                            </label>
+                          </div>
+                          <div class="form-check disabled">
+                            <label class="form-check-label">
+                              <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+                            </label>
+                          </div>
+                          <div class="text-muted">Note related to a field. Note related to a field. Note related to a field. Note related to a field. Note related to a field. Note related to a field. </div>
+                        </div>
+
+                        <div class="text-muted mb-3">Stand alone note. Stand alone note. Stand alone note. Stand alone note. Stand alone note. Stand alone note. Stand alone note. Stand alone note. Stand alone note.  </div>
+
+
+                            <div class="form-group">
+                              <label for="sel1">Select list</label> <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a>
+
+                              <div class="row">
+                                <div class="col">
+
+                              <select multiple class="form-control" id="sel2" name="sellist2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                              <button type="submit" class="btn btn-link"><i class="fas fa-plus"></i> Add</button>
+
+                            </div>
+                            <div class="col">
+                              <select multiple class="form-control" id="sel2" name="sellist2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                              <button type="submit" class="btn btn-link"><i class="fas fa-minus"></i> Delete</button>
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                        <div class="form-row mb-3">
+                          <table class="table table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th>Jurisdiction of Tax Residency</th>
+                                <th>Tax identification Number (TIN)</th>
+                                <th>Reason for no TIN</th>
+                                <th>Other reason for no TIN, provide details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <input class="form-control" id="field">
+                                </td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <button type="submit" class="btn btn-link"><i class="fas fa-plus"></i> Add</button>
+                          <button type="submit" class="btn btn-link"><i class="fas fa-minus"></i> Delete</button>
+                        </div>
+
+
+
+
+
+
+                        <div class="form-row mb-3">
+                          <table class="table table-bordered mb-0">
+                            <thead>
+                              <tr>
+                                <th></th>
+                                <th>Full Name in English</th>
+                                <th>ID Document Type</th>
+                                <th>ID Document No.</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" type="radio" name="optradio">
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" id="field">
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">HKID
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Passport
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Travel Document
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Others
+                                    </label>
+                                  </div>
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" id="field">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                              </tr>
+
+                              <tr>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" type="radio" name="optradio">
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" id="field">
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">HKID
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Passport
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Travel Document
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="checkbox" class="form-check-input" value="">Others
+                                    </label>
+                                  </div>
+                                </td>
+                                <td rowspan="2" class="align-middle">
+                                  <input class="form-control" id="field">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                              </tr>
+
+
+                            </tbody>
+                          </table>
+
+                          <button type="submit" class="btn btn-link"><i class="fas fa-plus"></i> Add</button>
+                          <button type="submit" class="btn btn-link"><i class="fas fa-minus"></i> Delete</button>
+                        </div>
+
+
+
+
+                        <table class="table table-bordered">
+<col width="5%">
+<col width="19%">
+<col width="19%">
+<col width="19%">
+<col width="19%">
+<col width="19%">
+                          <thead>
+                            <tr>
+                              <th colspan="2" rowspan="2">Authorised Channel User<sup>4</sup></th>
+                              <th rowspan="2">Channel</th>
+                              <th colspan="2">Only for account opened in Business Banking Centre</th>
+                              <th rowspan="2">
+
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">Collect at Branch and via Mail<sup>7</sup>
+                                  </label>
+                                </div>
+
+                                </th>
+                            </tr>
+                            <tr>
+                              <th>
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">Collection on spot<sup>5</sup>
+                                  </label>
+                                </div>
+                              </th>
+                              <th>
+
+                                <div class="form-check">
+                                  <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" value="">Courier Services<sup>6</sup>
+                                  </label>
+                                </div>
+
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="4">1.</td>
+                              <td rowspan="3">
+                                <div class="form-group">
+                                  <label for="field">English Name</label>
+                                  <input class="form-control" id="field">
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">ID Document Type</label>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio" checked>HKID
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Passport
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Travel Document
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Others
+                                    </label>
+                                  </div>
+                                </div>
+
+                              </td>
+                              <td>Phone Banking Services</td>
+                              <td>✓</td>
+                              <td>✓</td>
+                              <td> </td>
+                            </tr>
+                            <tr>
+                              <td>
+
+
+                                <div class="form-group">
+                                  <label for="field">Services Linked Account<sup>8</sup></label>
+                                  <input class="form-control" id="field">
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">Screen Selection</label>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">English
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Chinese
+                                    </label>
+                                  </div>
+                                </div>
+
+
+
+                              </td>
+                              <td>✓	</td>
+                              <td>✓	</td>
+                              <td rowspan="3"></td>
+                            </tr>
+                            <tr>
+                              <td rowspan="2">Hang Seng Business e-Banking Services<sup>9</sup></td>
+                              <td>✓</td>
+                              <td>✓</td>
+                            </tr>
+                            <tr>
+                              <td>
+
+                                <div class="form-group">
+                                  <label for="field">Number</label>
+                                  <input class="form-control" id="field">
+                                </div>
+
+                              </td>
+                              <td colspan="2">
+
+<div class="form-row d-flex mb-3">
+<span>Primary User 1 (PU1)<sup>10</sup></span>
+<span class="ml-auto">Short Name: <strong>PUSER1</strong></span>
+</div>
+
+<div class="form-row">
+Business e-banking PIN will be mailed to the correspondance
+address of the above Business Integrated Account
+</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td rowspan="3">2.</td>
+                              <td rowspan="2">
+
+                                <div class="form-group">
+                                  <label for="field">English Name</label>
+                                  <input class="form-control" id="field">
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">ID Document Type</label>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio" checked>HKID
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Passport
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Travel Document
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Others
+                                    </label>
+                                  </div>
+                                </div>
+
+
+                              </td>
+                              <td>Phone Banking Services</td>
+                              <td>✗</td>
+                              <td>✗</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="form-group">
+                                  <label for="field">ATM Services Linked Account<sup>8</sup></label>
+                                  <input class="form-control" id="field">
+                                </div>
+                                <div class="form-group">
+                                  <label for="email">Screen Selection</label>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">English
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" name="optradio">Chinese
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>✗</td>
+                              <td>✗</td>
+                              <td rowspan="2"></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                                              <div class="form-group">
+                                                                <label for="field">Number</label>
+                                                                <input class="form-control" id="field">
+                                                              </div>
+                                                            </td>
+                              <td>Hang Seng Business e-Banking Services<sup>9</sup></td>
+                              <td colspan="2">
+                                <div class="form-row d-flex mb-3">
+                                <span>Primary User 2 (PU2)<sup>10</sup></span>
+                                <span class="ml-auto">Short Name: <strong>PUSER2</strong></span>
+                                </div>
+
+                                <div class="form-row">
+                                    Mailing Address will be same as Primary User 1 (PU1).
+                                </div>
+
+                              </td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+
+
+
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Remember me</label>
+                        </div>
+
+                        <div class="alert alert-warning">
+                          <strong>Remark</strong> This alert box could indicate a warning that might need attention.
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+
+                    </div>
+
+
+
+
+
+
+
+        <br/>
+        <br/>
+        <br/>
+
+        <h1>4.0 Lists and Tables</h1>
+
+
+                <!-- my cases box -->
+                <div class="row mb-3">
+                  <div class="col-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">My Cases</h5>
+                        <div class="list-group">
+                          <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Pending CCC Allocation
+                            <span class="badge badge-primary badge-pill">18</span>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Pending for handling
+                            <span class="badge badge-primary badge-pill">22</span>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"> All
+                            <span class="badge badge-primary badge-pill">40</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- notification box -->
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="list-group">
+
+                          <a href="#" class="list-group-item list-group-item-action d-flex bg-info text-light">
+                            <span><strong>22288811</strong> has not been assigned to CCC Agents.</span>
+                            <span class="ml-auto">18 Jan 2088</span>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex bg-info text-light">
+                            <span>A new case <strong>22228888221</strong> has been submitted to Contact Centre.</span>
+                            <span class="ml-auto">18 Jan 2088</span>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex">
+                            <span><strong>22288811</strong> has uploaded new document(s). Please review and follow up.</span>
+                            <span class="ml-auto">18 Jan 2088</span>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action d-flex">
+                            <span><strong>22288228</strong> has uploaded new document(s) on <strong>21 Dec 2020</strong>. It is still pending <strong>Danny Wong</strong> to review and follow up.
+        </span>
+                            <span class="ml-auto">18 Jan 2088</span>
+                          </a>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <h5 class="card-title mr-auto">Results</h5>
+                      <button type="button" data-toggle="modal" data-target="#assignCallAgentModal" class="btn btn-link"><i class="far fa-hand-point-right"></i> Assign Call Agent</button>
+
+                    </div>
+                    <div class="table-responsive mb-3">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th nowrap class="align-bottom">Application ID <i class="ml-auto fas fa-sort mt-1"></i></th>
+                            <th nowrap class="align-bottom">Quick View</th>
+                            <th nowrap class="align-bottom">Company Name <i class="ml-auto fas fa-sort-down mt-1"></i></th>
+                            <th nowrap class="align-bottom">Something <i class="ml-auto fas fa-sort-down mt-1"></i></th>
+                            <th nowrap class="align-bottom">Something <i class="ml-auto fas fa-sort-down mt-1"></i></th>
+                            <th nowrap class="align-bottom">Something </th>
+                            <th nowrap class="align-bottom">Something </th>
+
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                              </div>
+                            </td>
+                            <td><a href="#">123456789</a></td>
+                            <td align="center"><a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="fas fa-binoculars"></i></a></td>
+                            <td>Pacific Specific Coffee</td>
+                            <td align="center">Something else</td>
+                            <td>Pacific Specific </td>
+                            <td>Pacific Specific Coffee Pacific Specific Coffee Pacific Specific Coffee ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+                            <td>Pacific Specific Coffee Pacific Specific Coffee Pacific Specific Coffee ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                              </div>
+                            </td>
+                            <td><a href="#">123456789</a></td>
+                            <td align="center"><a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="fas fa-binoculars"></i></a></td>
+                            <td>Pacific Specific Coffee</td>
+                            <td align="center"></td>
+                            <td>Pacific Specific </td>
+                            <td>Pacific Specific Coffee Pacific Specific Coffee Pacific Specific Coffee ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+                            <td>Pacific Specific Coffee Pacific Specific Coffee Pacific Specific Coffee ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="d-flex">
+                      <div class="p-1">Showing 1 to 10 of 57 entries</div>
+                      <div class="dropdown pl-3">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          10
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">25</a>
+                          <a class="dropdown-item" href="#">50</a>
+                          <a class="dropdown-item" href="#">100</a>
+                          <a class="dropdown-item" href="#">All</a>
+                        </div>
+                      </div>
+                      <div class="p-1">rows per page</div>
+
+                      <ul class="pagination ml-auto">
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">...</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+        <br/>
+        <br/>
+        <br/>
+
+        <h1>5.0 Structure</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- application information box -->
+
+    <div class="row mb-3">
+      <div class="col-3">
+        <div class="card bg-secondary text-light">
+          <div class="card-body">
+
+            <div class="d-flex">
+              <div class="mr-3">
+                <a href="#"><h1><i class="fas fa-arrow-left"></i></h1></a>
+              </div>
+
+              <dl>
+                <dt>Application ID</dt>
+                <dd><h3>28881888 <a href="#" data-toggle="modal" data-target="#commentModal"><i class="far fa-comment"></i></a></h3></dd>
+              </dl>
+            </div>
+
+            <dl>
+              <dt>Status</dt>
+              <dd>Rejected <a href="#" data-toggle="modal" data-target="#quickViewModal"><i class="far fa-comment-dots"></i></a></dd>
+              <dt>Appointment</dt>
+              <dd>31 Dec 2018, 13:30, Central</dd>
+              <dt>Assigned To</dt>
+              <dd>Ben Wong</dd>
+
+            </dl>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- checklist box -->
+
+    <div class="row mb-3">
+      <div class="col-3">
+        <div class="card  bg-secondary text-light">
+          <div class="card-body">
+            <h5 class="card-title">Checklist</h5>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Option 1
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Option 2
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- change status box -->
+
+    <div class="row mb-3">
+      <div class="col-3">
+        <div class="card  bg-secondary text-light">
+          <div class="card-body">
+            <h5 class="card-title">Change Status To</h5>
+
+            <button type="button" class="btn btn-primary btn-block">Move Forward button</button>
+            <button type="button" class="btn btn-primary btn-block disabled">Move Forward diabled</button>
+
+            <button type="button" class="btn btn-warning btn-block">Reject</button>
+            <button type="button" class="btn btn-warning btn-block">Cancel</button>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- search box -->
+
+    <div class="row">
+      <div class="col-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Search</h5>
+            <form>
+              <div class="row" >
+                <div class="col-4 mb-3">
+                  <label>Application Number</label>
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-4 mb-3">
+                  <label>Customer ID</label>
+                  <input type="text" class="form-control" >
+                </div>
+                <div class="col-4 mb-3">
+                  <label>Customer Name</label>
+                  <input type="text" class="form-control" >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4 mb-3">
+                  <label>Status</label>
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-4 mb-3">
+                  <label>Business Center</label>
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="col-4 mb-3">
+                  <label>BBO Assigned</label>
+                  <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3d -flex justify-content-end">
+                <button type="button" class="btn btn-primary mr-3">Search</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+          <br/>
+          <br/>
+          <br/>
+
+          <h1>6.0 Modals</h1>
+
+
+
+
+
+
+
+
+
+      <!-- The Toast -->
+
+
+      <div class="toast bg-info" style="position: relative" data-autohide="true" data-delay="500000">
+        <div class="toast-header bg-info">
+          <button type="button" class="ml-auto mb-1 close" data-dismiss="toast">&times;</button>
+        </div>
+
+        <div class="toast-body text-light">
+          Status Changed.
+        </div>
+      </div>
+
+
+
+
+      <script>
+      $(document).ready(function(){
+        $('.toast').toast('show');
+      });
+      </script>
+
+
+      <a href="#" data-toggle="modal" data-target="#commentModal">Chat Modal</a><br/>
+      <a href="#" data-toggle="modal" data-target="#quickViewModal">View Only Modal</a><br/>
+      <a href="#" data-toggle="modal" data-target="#errorModal">Error Modal</a><br/>
+      <a href="#" data-toggle="modal" data-target="#assignCallAgentModal">Confirmation Modal</a><br/>
+
+
+
+
+
+      <br/>
+      <br/>
+      <br/>
+
+      <h1>7.0 Badges</h1>
+      <div class="row">
+        <div class="col-lg-12">
+          Attention, Endorsement indicator <br>
+          <span class="badge badge-info">#PROD228</span>        <span class="badge badge-warning">#PROD228 Endorse Needed</span>
+<br><br>
+          Risk indicator <br>
+          <span class="badge badge-success">Low</span> <span class="badge badge-warning">Medium</span> <span class="badge badge-danger">High</span> <span class="badge badge-in">Undetermined</span>
+
+        </div>
+      </div>
+
+      <br/>
+      <br/>
+      <br/>
+
+      <h1>8.0 Icons</h1>
+      <div class="row">
+        <div class="col-lg-3">
+          Comment / Remark Empty <br>
+          <a href="#"><i class="far fa-comment"></i></a><br>
+          <br>
+
+          Comment / Remark Filled <br>
+
+          <a href="#"><i class="far fa-comment-dots"></i></a><br>
+          <br>
+          Attention <br>
+
+          <a href="#"><i class="fas fa-comment-dots text-info"></i></a><br>
+          <br>
+          Endorsement<br>
+
+          <a href="#"><i class="fas fa-comment-dots text-warning"></i></a><br>
+          <br>
+
+
+
+        </div>
+
+        <div class="col-lg-3">
+
+          Help Content<br>
+          <a href="#"><i class="fas fa-question-circle"></i></a><br>
+          <br>
+
+          Quickview / Reject Reason<br>
+          <a href="#"><i class="fas fa-binoculars"></i></a><br>
+          <br>
+
+          Assign<br>
+          <a href="#"><i class="far fa-hand-point-right"></i></a><br>
+          <br>
+
+          Save<br>
+          <a href="#"><i class="far fa-save"></i></a><br>
+          <br>
+
+
+          <br>
+
+        </div>
+
+        <div class="col-lg-3">
+
+          Print<br>
+          <a href="#"><i class="fas fa-print"></i></a><br>
+          <br>
+
+          Import<br>
+          <a href="#"><i class="fas fa-file-import"></i></a><br>
+          <br>
+
+          User<br>
+          <a href="#"><i class="fas fa-user"></i></a><br>
+          <br>
+
+          Add<br>
+          <a href="#"><i class="fas fa-plus"></i></a><br>
+          <br>
+
+
+
+        </div>
+
+        <div class="col-lg-3">
+
+          Minus<br>
+          <a href="#"><i class="fas fa-minus"></i></a><br>
+          <br>
+          Edit<br>
+          <a href="#"><i class="fas fa-pen"></i></a><br>
+          <br>
+          refresh<br>
+          <a href="#"><i class="fas fa-redo-alt"></i></a><br>
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+      <br/>
+      <br/>
+      <br/>
+
+      <h1>9.0 Footer</h1>
+
+      <div class="row">
+
+      <div class="col-lg-12">
+        <hr/>
+      </div>
+
+      <div class="col-lg-12 d-flex">
+
+        <span>© Hang Seng Bank Limited</span>
+        <img class="ml-auto" src="img/hsbc_logo.gif">
+      </div>
+      </div>
+
+
+      <br/>
+      <br/>
+      <br/>
+
+    
+
+
+
+
+
+  </div><!-- end containter-->
+
+
+
+  <!-- The Assign Call Agent Modal -->
+  <div class="modal" id="assignCallAgentModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Assign Call Agent</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <label>Assign the 4 cases to</label>
+          <select class="form-control">
+            <option>Aaron</option>
+            <option>Beatrice</option>
+            <option>Candy</option>
+            <option>Daisy</option>
+            <option>Eddie</option>
+          </select>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="myBtn">Confirm</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- The Comment Modal -->
+  <div class="modal" id="commentModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Comment </h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+
+
+          <div class="mb-3">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-user mr-1"></i>Ben Wong<div class="ml-auto">31 Dec 2020, 14:00</div>
+            </div>
+            What a sunny day!
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-user mr-1"></i>Ben Wong<div class="ml-auto">31 Dec 2020, 14:00</div>
+            </div>
+            Its a great day!
+          </div>
+
+
+
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Write a comment</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="d-flex">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+              <label class="form-check-label" for="defaultCheck1">
+                Attention
+              </label>
+            </div>
+
+            <div class="form-check ml-3">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+              <label class="form-check-label" for="defaultCheck1">
+                Endorse Needed
+              </label>
+            </div>
+
+            <button type="button" class="ml-auto btn btn-primary">Post</button>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- The Quickview Modal -->
+  <div class="modal" id="quickViewModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Quick View</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <dl>
+            <dt>Customer ID</dt>
+            <dd>123456789</dd>
+            <dt>Document Last Uploaded Date</dt>
+            <dd>31 Dec 2018</dd>
+            <dt>Remark</dt>
+            <dd>Use quick view to show remarks, it supports long paragraphs. Use quick view to show remarks, it supports long paragraphs. Use quick view to show remarks, it supports long paragraphs. Use quick view to show remarks, it supports long paragraphs. Use quick view to show remarks, it supports long paragraphs. Use quick view to show remarks, it supports long paragraphs. </dd>
+            <dt>Document Last Uploaded Date</dt>
+            <dd>31 Dec 2018</dd>
+            <dt>Customer ID</dt>
+            <dd>123456789</dd>
+            <dt>Document Last Uploaded Date</dt>
+            <dd>31 Dec 2018</dd>
+            <dt>Customer ID</dt>
+            <dd>123456789</dd>
+            <dt>Document Last Uploaded Date</dt>
+            <dd>31 Dec 2018</dd>
+            <dt>Customer ID</dt>
+            <dd>123456789</dd>
+            <dt>Document Last Uploaded Date</dt>
+            <dd>31 Dec 2018</dd>
+            <dt>Customer ID</dt>
+            <dd>123456789</dd>
+          </dl>
+
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <!-- The Error Modal -->
+    <div class="modal" id="errorModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title ">Error</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row">
+                      <div class="col-2"> <h1> <i class="fas fa-exclamation-triangle text-danger"></i></h1> </div>
+                      <div class="col-10"> Due to this reason, that has happened. Try do this and that to resolve the issue.</div>
+            </div>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
