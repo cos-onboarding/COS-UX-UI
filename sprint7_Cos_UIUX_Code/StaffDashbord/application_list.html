@@ -28,7 +28,7 @@
 <body ng-app="myApp">
 	<div class="container-fluid">	
 		<!-- header -->
-		<header class="sticky-top bg-primary row pl-3 mb-3" ng-controller="headerCtrl">
+		<header class="sticky-top bg-primary row mb-3" ng-controller="headerCtrl">
 			<nav class="navbar navbar-dark col-8 navbar-expand-lg">
 				<!-- Brand and collapse-icon -->
 				<div class="">
@@ -83,7 +83,7 @@
 				<div class="col-4 mb-3 px-1 pr-3">
 					<div class="card" ng-controller="myCaseCtrl">
 						<div class="card-body">
-							<h6 class="card-title">MY CASES</h6>
+							<h5 class="card-title pb-1">MY CASES</h5>
 							<div class="list-group">
 								<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
 									Pending CCC Allocation
@@ -186,17 +186,19 @@
 									</div>
 								</div>
 								<!-- toast Message for Assign Call Agent Modal's save btn-->
-								<div class="toast bg-info fixed-top w-75 py-2" style="top: 0; right: 0;" id="AssignToast" data-autohide="true" data-animation="true" data-delay="3000">
+								<div class="toast bg-info fixed-top w-50 mt-3 mr-3" style="top: 0; right: 0;" id="AssignToast" data-autohide="true" data-animation="true" data-delay="3000">
 									<div class="toast-header bg-info">
 										<button type="button" class="ml-auto mb-1 close" data-dismiss="toast">&times;</button>
 									</div>
 									<div class="toast-body text-light" ng-bind="toastContent"></div>
 								</div>
+
 							</div>
 							
 							<!-- table-responsive -->
 							<div class="table-responsive">
-								<table class="col-12 table table-hover px-0" id="appli_list_table" data-pagination="true" >
+								<table class="col-12 table table-hover px-0" id="appli_list_table" 
+									data-pagination="true" data-pagination-pre-text="Previous" data-pagination-next-text="Next">
 								</table>
 							</div>
 							<!-- table-responsive end -->
